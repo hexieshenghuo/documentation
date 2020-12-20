@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -118,7 +118,7 @@ $(function() {
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;pcl/common/utils.h&gt;</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;numeric&gt;</span> <span class="comment">// for partial_sum</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//////////////////////////////////////////////////////////////////////////////////////////////</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>InT, <span class="keyword">typename</span> Po<span class="keywordtype">int</span>NT, <span class="keyword">typename</span> Po<span class="keywordtype">int</span>OutT&gt; <span class="keywordtype">bool</span></div>
@@ -225,7 +225,7 @@ $(function() {
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> minIndex = nn_indices[<a class="code" href="namespacepcl_1_1geometry.html#a2fc89f0c26b7c7377fcd2851fa933b87">std::distance</a> (nn_dists.begin (), minDistanceIt)];</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="comment">// Get origin point</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="code" href="namespacepcl.html#a6646587b6e57635d1fa584cd7186ecc9">Vector3fMapConst</a> origin = input_-&gt;points[(*indices_)[index]].getVector3fMap ();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="code" href="namespacepcl.html#a6646587b6e57635d1fa584cd7186ecc9">Vector3fMapConst</a> origin = (*input_)[(*indices_)[index]].getVector3fMap ();</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="comment">// Get origin normal</span></div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="comment">// Use pre-computed normals</span></div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  normal = normals[minIndex].getNormalVector3fMap ();</div>
@@ -255,7 +255,7 @@ $(function() {
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacepcl_1_1utils.html#ac8067a0850d83723e500d3e0d66ad044">pcl::utils::equal</a> (nn_dists[ne], 0.0f))</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="comment">// Get neighbours coordinates</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    Eigen::Vector3f neighbour = surface_-&gt;points[nn_indices[ne]].getVector3fMap ();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    Eigen::Vector3f neighbour = (*surface_)[nn_indices[ne]].getVector3fMap ();</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">    /// ----- Compute current neighbour polar coordinates -----</span></div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">    /// Get distance between the neighbour and the origin</span></div>
@@ -368,7 +368,7 @@ $(function() {
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:10:28</p>
+<p>Pages generated on Sun Dec 20 2020 13:18:15</p>
 </div> <!-- #footer -->
 </body>
 </html>

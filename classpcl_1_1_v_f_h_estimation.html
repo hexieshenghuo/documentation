@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -378,7 +378,7 @@ Protected Attributes</h2></td></tr>
 class pcl::VFHEstimation&lt; PointInT, PointNT, PointOutT &gt;</h3>
 
 <p><a class="el" href="classpcl_1_1_v_f_h_estimation.html" title="VFHEstimation estimates the Viewpoint Feature Histogram (VFH) descriptor for a given point cloud data...">VFHEstimation</a> estimates the <b>Viewpoint <a class="el" href="classpcl_1_1_feature.html" title="Feature represents the base feature class.">Feature</a> <a class="el" href="structpcl_1_1_histogram.html" title="A point structure representing an N-D histogram.">Histogram</a> (VFH)</b> descriptor for a given point cloud dataset containing points and normals. </p>
-<p>The default VFH implementation uses 45 binning subdivisions for each of the three extended FPFH values, plus another 45 binning subdivisions for the distances between each point and the centroid and 128 binning subdivisions for the viewpoint component, which results in a 308-byte array of float values. These are stored in a <a class="el" href="structpcl_1_1_v_f_h_signature308.html" title="A point structure representing the Viewpoint Feature Histogram (VFH).">pcl::VFHSignature308</a> point type. A major difference between the PFH/FPFH descriptors and VFH, is that for a given point cloud dataset, only a single VFH descriptor will be estimated (vfhs-&gt;points.size() should be 1), while the resultant PFH/FPFH data will have the same number of entries as the number of points in the cloud.</p>
+<p>The default VFH implementation uses 45 binning subdivisions for each of the three extended FPFH values, plus another 45 binning subdivisions for the distances between each point and the centroid and 128 binning subdivisions for the viewpoint component, which results in a 308-byte array of float values. These are stored in a <a class="el" href="structpcl_1_1_v_f_h_signature308.html" title="A point structure representing the Viewpoint Feature Histogram (VFH).">pcl::VFHSignature308</a> point type. A major difference between the PFH/FPFH descriptors and VFH, is that for a given point cloud dataset, only a single VFH descriptor will be estimated (vfhs-&gt;size() should be 1), while the resultant PFH/FPFH data will have the same number of entries as the number of points in the cloud.</p>
 <dl class="section note"><dt>Note</dt><dd>If you use this code in any academic work, please cite:</dd></dl>
 <ul>
 <li>R.B. Rusu, G. Bradski, R. Thibaux, J. Hsu. Fast 3D Recognition and Pose Using the Viewpoint <a class="el" href="classpcl_1_1_feature.html" title="Feature represents the base feature class.">Feature</a> <a class="el" href="structpcl_1_1_histogram.html" title="A point structure representing an N-D histogram.">Histogram</a>. In Proceedings of International Conference on Intelligent Robots and Systems (IROS) Taipei, Taiwan, October 18-22 2010.</li>
@@ -565,7 +565,7 @@ template&lt;typename PointInT , typename PointNT , typename PointOutT &gt; </div
 
 <p class="definition">Definition at line <a class="el" href="vfh_8hpp_source.html#l00092">92</a> of file <a class="el" href="vfh_8hpp_source.html">vfh.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="group__features.html#gaacfebe0c36e7d879e48bd3f163aec3c9">pcl::computePairFeatures()</a>, <a class="el" href="common_2include_2pcl_2common_2impl_2common_8hpp_source.html#l00144">pcl::getMaxDistance()</a>, <a class="el" href="pcl__macros_8h_source.html#l00195">M_PI</a>, <a class="el" href="pcl__macros_8h_source.html#l00247">pcl_round()</a>, and <a class="el" href="common_2include_2pcl_2point__cloud_8h_source.html#l00411">pcl::PointCloud&lt; PointT &gt;::points</a>.</p>
+<p class="reference">References <a class="el" href="group__features.html#gaacfebe0c36e7d879e48bd3f163aec3c9">pcl::computePairFeatures()</a>, <a class="el" href="common_2include_2pcl_2common_2impl_2common_8hpp_source.html#l00197">pcl::getMaxDistance()</a>, <a class="el" href="pcl__macros_8h_source.html#l00201">M_PI</a>, and <a class="el" href="pcl__macros_8h_source.html#l00239">pcl_round()</a>.</p>
 
 </div>
 </div>
@@ -1262,7 +1262,7 @@ template&lt;typename PointInT , typename PointNT , typename PointOutT  = pcl::VF
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:13:08</p>
+<p>Pages generated on Sun Dec 20 2020 13:21:23</p>
 </div> <!-- #footer -->
 </body>
 </html>

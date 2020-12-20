@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -125,7 +125,7 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    * the centroid and 128 binning subdivisions for the viewpoint component, which results in a</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">    * 308-byte array of float values. These are stored in a pcl::VFHSignature308 point type.</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    * A major difference between the PFH/FPFH descriptors and VFH, is that for a given point cloud dataset, only a</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    * single VFH descriptor will be estimated (vfhs-&gt;points.size() should be 1), while the resultant PFH/FPFH data</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    * single VFH descriptor will be estimated (vfhs-&gt;size() should be 1), while the resultant PFH/FPFH data</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    * will have the same number of entries as the number of points in the cloud.</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    *</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    * \note If you use this code in any academic work, please cite:</span></div>
@@ -356,7 +356,7 @@ $(function() {
 <div class="ttc" id="aclasspcl_1_1_v_f_h_estimation_html_a3077be2fcbda5003984a90bf9af0f62f"><div class="ttname"><a href="classpcl_1_1_v_f_h_estimation.html#a3077be2fcbda5003984a90bf9af0f62f">pcl::VFHEstimation::use_given_normal_</a></div><div class="ttdeci">bool use_given_normal_</div><div class="ttdoc">Use the normal_to_use_.</div><div class="ttdef"><b>Definition:</b> <a href="vfh_8h_source.html#l00251">vfh.h:251</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_feature_html_a2c52e9b0412b8ce790837b24cd99f0af"><div class="ttname"><a href="classpcl_1_1_feature.html#a2c52e9b0412b8ce790837b24cd99f0af">pcl::Feature&lt; PointInT, pcl::VFHSignature308 &gt;::search_radius_</a></div><div class="ttdeci">double search_radius_</div><div class="ttdoc">The nearest neighbors search radius for each point.</div><div class="ttdef"><b>Definition:</b> <a href="feature_8h_source.html#l00240">feature.h:240</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_v_f_h_estimation_html_ac4fb0a2f20ad84b39cc384bef0d08ce6"><div class="ttname"><a href="classpcl_1_1_v_f_h_estimation.html#ac4fb0a2f20ad84b39cc384bef0d08ce6">pcl::VFHEstimation::use_given_centroid_</a></div><div class="ttdeci">bool use_given_centroid_</div><div class="ttdoc">Use the centroid_to_use_.</div><div class="ttdef"><b>Definition:</b> <a href="vfh_8h_source.html#l00253">vfh.h:253</a></div></div>
-<div class="ttc" id="apcl__macros_8h_html_ae71449b1cc6e6250b91f539153a7a0d3"><div class="ttname"><a href="pcl__macros_8h.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a></div><div class="ttdeci">#define M_PI</div><div class="ttdef"><b>Definition:</b> <a href="pcl__macros_8h_source.html#l00195">pcl_macros.h:195</a></div></div>
+<div class="ttc" id="apcl__macros_8h_html_ae71449b1cc6e6250b91f539153a7a0d3"><div class="ttname"><a href="pcl__macros_8h.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a></div><div class="ttdeci">#define M_PI</div><div class="ttdef"><b>Definition:</b> <a href="pcl__macros_8h_source.html#l00201">pcl_macros.h:201</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_v_f_h_estimation_html_a330f228ab39b3ac096f20ea73b8612ab"><div class="ttname"><a href="classpcl_1_1_v_f_h_estimation.html#a330f228ab39b3ac096f20ea73b8612ab">pcl::VFHEstimation::setViewPoint</a></div><div class="ttdeci">void setViewPoint(float vpx, float vpy, float vpz)</div><div class="ttdoc">Set the viewpoint.</div><div class="ttdef"><b>Definition:</b> <a href="vfh_8h_source.html#l00125">vfh.h:125</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_v_f_h_estimation_html_ab5bf11bac8d114f93035d9b97653a974"><div class="ttname"><a href="classpcl_1_1_v_f_h_estimation.html#ab5bf11bac8d114f93035d9b97653a974">pcl::VFHEstimation::ConstPtr</a></div><div class="ttdeci">shared_ptr&lt; const VFHEstimation&lt; PointInT, PointNT, PointOutT &gt; &gt; ConstPtr</div><div class="ttdef"><b>Definition:</b> <a href="vfh_8h_source.html#l00086">vfh.h:86</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_v_f_h_estimation_html_a30c2e3f9b4cd4e7c17f1f694bcee87a3"><div class="ttname"><a href="classpcl_1_1_v_f_h_estimation.html#a30c2e3f9b4cd4e7c17f1f694bcee87a3">pcl::VFHEstimation::VFHEstimation</a></div><div class="ttdeci">VFHEstimation()</div><div class="ttdoc">Empty constructor.</div><div class="ttdef"><b>Definition:</b> <a href="vfh_8h_source.html#l00090">vfh.h:90</a></div></div>
@@ -380,7 +380,7 @@ $(function() {
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:10:29</p>
+<p>Pages generated on Sun Dec 20 2020 13:18:17</p>
 </div> <!-- #footer -->
 </body>
 </html>

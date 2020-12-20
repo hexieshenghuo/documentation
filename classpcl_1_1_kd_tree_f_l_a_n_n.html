@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -151,9 +151,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae63180631ac6fe1ad6b3349ef942bbe8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree_f_l_a_n_n.html#ae63180631ac6fe1ad6b3349ef942bbe8">setInputCloud</a> (const <a class="el" href="classpcl_1_1_kd_tree.html#a899c6b5d462f4126259ac445a57f92ca">PointCloudConstPtr</a> &amp;cloud, const <a class="el" href="classpcl_1_1_kd_tree.html#ae8f7b724e94c01d3b1a67f94e48da562">IndicesConstPtr</a> &amp;indices=<a class="el" href="classpcl_1_1_kd_tree.html#ae8f7b724e94c01d3b1a67f94e48da562">IndicesConstPtr</a>()) override</td></tr>
 <tr class="memdesc:ae63180631ac6fe1ad6b3349ef942bbe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a pointer to the input dataset.  <a href="classpcl_1_1_kd_tree_f_l_a_n_n.html#ae63180631ac6fe1ad6b3349ef942bbe8">More...</a><br /></td></tr>
 <tr class="separator:ae63180631ac6fe1ad6b3349ef942bbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a422763997dae25c1db1d67b1ecf3c9ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree_f_l_a_n_n.html#a422763997dae25c1db1d67b1ecf3c9ee">nearestKSearch</a> (const <a class="el" href="structpcl_1_1_point_x_y_z_r_g_b.html">PointT</a> &amp;point, int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const override</td></tr>
-<tr class="memdesc:a422763997dae25c1db1d67b1ecf3c9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for k-nearest neighbors for the given query point.  <a href="classpcl_1_1_kd_tree_f_l_a_n_n.html#a422763997dae25c1db1d67b1ecf3c9ee">More...</a><br /></td></tr>
-<tr class="separator:a422763997dae25c1db1d67b1ecf3c9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2875cb4418b79d3463ceb453134a94a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree_f_l_a_n_n.html#ac2875cb4418b79d3463ceb453134a94a">nearestKSearch</a> (const <a class="el" href="structpcl_1_1_point_x_y_z_r_g_b.html">PointT</a> &amp;point, unsigned int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const override</td></tr>
+<tr class="memdesc:ac2875cb4418b79d3463ceb453134a94a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for k-nearest neighbors for the given query point.  <a href="classpcl_1_1_kd_tree_f_l_a_n_n.html#ac2875cb4418b79d3463ceb453134a94a">More...</a><br /></td></tr>
+<tr class="separator:ac2875cb4418b79d3463ceb453134a94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00dce9de6ac4dabd8640f68a84af7324"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree_f_l_a_n_n.html#a00dce9de6ac4dabd8640f68a84af7324">radiusSearch</a> (const <a class="el" href="structpcl_1_1_point_x_y_z_r_g_b.html">PointT</a> &amp;point, double radius, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances, unsigned int max_nn=0) const override</td></tr>
 <tr class="memdesc:a00dce9de6ac4dabd8640f68a84af7324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for all the nearest neighbors of the query point in a given radius.  <a href="classpcl_1_1_kd_tree_f_l_a_n_n.html#a00dce9de6ac4dabd8640f68a84af7324">More...</a><br /></td></tr>
 <tr class="separator:a00dce9de6ac4dabd8640f68a84af7324"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,16 +176,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec3baf44b02605ba4efde9f49e93db3d inherit pub_methods_classpcl_1_1_kd_tree"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree.html#aec3baf44b02605ba4efde9f49e93db3d">~KdTree</a> ()</td></tr>
 <tr class="memdesc:aec3baf44b02605ba4efde9f49e93db3d inherit pub_methods_classpcl_1_1_kd_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for <a class="el" href="classpcl_1_1_kd_tree.html" title="KdTree represents the base spatial locator class for kd-tree implementations.">KdTree</a>.  <a href="classpcl_1_1_kd_tree.html#aec3baf44b02605ba4efde9f49e93db3d">More...</a><br /></td></tr>
 <tr class="separator:aec3baf44b02605ba4efde9f49e93db3d inherit pub_methods_classpcl_1_1_kd_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6375c3f23775693f316482e7bd1c5e5d inherit pub_methods_classpcl_1_1_kd_tree"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree.html#a6375c3f23775693f316482e7bd1c5e5d">nearestKSearch</a> (const <a class="el" href="classpcl_1_1_kd_tree.html#afc34812fe33e1767dd856ae7d9dcda77">PointCloud</a> &amp;cloud, int index, int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td></tr>
-<tr class="memdesc:a6375c3f23775693f316482e7bd1c5e5d inherit pub_methods_classpcl_1_1_kd_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for k-nearest neighbors for the given query point.  <a href="classpcl_1_1_kd_tree.html#a6375c3f23775693f316482e7bd1c5e5d">More...</a><br /></td></tr>
-<tr class="separator:a6375c3f23775693f316482e7bd1c5e5d inherit pub_methods_classpcl_1_1_kd_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c3de00ef91b96c2680c17de1b236c23 inherit pub_methods_classpcl_1_1_kd_tree"><td class="memTemplParams" colspan="2">template&lt;typename PointTDiff &gt; </td></tr>
-<tr class="memitem:a3c3de00ef91b96c2680c17de1b236c23 inherit pub_methods_classpcl_1_1_kd_tree"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree.html#a3c3de00ef91b96c2680c17de1b236c23">nearestKSearchT</a> (const PointTDiff &amp;point, int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td></tr>
-<tr class="memdesc:a3c3de00ef91b96c2680c17de1b236c23 inherit pub_methods_classpcl_1_1_kd_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for k-nearest neighbors for the given query point.  <a href="classpcl_1_1_kd_tree.html#a3c3de00ef91b96c2680c17de1b236c23">More...</a><br /></td></tr>
-<tr class="separator:a3c3de00ef91b96c2680c17de1b236c23 inherit pub_methods_classpcl_1_1_kd_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b8a30dcd9117c962e1940ad2bf3b79d inherit pub_methods_classpcl_1_1_kd_tree"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree.html#a7b8a30dcd9117c962e1940ad2bf3b79d">nearestKSearch</a> (int index, int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td></tr>
-<tr class="memdesc:a7b8a30dcd9117c962e1940ad2bf3b79d inherit pub_methods_classpcl_1_1_kd_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for k-nearest neighbors for the given query point (zero-copy).  <a href="classpcl_1_1_kd_tree.html#a7b8a30dcd9117c962e1940ad2bf3b79d">More...</a><br /></td></tr>
-<tr class="separator:a7b8a30dcd9117c962e1940ad2bf3b79d inherit pub_methods_classpcl_1_1_kd_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbc35714fc75a4b9bd4e7a4ae89f2e93 inherit pub_methods_classpcl_1_1_kd_tree"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree.html#adbc35714fc75a4b9bd4e7a4ae89f2e93">nearestKSearch</a> (const <a class="el" href="classpcl_1_1_kd_tree.html#afc34812fe33e1767dd856ae7d9dcda77">PointCloud</a> &amp;cloud, int index, unsigned int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td></tr>
+<tr class="memdesc:adbc35714fc75a4b9bd4e7a4ae89f2e93 inherit pub_methods_classpcl_1_1_kd_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for k-nearest neighbors for the given query point.  <a href="classpcl_1_1_kd_tree.html#adbc35714fc75a4b9bd4e7a4ae89f2e93">More...</a><br /></td></tr>
+<tr class="separator:adbc35714fc75a4b9bd4e7a4ae89f2e93 inherit pub_methods_classpcl_1_1_kd_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a561c1be97c2bae1a921b28844ec7804a inherit pub_methods_classpcl_1_1_kd_tree"><td class="memTemplParams" colspan="2">template&lt;typename PointTDiff &gt; </td></tr>
+<tr class="memitem:a561c1be97c2bae1a921b28844ec7804a inherit pub_methods_classpcl_1_1_kd_tree"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree.html#a561c1be97c2bae1a921b28844ec7804a">nearestKSearchT</a> (const PointTDiff &amp;point, unsigned int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td></tr>
+<tr class="memdesc:a561c1be97c2bae1a921b28844ec7804a inherit pub_methods_classpcl_1_1_kd_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for k-nearest neighbors for the given query point.  <a href="classpcl_1_1_kd_tree.html#a561c1be97c2bae1a921b28844ec7804a">More...</a><br /></td></tr>
+<tr class="separator:a561c1be97c2bae1a921b28844ec7804a inherit pub_methods_classpcl_1_1_kd_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66937853e2b2a9c2171da966ac781a5 inherit pub_methods_classpcl_1_1_kd_tree"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree.html#ae66937853e2b2a9c2171da966ac781a5">nearestKSearch</a> (int index, unsigned int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td></tr>
+<tr class="memdesc:ae66937853e2b2a9c2171da966ac781a5 inherit pub_methods_classpcl_1_1_kd_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for k-nearest neighbors for the given query point (zero-copy).  <a href="classpcl_1_1_kd_tree.html#ae66937853e2b2a9c2171da966ac781a5">More...</a><br /></td></tr>
+<tr class="separator:ae66937853e2b2a9c2171da966ac781a5 inherit pub_methods_classpcl_1_1_kd_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22292d6936e364d71b9289e5d8d58b1c inherit pub_methods_classpcl_1_1_kd_tree"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_kd_tree.html#a22292d6936e364d71b9289e5d8d58b1c">radiusSearch</a> (const <a class="el" href="classpcl_1_1_kd_tree.html#afc34812fe33e1767dd856ae7d9dcda77">PointCloud</a> &amp;cloud, int index, double radius, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances, unsigned int max_nn=0) const</td></tr>
 <tr class="memdesc:a22292d6936e364d71b9289e5d8d58b1c inherit pub_methods_classpcl_1_1_kd_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for all the nearest neighbors of the query point in a given radius.  <a href="classpcl_1_1_kd_tree.html#a22292d6936e364d71b9289e5d8d58b1c">More...</a><br /></td></tr>
 <tr class="separator:a22292d6936e364d71b9289e5d8d58b1c inherit pub_methods_classpcl_1_1_kd_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,7 +236,7 @@ class pcl::KdTreeFLANN&lt; PointT, Dist &gt;</h3>
 <p>The class is making use of the FLANN (Fast Library for Approximate Nearest Neighbor) project by Marius Muja and David Lowe.</p>
 <dl class="section author"><dt>Author</dt><dd>Radu B. Rusu, Marius Muja </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00067">67</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00064">64</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a5872238a71a67793cb8c38e12ca0b0b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5872238a71a67793cb8c38e12ca0b0b6">&#9670;&nbsp;</a></span>ConstPtr</h2>
@@ -252,7 +252,7 @@ template&lt;typename PointT , typename Dist  = ::flann::L2_Simple&lt;float&gt;&g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00088">88</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00085">85</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
 
 </div>
 </div>
@@ -270,7 +270,7 @@ template&lt;typename PointT , typename Dist  = ::flann::L2_Simple&lt;float&gt;&g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00084">84</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00081">81</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +288,7 @@ template&lt;typename PointT , typename Dist  = ::flann::L2_Simple&lt;float&gt;&g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00082">82</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00079">79</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
 
 </div>
 </div>
@@ -306,7 +306,7 @@ template&lt;typename PointT , typename Dist  = ::flann::L2_Simple&lt;float&gt;&g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00081">81</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00078">78</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
 
 </div>
 </div>
@@ -324,7 +324,7 @@ template&lt;typename PointT , typename Dist  = ::flann::L2_Simple&lt;float&gt;&g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00078">78</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00075">75</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
 
 </div>
 </div>
@@ -342,7 +342,7 @@ template&lt;typename PointT , typename Dist  = ::flann::L2_Simple&lt;float&gt;&g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00079">79</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00076">76</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
 
 </div>
 </div>
@@ -360,7 +360,7 @@ template&lt;typename PointT , typename Dist  = ::flann::L2_Simple&lt;float&gt;&g
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00087">87</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00084">84</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
 
 </div>
 </div>
@@ -392,7 +392,7 @@ template&lt;typename PointT , typename Dist &gt; </div>
 </dl>
 <p>By setting sorted to false, the <a class="el" href="classpcl_1_1_kd_tree_f_l_a_n_n.html#a00dce9de6ac4dabd8640f68a84af7324">radiusSearch</a> operations will be faster. </p>
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00051">51</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00049">49</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
 
 </div>
 </div>
@@ -422,7 +422,7 @@ template&lt;typename PointT , typename Dist &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00063">63</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00061">61</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
 
 </div>
 </div>
@@ -454,7 +454,7 @@ template&lt;typename PointT , typename Dist  = ::flann::L2_Simple&lt;float&gt;&g
 <p>Destructor for <a class="el" href="classpcl_1_1_kd_tree_f_l_a_n_n.html" title="KdTreeFLANN is a generic type of 3D spatial locator using kD-tree structures.">KdTreeFLANN</a>. </p>
 <p>Deletes all allocated data arrays and destroys the kd-tree structures. </p>
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00134">134</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00131">131</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
 
 </div>
 </div>
@@ -484,12 +484,12 @@ template&lt;typename PointT , typename Dist  = ::flann::L2_Simple&lt;float&gt;&g
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00129">129</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00126">126</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
 
 </div>
 </div>
-<a id="a422763997dae25c1db1d67b1ecf3c9ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a422763997dae25c1db1d67b1ecf3c9ee">&#9670;&nbsp;</a></span>nearestKSearch()</h2>
+<a id="ac2875cb4418b79d3463ceb453134a94a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2875cb4418b79d3463ceb453134a94a">&#9670;&nbsp;</a></span>nearestKSearch()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -508,7 +508,7 @@ template&lt;typename PointT , typename Dist &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>k</em>, </td>
         </tr>
         <tr>
@@ -537,7 +537,7 @@ template&lt;typename PointT , typename Dist &gt; </div>
 </div><div class="memdoc">
 
 <p>Search for k-nearest neighbors for the given query point. </p>
-<dl class="section attention"><dt>Attention</dt><dd>This method does not do any bounds checking for the input index (i.e., index &gt;= cloud.points.size () || index &lt; 0), and assumes valid (i.e., finite) data.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>This method does not do any bounds checking for the input index (i.e., index &gt;= cloud.size () || index &lt; 0), and assumes valid (i.e., finite) data.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>a given <em>valid</em> (i.e., finite) query point </td></tr>
@@ -555,11 +555,11 @@ template&lt;typename PointT , typename Dist &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classpcl_1_1_kd_tree.html#ac81c442ff9c9b1e03c10cb55128e726d">pcl::KdTree&lt; PointT &gt;</a>.</p>
+<p>Implements <a class="el" href="classpcl_1_1_kd_tree.html#ac8ffab954e827438acae304837a9bb3e">pcl::KdTree&lt; PointT &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00134">134</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00132">132</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="features_2test_2data__source_8hpp_source.html#l00128">pcl::gpu::DataSource::findKNNeghbors()</a>, <a class="el" href="statistical__multiscale__interest__region__extraction_8hpp_source.html#l00053">pcl::StatisticalMultiscaleInterestRegionExtraction&lt; PointT &gt;::generateCloudGraph()</a>, <a class="el" href="kdtree_2include_2pcl_2kdtree_2impl_2io_8hpp_source.html#l00067">pcl::getApproximateIndices()</a>, <a class="el" href="voxel__grid__covariance_8h_source.html#l00408">pcl::VoxelGridCovariance&lt; PointTarget &gt;::nearestKSearch()</a>, and <a class="el" href="concave__hull_8hpp_source.html#l00119">pcl::ConcaveHull&lt; PointInT &gt;::performReconstruction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="data__source_8hpp_source.html#l00125">pcl::gpu::DataSource::findKNNeghbors()</a>, <a class="el" href="statistical__multiscale__interest__region__extraction_8hpp_source.html#l00054">pcl::StatisticalMultiscaleInterestRegionExtraction&lt; PointT &gt;::generateCloudGraph()</a>, <a class="el" href="kdtree_2include_2pcl_2kdtree_2impl_2io_8hpp_source.html#l00067">pcl::getApproximateIndices()</a>, <a class="el" href="voxel__grid__covariance_8h_source.html#l00444">pcl::VoxelGridCovariance&lt; PointTarget &gt;::nearestKSearch()</a>, and <a class="el" href="concave__hull_8hpp_source.html#l00119">pcl::ConcaveHull&lt; PointInT &gt;::performReconstruction()</a>.</p>
 
 </div>
 </div>
@@ -597,7 +597,7 @@ template&lt;typename PointT , typename Dist  = ::flann::L2_Simple&lt;float&gt;&g
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00106">106</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8h_source.html#l00103">103</a> of file <a class="el" href="kdtree__flann_8h_source.html">kdtree_flann.h</a>.</p>
 
 </div>
 </div>
@@ -656,7 +656,7 @@ template&lt;typename PointT , typename Dist &gt; </div>
 </div><div class="memdoc">
 
 <p>Search for all the nearest neighbors of the query point in a given radius. </p>
-<dl class="section attention"><dt>Attention</dt><dd>This method does not do any bounds checking for the input index (i.e., index &gt;= cloud.points.size () || index &lt; 0), and assumes valid (i.e., finite) data.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>This method does not do any bounds checking for the input index (i.e., index &gt;= cloud.size () || index &lt; 0), and assumes valid (i.e., finite) data.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>a given <em>valid</em> (i.e., finite) query point </td></tr>
@@ -677,9 +677,9 @@ template&lt;typename PointT , typename Dist &gt; </div>
 
 <p>Implements <a class="el" href="classpcl_1_1_kd_tree.html#a662d9de50237121e142502a8737dfefa">pcl::KdTree&lt; PointT &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00171">171</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00172">172</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="features_2test_2data__source_8hpp_source.html#l00145">pcl::gpu::DataSource::findRadiusNeghbors()</a>, <a class="el" href="voxel__grid__covariance_8h_source.html#l00462">pcl::VoxelGridCovariance&lt; PointTarget &gt;::radiusSearch()</a>, and <a class="el" href="texture__mapping_8hpp_source.html#l00718">pcl::TextureMapping&lt; PointInT &gt;::textureMeshwithMultipleCameras()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="data__source_8hpp_source.html#l00142">pcl::gpu::DataSource::findRadiusNeghbors()</a>, <a class="el" href="voxel__grid__covariance_8h_source.html#l00503">pcl::VoxelGridCovariance&lt; PointTarget &gt;::radiusSearch()</a>, and <a class="el" href="texture__mapping_8hpp_source.html#l00713">pcl::TextureMapping&lt; PointInT &gt;::textureMeshwithMultipleCameras()</a>.</p>
 
 </div>
 </div>
@@ -719,7 +719,7 @@ template&lt;typename PointT , typename Dist &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classpcl_1_1_kd_tree.html#aa150954080bc14f46772871739c3bfff">pcl::KdTree&lt; PointT &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00076">76</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00074">74</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
 
 </div>
 </div>
@@ -770,9 +770,9 @@ template&lt;typename PointT , typename Dist &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classpcl_1_1_kd_tree.html#ac105d90b2b10383adb58e62abe7b1161">pcl::KdTree&lt; PointT &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00094">94</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00092">92</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="voxel__grid__covariance_8h_source.html#l00264">pcl::VoxelGridCovariance&lt; PointTarget &gt;::filter()</a>, <a class="el" href="features_2test_2data__source_8hpp_source.html#l00128">pcl::gpu::DataSource::findKNNeghbors()</a>, <a class="el" href="features_2test_2data__source_8hpp_source.html#l00145">pcl::gpu::DataSource::findRadiusNeghbors()</a>, <a class="el" href="statistical__multiscale__interest__region__extraction_8hpp_source.html#l00053">pcl::StatisticalMultiscaleInterestRegionExtraction&lt; PointT &gt;::generateCloudGraph()</a>, <a class="el" href="kdtree_2include_2pcl_2kdtree_2impl_2io_8hpp_source.html#l00047">pcl::getApproximateIndices()</a>, <a class="el" href="concave__hull_8hpp_source.html#l00119">pcl::ConcaveHull&lt; PointInT &gt;::performReconstruction()</a>, and <a class="el" href="texture__mapping_8hpp_source.html#l00718">pcl::TextureMapping&lt; PointInT &gt;::textureMeshwithMultipleCameras()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="voxel__grid__covariance_8h_source.html#l00263">pcl::VoxelGridCovariance&lt; PointTarget &gt;::filter()</a>, <a class="el" href="data__source_8hpp_source.html#l00125">pcl::gpu::DataSource::findKNNeghbors()</a>, <a class="el" href="data__source_8hpp_source.html#l00142">pcl::gpu::DataSource::findRadiusNeghbors()</a>, <a class="el" href="statistical__multiscale__interest__region__extraction_8hpp_source.html#l00054">pcl::StatisticalMultiscaleInterestRegionExtraction&lt; PointT &gt;::generateCloudGraph()</a>, <a class="el" href="kdtree_2include_2pcl_2kdtree_2impl_2io_8hpp_source.html#l00047">pcl::getApproximateIndices()</a>, <a class="el" href="concave__hull_8hpp_source.html#l00119">pcl::ConcaveHull&lt; PointInT &gt;::performReconstruction()</a>, and <a class="el" href="texture__mapping_8hpp_source.html#l00713">pcl::TextureMapping&lt; PointInT &gt;::textureMeshwithMultipleCameras()</a>.</p>
 
 </div>
 </div>
@@ -794,7 +794,7 @@ template&lt;typename PointT , typename Dist &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00085">85</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kdtree__flann_8hpp_source.html#l00083">83</a> of file <a class="el" href="kdtree__flann_8hpp_source.html">kdtree_flann.hpp</a>.</p>
 
 </div>
 </div>
@@ -808,7 +808,7 @@ template&lt;typename PointT , typename Dist &gt; </div>
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:12:10</p>
+<p>Pages generated on Sun Dec 20 2020 13:20:16</p>
 </div> <!-- #footer -->
 </body>
 </html>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Cluster Recognition and 6DOF Pose Estimation using VFH descriptors &mdash; Point Cloud Library 1.11.0-dev documentation</title>
+  <title>Cluster Recognition and 6DOF Pose Estimation using VFH descriptors &mdash; Point Cloud Library 1.11.1-dev documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                1.11.0-dev
+                1.11.1-dev
               </div>
             
           
@@ -407,7 +407,7 @@ to acquire the data.</p>
 
   <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">fields</span><span class="p">[</span><span class="n">vfh_idx</span><span class="p">].</span><span class="n">count</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
   <span class="p">{</span>
-    <span class="n">vfh</span><span class="p">.</span><span class="n">second</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">point</span><span class="p">.</span><span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">histogram</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">vfh</span><span class="p">.</span><span class="n">second</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">histogram</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
   <span class="p">}</span>
   <span class="n">vfh</span><span class="p">.</span><span class="n">first</span> <span class="o">=</span> <span class="n">path</span><span class="p">.</span><span class="n">string</span> <span class="p">();</span>
   <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span>
@@ -881,7 +881,7 @@ own file here!), and checking the results of the tree.</p>
 
   <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">fields</span><span class="p">[</span><span class="n">vfh_idx</span><span class="p">].</span><span class="n">count</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
   <span class="p">{</span>
-    <span class="n">vfh</span><span class="p">.</span><span class="n">second</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">point</span><span class="p">.</span><span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">histogram</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">vfh</span><span class="p">.</span><span class="n">second</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">histogram</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
   <span class="p">}</span>
   <span class="n">vfh</span><span class="p">.</span><span class="n">first</span> <span class="o">=</span> <span class="n">path</span><span class="p">.</span><span class="n">string</span> <span class="p">();</span>
   <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span>
@@ -916,7 +916,7 @@ own file here!), and checking the results of the tree.</p>
 <span class="kt">bool</span>
 <span class="nf">loadFileList</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vfh_model</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">models</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="n">ifstream</span> <span class="n">fs</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">ifstream</span> <span class="n">fs</span><span class="p">;</span>
   <span class="n">fs</span><span class="p">.</span><span class="n">open</span> <span class="p">(</span><span class="n">filename</span><span class="p">.</span><span class="n">c_str</span> <span class="p">());</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">fs</span><span class="p">.</span><span class="n">is_open</span> <span class="p">()</span> <span class="o">||</span> <span class="n">fs</span><span class="p">.</span><span class="n">fail</span> <span class="p">())</span>
     <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">);</span>
@@ -924,7 +924,7 @@ own file here!), and checking the results of the tree.</p>
   <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">line</span><span class="p">;</span>
   <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">fs</span><span class="p">.</span><span class="n">eof</span> <span class="p">())</span>
   <span class="p">{</span>
-    <span class="n">getline</span> <span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">line</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">getline</span> <span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">line</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">line</span><span class="p">.</span><span class="n">empty</span> <span class="p">())</span>
       <span class="k">continue</span><span class="p">;</span>
     <span class="n">vfh_model</span> <span class="n">m</span><span class="p">;</span>
@@ -1053,11 +1053,11 @@ own file here!), and checking the results of the tree.</p>
     <span class="n">pcl</span><span class="o">::</span><span class="n">PointCloud</span><span class="o">&lt;</span><span class="n">pcl</span><span class="o">::</span><span class="n">PointXYZ</span><span class="o">&gt;</span> <span class="n">cloud_xyz</span><span class="p">;</span>
     <span class="n">pcl</span><span class="o">::</span><span class="n">fromPCLPointCloud2</span> <span class="p">(</span><span class="n">cloud</span><span class="p">,</span> <span class="n">cloud_xyz</span><span class="p">);</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">cloud_xyz</span><span class="p">.</span><span class="n">points</span><span class="p">.</span><span class="n">size</span> <span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">cloud_xyz</span><span class="p">.</span><span class="n">size</span> <span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
       <span class="k">break</span><span class="p">;</span>
 
     <span class="n">pcl</span><span class="o">::</span><span class="n">console</span><span class="o">::</span><span class="n">print_info</span> <span class="p">(</span><span class="s">&quot;[done, &quot;</span><span class="p">);</span> 
-    <span class="n">pcl</span><span class="o">::</span><span class="n">console</span><span class="o">::</span><span class="n">print_value</span> <span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">cloud_xyz</span><span class="p">.</span><span class="n">points</span><span class="p">.</span><span class="n">size</span> <span class="p">());</span> 
+    <span class="n">pcl</span><span class="o">::</span><span class="n">console</span><span class="o">::</span><span class="n">print_value</span> <span class="p">(</span><span class="s">&quot;%zu&quot;</span><span class="p">,</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cloud_xyz</span><span class="p">.</span><span class="n">size</span> <span class="p">()));</span>
     <span class="n">pcl</span><span class="o">::</span><span class="n">console</span><span class="o">::</span><span class="n">print_info</span> <span class="p">(</span><span class="s">&quot; points]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="n">pcl</span><span class="o">::</span><span class="n">console</span><span class="o">::</span><span class="n">print_info</span> <span class="p">(</span><span class="s">&quot;Available dimensions: &quot;</span><span class="p">);</span> 
     <span class="n">pcl</span><span class="o">::</span><span class="n">console</span><span class="o">::</span><span class="n">print_value</span> <span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">pcl</span><span class="o">::</span><span class="n">getFieldsList</span> <span class="p">(</span><span class="n">cloud</span><span class="p">).</span><span class="n">c_str</span> <span class="p">());</span>

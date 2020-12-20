@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -152,7 +152,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a101a408eddee97434c8d5cebfc3c099a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimate a rigid rotation transformation between a source and a target.  <a href="classpcl_1_1registration_1_1_transformation_estimation_s_v_d.html#a101a408eddee97434c8d5cebfc3c099a">More...</a><br /></td></tr>
 <tr class="separator:a101a408eddee97434c8d5cebfc3c099a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95dd96b2e6cce3a1add3ce7648434134"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1registration_1_1_transformation_estimation_s_v_d.html#a95dd96b2e6cce3a1add3ce7648434134">getTransformationFromCorrelation</a> (const Eigen::Matrix&lt; Scalar, Eigen::Dynamic, Eigen::Dynamic &gt; &amp;cloud_src_demean, const Eigen::Matrix&lt; Scalar, 4, 1 &gt; &amp;centroid_src, const Eigen::Matrix&lt; Scalar, Eigen::Dynamic, Eigen::Dynamic &gt; &amp;cloud_tgt_demean, const Eigen::Matrix&lt; Scalar, 4, 1 &gt; &amp;centroid_tgt, <a class="el" href="classpcl_1_1registration_1_1_transformation_estimation_s_v_d.html#a15770ff72a379e2567d53d9c3a2f1598">Matrix4</a> &amp;transformation_matrix) const</td></tr>
-<tr class="memdesc:a95dd96b2e6cce3a1add3ce7648434134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a 4x4 rigid transformation matrix from a correlation matrix H = src * tgt'.  <a href="classpcl_1_1registration_1_1_transformation_estimation_s_v_d.html#a95dd96b2e6cce3a1add3ce7648434134">More...</a><br /></td></tr>
+<tr class="memdesc:a95dd96b2e6cce3a1add3ce7648434134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a 4x4 rigid transformation matrix from a correlation matrix H = src.  <a href="classpcl_1_1registration_1_1_transformation_estimation_s_v_d.html#a95dd96b2e6cce3a1add3ce7648434134">More...</a><br /></td></tr>
 <tr class="separator:a95dd96b2e6cce3a1add3ce7648434134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -168,7 +168,7 @@ class pcl::registration::TransformationEstimationSVD&lt; PointSource, PointTarge
 <dl class="section note"><dt>Note</dt><dd>The class is templated on the source and target point types as well as on the output scalar of the transformation matrix (i.e., float or double). Default: float. </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Dirk Holz, Radu B. Rusu </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00058">58</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00057">57</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ae582d2eb9e7d9ed63527702c5742b7bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae582d2eb9e7d9ed63527702c5742b7bb">&#9670;&nbsp;</a></span>ConstPtr</h2>
@@ -202,7 +202,7 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar  = flo
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00064">64</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00065">65</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
 
 </div>
 </div>
@@ -220,7 +220,7 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar  = flo
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00061">61</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00060">60</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
 
 </div>
 </div>
@@ -259,7 +259,7 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar  = flo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00068">68</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00069">69</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +288,7 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar  = flo
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00072">72</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00071">71</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
 
 </div>
 </div>
@@ -346,15 +346,13 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar &gt; <
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cloud_src</td><td>the source point cloud dataset </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cloud_tgt</td><td>the target point cloud dataset </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">correspondences</td><td>the vector of correspondences between source and target point cloud </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">correspondences</td><td>the vector of correspondences between source and target point cloud</td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">transformation_matrix</td><td>the resultant transformation matrix </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00112">112</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00112">pcl::registration::TransformationEstimationSVD&lt; PointT, PointT, Scalar &gt;::estimateRigidTransformation()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00117">117</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
 
 </div>
 </div>
@@ -410,7 +408,7 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00054">54</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00053">53</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
 
 </div>
 </div>
@@ -472,15 +470,13 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar &gt; <
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cloud_src</td><td>the source point cloud dataset </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">indices_src</td><td>the vector of indices describing the points of interest in <em>cloud_src</em> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cloud_tgt</td><td>the target point cloud dataset </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">indices_tgt</td><td>the vector of indices describing the correspondences of the interest points from <em>indices_src</em> </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">transformation_matrix</td><td>the resultant transformation matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indices_src</td><td>the vector of indices describing the points of interest in <em>cloud_src@param</em>  cloud_tgt the target point cloud dataset</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indices_tgt</td><td>the vector of indices describing the correspondences of the interest points from <em>indices_src@param</em>  transformation_matrix the resultant transformation matrix </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00092">92</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00095">95</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
 
 </div>
 </div>
@@ -536,14 +532,13 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar &gt; <
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cloud_src</td><td>the source point cloud dataset </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">indices_src</td><td>the vector of indices describing the points of interest in <em>cloud_src</em> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cloud_tgt</td><td>the target point cloud dataset </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indices_src</td><td>the vector of indices describing the points of interest in <em>cloud_src@param</em>  cloud_tgt the target point cloud dataset</td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">transformation_matrix</td><td>the resultant transformation matrix </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00073">73</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00074">74</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
 
 </div>
 </div>
@@ -599,7 +594,7 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00125">125</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00130">130</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
 
 </div>
 </div>
@@ -657,10 +652,11 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar &gt; <
 </table>
 </div><div class="memdoc">
 
-<p>Obtain a 4x4 rigid transformation matrix from a correlation matrix H = src * tgt'. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Obtain a 4x4 rigid transformation matrix from a correlation matrix H = src. </p>
+<ul>
+<li>tgt'<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">cloud_src_demean</td><td>the input source cloud, demeaned, in <a class="el" href="namespace_eigen.html">Eigen</a> format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cloud_src_demean</td><td>the input source cloud, demeaned, in <a class="el" href="namespace_eigen.html">Eigen</a> format</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">centroid_src</td><td>the input source centroid, in <a class="el" href="namespace_eigen.html">Eigen</a> format </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cloud_tgt_demean</td><td>the input target cloud, demeaned, in <a class="el" href="namespace_eigen.html">Eigen</a> format </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">centroid_tgt</td><td>the input target cloud, in <a class="el" href="namespace_eigen.html">Eigen</a> format </td></tr>
@@ -668,8 +664,10 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar &gt; <
   </table>
   </dd>
 </dl>
+</li>
+</ul>
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00179">179</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8hpp_source.html#l00186">186</a> of file <a class="el" href="transformation__estimation__svd_8hpp_source.html">transformation_estimation_svd.hpp</a>.</p>
 
 </div>
 </div>
@@ -696,7 +694,7 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar  = flo
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00153">153</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transformation__estimation__svd_8h_source.html#l00148">148</a> of file <a class="el" href="transformation__estimation__svd_8h_source.html">transformation_estimation_svd.h</a>.</p>
 
 </div>
 </div>
@@ -710,7 +708,7 @@ template&lt;typename PointSource , typename PointTarget , typename Scalar  = flo
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:14:32</p>
+<p>Pages generated on Sun Dec 20 2020 13:23:00</p>
 </div> <!-- #footer -->
 </body>
 </html>

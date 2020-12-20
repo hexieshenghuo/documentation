@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Writing a new PCL class &mdash; Point Cloud Library 1.11.0-dev documentation</title>
+  <title>Writing a new PCL class &mdash; Point Cloud Library 1.11.1-dev documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                1.11.0-dev
+                1.11.1-dev
               </div>
             
           
@@ -377,17 +377,17 @@ and save the results to disk.</p>
      <span class="p">{</span>
        <span class="kt">float</span> <span class="n">id</span> <span class="o">=</span> <span class="n">k_indices</span><span class="p">.</span><span class="n">at</span> <span class="p">(</span><span class="n">n_id</span><span class="p">);</span>
        <span class="kt">float</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">sqrt</span> <span class="p">(</span><span class="n">k_distances</span><span class="p">.</span><span class="n">at</span> <span class="p">(</span><span class="n">n_id</span><span class="p">));</span>
-       <span class="kt">float</span> <span class="n">intensity_dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">abs</span> <span class="p">(</span><span class="n">cloud</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">point_id</span><span class="p">].</span><span class="n">intensity</span> <span class="o">-</span> <span class="n">cloud</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">);</span>
+       <span class="kt">float</span> <span class="n">intensity_dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">abs</span> <span class="p">((</span><span class="o">*</span><span class="n">cloud</span><span class="p">)[</span><span class="n">point_id</span><span class="p">].</span><span class="n">intensity</span> <span class="o">-</span> <span class="p">(</span><span class="o">*</span><span class="n">cloud</span><span class="p">)[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">);</span>
 
        <span class="kt">float</span> <span class="n">w_a</span> <span class="o">=</span> <span class="n">G</span> <span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">sigma_s</span><span class="p">);</span>
        <span class="kt">float</span> <span class="n">w_b</span> <span class="o">=</span> <span class="n">G</span> <span class="p">(</span><span class="n">intensity_dist</span><span class="p">,</span> <span class="n">sigma_r</span><span class="p">);</span>
        <span class="kt">float</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">w_a</span> <span class="o">*</span> <span class="n">w_b</span><span class="p">;</span>
 
-       <span class="n">BF</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="n">cloud</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">;</span>
+       <span class="n">BF</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="p">(</span><span class="o">*</span><span class="n">cloud</span><span class="p">)[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">;</span>
        <span class="n">W</span> <span class="o">+=</span> <span class="n">weight</span><span class="p">;</span>
      <span class="p">}</span>
 
-     <span class="n">outcloud</span><span class="p">.</span><span class="n">points</span><span class="p">[</span><span class="n">point_id</span><span class="p">].</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">BF</span> <span class="o">/</span> <span class="n">W</span><span class="p">;</span>
+     <span class="n">outcloud</span><span class="p">[</span><span class="n">point_id</span><span class="p">].</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">BF</span> <span class="o">/</span> <span class="n">W</span><span class="p">;</span>
    <span class="p">}</span>
 
    <span class="c1">// Save filtered output</span>
@@ -606,7 +606,7 @@ also painful. Therefore, we are going to use a special macro called
 defined in the <em>point_types.h</em> file (see
 <a href="#id4"><span class="problematic" id="id5">:pcl:`PCL_XYZ_POINT_TYPES&lt;PCL_XYZ_POINT_TYPES&gt;`</span></a> for more information).</p>
 <p>By looking closer at the code presented in <a class="reference internal" href="#bilateral-filter-example"><span class="std std-ref">Example: a bilateral filter</span></a>, we
-notice constructs such as <cite>cloud-&gt;points[point_id].intensity</cite>. This indicates
+notice constructs such as <cite>(*cloud)[point_id].intensity</cite>. This indicates
 that our filter expects the presence of an <strong>intensity</strong> field in the point
 type. Because of this, using <strong>PCL_XYZ_POINT_TYPES</strong> won’t work, as not all the
 types defined there have intensity data present. In fact, it’s easy to notice
@@ -1059,11 +1059,11 @@ header file becomes:</p>
    <span class="p">{</span>
      <span class="kt">double</span> <span class="n">id</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">n_id</span><span class="p">];</span>
      <span class="kt">double</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">sqrt</span> <span class="p">(</span><span class="n">distances</span><span class="p">[</span><span class="n">n_id</span><span class="p">]);</span>
-     <span class="kt">double</span> <span class="n">intensity_dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">abs</span> <span class="p">(</span><span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">pid</span><span class="p">].</span><span class="n">intensity</span> <span class="o">-</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">);</span>
+     <span class="kt">double</span> <span class="n">intensity_dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">abs</span> <span class="p">((</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">pid</span><span class="p">].</span><span class="n">intensity</span> <span class="o">-</span> <span class="p">(</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">);</span>
 
      <span class="kt">double</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">kernel</span> <span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">sigma_s_</span><span class="p">)</span> <span class="o">*</span> <span class="n">kernel</span> <span class="p">(</span><span class="n">intensity_dist</span><span class="p">,</span> <span class="n">sigma_r_</span><span class="p">);</span>
 
-     <span class="n">BF</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">;</span>
+     <span class="n">BF</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="p">(</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">;</span>
      <span class="n">W</span> <span class="o">+=</span> <span class="n">weight</span><span class="p">;</span>
    <span class="p">}</span>
    <span class="k">return</span> <span class="p">(</span><span class="n">BF</span> <span class="o">/</span> <span class="n">W</span><span class="p">);</span>
@@ -1079,11 +1079,11 @@ header file becomes:</p>
 
    <span class="n">output</span> <span class="o">=</span> <span class="o">*</span><span class="n">input_</span><span class="p">;</span>
 
-   <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">point_id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">point_id</span> <span class="o">&lt;</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">.</span><span class="n">size</span> <span class="p">();</span> <span class="o">++</span><span class="n">point_id</span><span class="p">)</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">point_id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">point_id</span> <span class="o">&lt;</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">size</span> <span class="p">();</span> <span class="o">++</span><span class="n">point_id</span><span class="p">)</span>
    <span class="p">{</span>
      <span class="n">tree_</span><span class="o">-&gt;</span><span class="n">radiusSearch</span> <span class="p">(</span><span class="n">point_id</span><span class="p">,</span> <span class="n">sigma_s_</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
 
-     <span class="n">output</span><span class="p">.</span><span class="n">points</span><span class="p">[</span><span class="n">point_id</span><span class="p">].</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">computePointWeight</span> <span class="p">(</span><span class="n">point_id</span><span class="p">,</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
+     <span class="n">output</span><span class="p">[</span><span class="n">point_id</span><span class="p">].</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">computePointWeight</span> <span class="p">(</span><span class="n">point_id</span><span class="p">,</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
    <span class="p">}</span>
 
  <span class="p">}</span>
@@ -1263,11 +1263,11 @@ provide a default option for the user. The best default options are:</p>
    <span class="p">{</span>
      <span class="kt">double</span> <span class="n">id</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">n_id</span><span class="p">];</span>
      <span class="kt">double</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">sqrt</span> <span class="p">(</span><span class="n">distances</span><span class="p">[</span><span class="n">n_id</span><span class="p">]);</span>
-     <span class="kt">double</span> <span class="n">intensity_dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">abs</span> <span class="p">(</span><span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">pid</span><span class="p">].</span><span class="n">intensity</span> <span class="o">-</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">);</span>
+     <span class="kt">double</span> <span class="n">intensity_dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">abs</span> <span class="p">((</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">pid</span><span class="p">].</span><span class="n">intensity</span> <span class="o">-</span> <span class="p">(</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">);</span>
 
      <span class="kt">double</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">kernel</span> <span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">sigma_s_</span><span class="p">)</span> <span class="o">*</span> <span class="n">kernel</span> <span class="p">(</span><span class="n">intensity_dist</span><span class="p">,</span> <span class="n">sigma_r_</span><span class="p">);</span>
 
-     <span class="n">BF</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">;</span>
+     <span class="n">BF</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="p">(</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">;</span>
      <span class="n">W</span> <span class="o">+=</span> <span class="n">weight</span><span class="p">;</span>
    <span class="p">}</span>
    <span class="k">return</span> <span class="p">(</span><span class="n">BF</span> <span class="o">/</span> <span class="n">W</span><span class="p">);</span>
@@ -1295,11 +1295,11 @@ provide a default option for the user. The best default options are:</p>
 
    <span class="n">output</span> <span class="o">=</span> <span class="o">*</span><span class="n">input_</span><span class="p">;</span>
 
-   <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">point_id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">point_id</span> <span class="o">&lt;</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">.</span><span class="n">size</span> <span class="p">();</span> <span class="o">++</span><span class="n">point_id</span><span class="p">)</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">point_id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">point_id</span> <span class="o">&lt;</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">size</span> <span class="p">();</span> <span class="o">++</span><span class="n">point_id</span><span class="p">)</span>
    <span class="p">{</span>
      <span class="n">tree_</span><span class="o">-&gt;</span><span class="n">radiusSearch</span> <span class="p">(</span><span class="n">point_id</span><span class="p">,</span> <span class="n">sigma_s_</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
 
-     <span class="n">output</span><span class="p">.</span><span class="n">points</span><span class="p">[</span><span class="n">point_id</span><span class="p">].</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">computePointWeight</span> <span class="p">(</span><span class="n">point_id</span><span class="p">,</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
+     <span class="n">output</span><span class="p">[</span><span class="n">point_id</span><span class="p">].</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">computePointWeight</span> <span class="p">(</span><span class="n">point_id</span><span class="p">,</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
    <span class="p">}</span>
  <span class="p">}</span>
 
@@ -1450,11 +1450,11 @@ indices, only those will be used, and if not, the entire cloud will be used.</p>
    <span class="p">{</span>
      <span class="kt">double</span> <span class="n">id</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">n_id</span><span class="p">];</span>
      <span class="kt">double</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">sqrt</span> <span class="p">(</span><span class="n">distances</span><span class="p">[</span><span class="n">n_id</span><span class="p">]);</span>
-     <span class="kt">double</span> <span class="n">intensity_dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">abs</span> <span class="p">(</span><span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">pid</span><span class="p">].</span><span class="n">intensity</span> <span class="o">-</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">);</span>
+     <span class="kt">double</span> <span class="n">intensity_dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">abs</span> <span class="p">((</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">pid</span><span class="p">].</span><span class="n">intensity</span> <span class="o">-</span> <span class="p">(</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">);</span>
 
      <span class="kt">double</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">kernel</span> <span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">sigma_s_</span><span class="p">)</span> <span class="o">*</span> <span class="n">kernel</span> <span class="p">(</span><span class="n">intensity_dist</span><span class="p">,</span> <span class="n">sigma_r_</span><span class="p">);</span>
 
-     <span class="n">BF</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">;</span>
+     <span class="n">BF</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="p">(</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">;</span>
      <span class="n">W</span> <span class="o">+=</span> <span class="n">weight</span><span class="p">;</span>
    <span class="p">}</span>
    <span class="k">return</span> <span class="p">(</span><span class="n">BF</span> <span class="o">/</span> <span class="n">W</span><span class="p">);</span>
@@ -1486,7 +1486,7 @@ indices, only those will be used, and if not, the entire cloud will be used.</p>
    <span class="p">{</span>
      <span class="n">tree_</span><span class="o">-&gt;</span><span class="n">radiusSearch</span> <span class="p">((</span><span class="o">*</span><span class="n">indices_</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span> <span class="n">sigma_s_</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
 
-     <span class="n">output</span><span class="p">.</span><span class="n">points</span><span class="p">[(</span><span class="o">*</span><span class="n">indices_</span><span class="p">)[</span><span class="n">i</span><span class="p">]].</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">computePointWeight</span> <span class="p">((</span><span class="o">*</span><span class="n">indices_</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
+     <span class="n">output</span><span class="p">[(</span><span class="o">*</span><span class="n">indices_</span><span class="p">)[</span><span class="n">i</span><span class="p">]].</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">computePointWeight</span> <span class="p">((</span><span class="o">*</span><span class="n">indices_</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
    <span class="p">}</span>
  <span class="p">}</span>
 
@@ -2086,14 +2086,14 @@ class look like:</p>
    <span class="p">{</span>
      <span class="kt">double</span> <span class="n">id</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">n_id</span><span class="p">];</span>
      <span class="c1">// Compute the difference in intensity</span>
-     <span class="kt">double</span> <span class="n">intensity_dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">abs</span> <span class="p">(</span><span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">pid</span><span class="p">].</span><span class="n">intensity</span> <span class="o">-</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">);</span>
+     <span class="kt">double</span> <span class="n">intensity_dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">abs</span> <span class="p">((</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">pid</span><span class="p">].</span><span class="n">intensity</span> <span class="o">-</span> <span class="p">(</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">);</span>
 
      <span class="c1">// Compute the Gaussian intensity weights both in Euclidean and in intensity space</span>
      <span class="kt">double</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">sqrt</span> <span class="p">(</span><span class="n">distances</span><span class="p">[</span><span class="n">n_id</span><span class="p">]);</span>
      <span class="kt">double</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">kernel</span> <span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">sigma_s_</span><span class="p">)</span> <span class="o">*</span> <span class="n">kernel</span> <span class="p">(</span><span class="n">intensity_dist</span><span class="p">,</span> <span class="n">sigma_r_</span><span class="p">);</span>
 
      <span class="c1">// Calculate the bilateral filter response</span>
-     <span class="n">BF</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="n">input_</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">;</span>
+     <span class="n">BF</span> <span class="o">+=</span> <span class="n">weight</span> <span class="o">*</span> <span class="p">(</span><span class="o">*</span><span class="n">input_</span><span class="p">)[</span><span class="n">id</span><span class="p">].</span><span class="n">intensity</span><span class="p">;</span>
      <span class="n">W</span> <span class="o">+=</span> <span class="n">weight</span><span class="p">;</span>
    <span class="p">}</span>
    <span class="k">return</span> <span class="p">(</span><span class="n">BF</span> <span class="o">/</span> <span class="n">W</span><span class="p">);</span>
@@ -2134,7 +2134,7 @@ class look like:</p>
      <span class="n">tree_</span><span class="o">-&gt;</span><span class="n">radiusSearch</span> <span class="p">((</span><span class="o">*</span><span class="n">indices_</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span> <span class="n">sigma_s_</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
 
      <span class="c1">// Overwrite the intensity value with the computed average</span>
-     <span class="n">output</span><span class="p">.</span><span class="n">points</span><span class="p">[(</span><span class="o">*</span><span class="n">indices_</span><span class="p">)[</span><span class="n">i</span><span class="p">]].</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">computePointWeight</span> <span class="p">((</span><span class="o">*</span><span class="n">indices_</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
+     <span class="n">output</span><span class="p">[(</span><span class="o">*</span><span class="n">indices_</span><span class="p">)[</span><span class="n">i</span><span class="p">]].</span><span class="n">intensity</span> <span class="o">=</span> <span class="n">computePointWeight</span> <span class="p">((</span><span class="o">*</span><span class="n">indices_</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span> <span class="n">k_indices</span><span class="p">,</span> <span class="n">k_distances</span><span class="p">);</span>
    <span class="p">}</span>
  <span class="p">}</span>
 

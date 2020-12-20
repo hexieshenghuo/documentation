@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>How 3D Features work in PCL &mdash; Point Cloud Library 1.11.0-dev documentation</title>
+  <title>How 3D Features work in PCL &mdash; Point Cloud Library 1.11.1-dev documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                1.11.0-dev
+                1.11.1-dev
               </div>
             
           
@@ -282,7 +282,7 @@ the <cite>pcl::Feature</cite> class accepts input data in two different ways:</p
   <span class="c1">// Compute the features</span>
   <span class="n">ne</span><span class="p">.</span><span class="n">compute</span> <span class="p">(</span><span class="o">*</span><span class="n">cloud_normals</span><span class="p">);</span>
 
-  <span class="c1">// cloud_normals-&gt;points.size () should have the same size as the input cloud-&gt;points.size ()</span>
+  <span class="c1">// cloud_normals-&gt;size () should have the same size as the input cloud-&gt;size ()</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
@@ -331,7 +331,7 @@ the <cite>pcl::Feature</cite> class accepts input data in two different ways:</p
   <span class="p">...</span> <span class="n">read</span><span class="p">,</span> <span class="n">pass</span> <span class="n">in</span> <span class="n">or</span> <span class="n">create</span> <span class="n">a</span> <span class="n">point</span> <span class="n">cloud</span> <span class="p">...</span>
 
   <span class="c1">// Create a set of indices to be used. For simplicity, we&#39;re going to be using the first 10% of the points in cloud</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">indices</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">floor</span> <span class="p">(</span><span class="n">cloud</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">.</span><span class="n">size</span> <span class="p">()</span> <span class="o">/</span> <span class="mi">10</span><span class="p">));</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">indices</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">floor</span> <span class="p">(</span><span class="n">cloud</span><span class="o">-&gt;</span><span class="n">size</span> <span class="p">()</span> <span class="o">/</span> <span class="mi">10</span><span class="p">));</span>
   <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">indices</span><span class="p">.</span><span class="n">size</span> <span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">indices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
 
   <span class="c1">// Create the normal estimation class, and pass the input dataset to it</span>
@@ -356,7 +356,7 @@ the <cite>pcl::Feature</cite> class accepts input data in two different ways:</p
   <span class="c1">// Compute the features</span>
   <span class="n">ne</span><span class="p">.</span><span class="n">compute</span> <span class="p">(</span><span class="o">*</span><span class="n">cloud_normals</span><span class="p">);</span>
 
-  <span class="c1">// cloud_normals-&gt;points.size () should have the same size as the input indicesptr-&gt;size ()</span>
+  <span class="c1">// cloud_normals-&gt;size () should have the same size as the input indicesptr-&gt;size ()</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
@@ -426,7 +426,7 @@ the <cite>pcl::Feature</cite> class accepts input data in two different ways:</p
   <span class="c1">// Compute the features</span>
   <span class="n">ne</span><span class="p">.</span><span class="n">compute</span> <span class="p">(</span><span class="o">*</span><span class="n">cloud_normals</span><span class="p">);</span>
 
-  <span class="c1">// cloud_normals-&gt;points.size () should have the same size as the input cloud_downsampled-&gt;points.size ()</span>
+  <span class="c1">// cloud_normals-&gt;size () should have the same size as the input cloud_downsampled-&gt;size ()</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>

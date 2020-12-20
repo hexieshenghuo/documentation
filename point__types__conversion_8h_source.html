@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -153,7 +153,7 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespacepcl.html#adb0c42f809f6b1a1a74460b4e7e29284">   81</a></span>&#160;  <a class="code" href="namespacepcl.html#ab8711ab975e8f5ee58602540bab56c63">PointRGBtoI</a> (<span class="keyword">const</span> <a class="code" href="structpcl_1_1_r_g_b.html">RGB</a>&amp;    in,</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;               <a class="code" href="structpcl_1_1_intensity8u.html">Intensity8u</a>&amp;  out)</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    out.intensity = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span>(0.299f * <span class="keyword">static_cast &lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span> (in.r)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    out.intensity = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(0.299f * <span class="keyword">static_cast &lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span> (in.r)</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                      + 0.587f * <span class="keyword">static_cast &lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span> (in.g) + 0.114f * <span class="keyword">static_cast &lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span> (in.b));</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"></span> </div>
@@ -165,7 +165,7 @@ $(function() {
 <div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="namespacepcl.html#a3428719f9ea8012a746c56929fd3d331">   93</a></span>&#160;  <a class="code" href="namespacepcl.html#ab8711ab975e8f5ee58602540bab56c63">PointRGBtoI</a> (<span class="keyword">const</span> <a class="code" href="structpcl_1_1_r_g_b.html">RGB</a>&amp;    in,</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;               <a class="code" href="structpcl_1_1_intensity32u.html">Intensity32u</a>&amp; out)</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    out.intensity = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#a7c55bf09e463d214a43d2bd7ceab7753">std::uint32_t</a><span class="keyword">&gt;</span>(0.299f * <span class="keyword">static_cast &lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span> (in.r)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    out.intensity = <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(0.299f * <span class="keyword">static_cast &lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span> (in.r)</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                      + 0.587f * <span class="keyword">static_cast &lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span> (in.g) + 0.114f * <span class="keyword">static_cast &lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span> (in.b));</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"></span> </div>
@@ -255,7 +255,7 @@ $(function() {
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    out.x = in.x; out.y = in.y; out.z = in.z;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">if</span> (in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#af55e8a49c98bfe322979f17059cfdb0b">s</a> == 0)</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      out.r = out.g = out.b = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      out.r = out.g = out.b = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>);</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    } </div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">float</span> a = in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a63c6164957e093bfde942676f7f28f43">h</a> / 60;</div>
@@ -269,44 +269,44 @@ $(function() {
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    {</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="keywordflow">case</span> 0:</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * t);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * p);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * t);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * p);</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      }</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="keywordflow">case</span> 1:</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * q); </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>); </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * p); </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * q); </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>); </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * p); </div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      }</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      <span class="keywordflow">case</span> 2:</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * p);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * t);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * p);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * t);</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      }</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordflow">case</span> 3:</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      {</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * p);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * q);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * p);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * q);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>);</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      }</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="keywordflow">case</span> 4:</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      {</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * t);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * p); </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>); </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * t);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * p); </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>); </div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      }</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>); </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * p); </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">std::uint8_t</a><span class="keyword">&gt;</span> (255 * q);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        out.r = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * in.<a class="code" href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">v</a>); </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        out.g = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * p); </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        out.b = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span> (255 * q);</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      }      </div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
@@ -326,7 +326,7 @@ $(function() {
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    {</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      <a class="code" href="structpcl_1_1_intensity.html">Intensity</a> p;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <a class="code" href="namespacepcl.html#ab8711ab975e8f5ee58602540bab56c63">PointRGBtoI</a> (point, p);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>.push_back (p);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#a0b4d7abee110e47d90635eb042488bb4">push_back</a> (p);</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  }</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment"></span> </div>
@@ -344,7 +344,7 @@ $(function() {
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    {</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      <a class="code" href="structpcl_1_1_intensity8u.html">Intensity8u</a> p;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      <a class="code" href="namespacepcl.html#ab8711ab975e8f5ee58602540bab56c63">PointRGBtoI</a> (point, p);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>.push_back (p);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#a0b4d7abee110e47d90635eb042488bb4">push_back</a> (p);</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    }</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  }</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment"></span> </div>
@@ -362,7 +362,7 @@ $(function() {
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    {</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <a class="code" href="structpcl_1_1_intensity32u.html">Intensity32u</a> p;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      <a class="code" href="namespacepcl.html#ab8711ab975e8f5ee58602540bab56c63">PointRGBtoI</a> (point, p);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>.push_back (p);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#a0b4d7abee110e47d90635eb042488bb4">push_back</a> (p);</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  }</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment"></span> </div>
@@ -380,7 +380,7 @@ $(function() {
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    {</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      <a class="code" href="structpcl_1_1_point_x_y_z_h_s_v.html">PointXYZHSV</a> p;</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      <a class="code" href="namespacepcl.html#a535c726cf92e7201f369715f9eef5902">PointXYZRGBtoXYZHSV</a> (point, p);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>.push_back (p);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#a0b4d7abee110e47d90635eb042488bb4">push_back</a> (p);</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    }</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  }</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment"></span> </div>
@@ -398,7 +398,7 @@ $(function() {
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    {</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <a class="code" href="structpcl_1_1_point_x_y_z_h_s_v.html">PointXYZHSV</a> p;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <a class="code" href="namespacepcl.html#a73954cca0b970cb4aae7db33a568998a">PointXYZRGBAtoXYZHSV</a> (point, p);</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>.push_back (p);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#a0b4d7abee110e47d90635eb042488bb4">push_back</a> (p);</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    }</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  }</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment"></span> </div>
@@ -416,7 +416,7 @@ $(function() {
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    {</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      <a class="code" href="structpcl_1_1_point_x_y_z_i.html">PointXYZI</a> p;</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      <a class="code" href="namespacepcl.html#ae7d33a86f7112fc2695d5644a299e6bd">PointXYZRGBtoXYZI</a> (point, p);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>.push_back (p);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      out.<a class="code" href="classpcl_1_1_point_cloud.html#a0b4d7abee110e47d90635eb042488bb4">push_back</a> (p);</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    }</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  }</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment"></span> </div>
@@ -458,7 +458,7 @@ $(function() {
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        pt.g = image.<a class="code" href="classpcl_1_1_point_cloud.html#a1155fe4ba5cdc7e83cb72159a4ea02dc">at</a> (u, v).g;</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        pt.b = image.<a class="code" href="classpcl_1_1_point_cloud.html#a1155fe4ba5cdc7e83cb72159a4ea02dc">at</a> (u, v).b;</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        out.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>.push_back (pt);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        out.<a class="code" href="classpcl_1_1_point_cloud.html#a0b4d7abee110e47d90635eb042488bb4">push_back</a> (pt);</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      }</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    out.<a class="code" href="classpcl_1_1_point_cloud.html#a644dc7161c2e3f23bc4d36d36c58e7b4">width</a> = width_;</div>
@@ -470,10 +470,9 @@ $(function() {
 <div class="ttc" id="anamespacepcl_html"><div class="ttname"><a href="namespacepcl.html">pcl</a></div><div class="ttdef"><b>Definition:</b> <a href="2d_2include_2pcl_22d_2convolution_8h_source.html#l00046">convolution.h:46</a></div></div>
 <div class="ttc" id="acommon_2include_2pcl_2point__types_8h_html"><div class="ttname"><a href="common_2include_2pcl_2point__types_8h.html">point_types.h</a></div></div>
 <div class="ttc" id="anamespacepcl_html_ae7d33a86f7112fc2695d5644a299e6bd"><div class="ttname"><a href="namespacepcl.html#ae7d33a86f7112fc2695d5644a299e6bd">pcl::PointXYZRGBtoXYZI</a></div><div class="ttdeci">void PointXYZRGBtoXYZI(const PointXYZRGB &amp;in, PointXYZI &amp;out)</div><div class="ttdoc">Convert a XYZRGB point type to a XYZI.</div><div class="ttdef"><b>Definition:</b> <a href="point__types__conversion_8h_source.html#l00058">point_types_conversion.h:58</a></div></div>
-<div class="ttc" id="anamespacepcl_html_a7c55bf09e463d214a43d2bd7ceab7753"><div class="ttname"><a href="namespacepcl.html#a7c55bf09e463d214a43d2bd7ceab7753">pcl::uint32_t</a></div><div class="ttdeci">std::uint32_t uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00058">types.h:58</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html_a917b6eb0ef204836c56a2334ddd703fe"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#a917b6eb0ef204836c56a2334ddd703fe">pcl::PointCloud::height</a></div><div class="ttdeci">std::uint32_t height</div><div class="ttdoc">The point cloud height (if organized as an image-structure).</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00416">point_cloud.h:416</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html_a917b6eb0ef204836c56a2334ddd703fe"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#a917b6eb0ef204836c56a2334ddd703fe">pcl::PointCloud::height</a></div><div class="ttdeci">std::uint32_t height</div><div class="ttdoc">The point cloud height (if organized as an image-structure).</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00393">point_cloud.h:393</a></div></div>
 <div class="ttc" id="anamespacepcl_html_af55e56a236bab4680054f866be7396c2"><div class="ttname"><a href="namespacepcl.html#af55e56a236bab4680054f866be7396c2">pcl::PointCloudXYZRGBtoXYZI</a></div><div class="ttdeci">void PointCloudXYZRGBtoXYZI(const PointCloud&lt; PointXYZRGB &gt; &amp;in, PointCloud&lt; PointXYZI &gt; &amp;out)</div><div class="ttdoc">Convert a XYZRGB point cloud to a XYZI.</div><div class="ttdef"><b>Definition:</b> <a href="point__types__conversion_8h_source.html#l00338">point_types_conversion.h:338</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html_af16a62638198313b9c093127c492c884"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">pcl::PointCloud::points</a></div><div class="ttdeci">std::vector&lt; PointT, Eigen::aligned_allocator&lt; PointT &gt; &gt; points</div><div class="ttdoc">The point data.</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00411">point_cloud.h:411</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html_af16a62638198313b9c093127c492c884"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">pcl::PointCloud::points</a></div><div class="ttdeci">std::vector&lt; PointT, Eigen::aligned_allocator&lt; PointT &gt; &gt; points</div><div class="ttdoc">The point data.</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00388">point_cloud.h:388</a></div></div>
 <div class="ttc" id="anamespacepcl_html_a4c3f94312acc1926da5f1ab7174e9b79"><div class="ttname"><a href="namespacepcl.html#a4c3f94312acc1926da5f1ab7174e9b79">pcl::PointCloudXYZRGBAtoXYZHSV</a></div><div class="ttdeci">void PointCloudXYZRGBAtoXYZHSV(const PointCloud&lt; PointXYZRGBA &gt; &amp;in, PointCloud&lt; PointXYZHSV &gt; &amp;out)</div><div class="ttdoc">Convert a XYZRGB point cloud to a XYZHSV.</div><div class="ttdef"><b>Definition:</b> <a href="point__types__conversion_8h_source.html#l00320">point_types_conversion.h:320</a></div></div>
 <div class="ttc" id="anamespacepcl_html_abbe8ed3ea926b449a3936b3d2eba3693"><div class="ttname"><a href="namespacepcl.html#abbe8ed3ea926b449a3936b3d2eba3693">pcl::PointCloudDepthAndRGBtoXYZRGBA</a></div><div class="ttdeci">void PointCloudDepthAndRGBtoXYZRGBA(const PointCloud&lt; Intensity &gt; &amp;depth, const PointCloud&lt; RGB &gt; &amp;image, const float &amp;focal, PointCloud&lt; PointXYZRGBA &gt; &amp;out)</div><div class="ttdoc">Convert registered Depth image and RGB image to PointCloudXYZRGBA.</div><div class="ttdef"><b>Definition:</b> <a href="point__types__conversion_8h_source.html#l00358">point_types_conversion.h:358</a></div></div>
 <div class="ttc" id="anamespacepcl_html_ab8711ab975e8f5ee58602540bab56c63"><div class="ttname"><a href="namespacepcl.html#ab8711ab975e8f5ee58602540bab56c63">pcl::PointRGBtoI</a></div><div class="ttdeci">void PointRGBtoI(const RGB &amp;in, Intensity &amp;out)</div><div class="ttdoc">Convert a RGB point type to a I.</div><div class="ttdef"><b>Definition:</b> <a href="point__types__conversion_8h_source.html#l00070">point_types_conversion.h:70</a></div></div>
@@ -481,12 +480,12 @@ $(function() {
 <div class="ttc" id="aclasspcl_1_1_point_cloud_html"><div class="ttname"><a href="classpcl_1_1_point_cloud.html">pcl::PointCloud&lt; RGB &gt;</a></div></div>
 <div class="ttc" id="astructpcl_1_1_intensity8u_html"><div class="ttname"><a href="structpcl_1_1_intensity8u.html">pcl::Intensity8u</a></div><div class="ttdoc">A point structure representing the grayscale intensity in single-channel images.</div><div class="ttdef"><b>Definition:</b> <a href="point__types_8hpp_source.html#l00399">point_types.hpp:399</a></div></div>
 <div class="ttc" id="astructpcl_1_1_point_x_y_z_r_g_b_html"><div class="ttname"><a href="structpcl_1_1_point_x_y_z_r_g_b.html">pcl::PointXYZRGB</a></div><div class="ttdoc">A point structure representing Euclidean xyz coordinates, and the RGB color.</div><div class="ttdef"><b>Definition:</b> <a href="point__types_8hpp_source.html#l00628">point_types.hpp:628</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html_a1155fe4ba5cdc7e83cb72159a4ea02dc"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#a1155fe4ba5cdc7e83cb72159a4ea02dc">pcl::PointCloud::at</a></div><div class="ttdeci">const PointT &amp; at(int column, int row) const</div><div class="ttdoc">Obtain the point given by the (column, row) coordinates.</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00284">point_cloud.h:284</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html_a1155fe4ba5cdc7e83cb72159a4ea02dc"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#a1155fe4ba5cdc7e83cb72159a4ea02dc">pcl::PointCloud::at</a></div><div class="ttdeci">const PointT &amp; at(int column, int row) const</div><div class="ttdoc">Obtain the point given by the (column, row) coordinates.</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00261">point_cloud.h:261</a></div></div>
 <div class="ttc" id="anamespacepcl_html_a535c726cf92e7201f369715f9eef5902"><div class="ttname"><a href="namespacepcl.html#a535c726cf92e7201f369715f9eef5902">pcl::PointXYZRGBtoXYZHSV</a></div><div class="ttdeci">void PointXYZRGBtoXYZHSV(const PointXYZRGB &amp;in, PointXYZHSV &amp;out)</div><div class="ttdoc">Convert a XYZRGB point type to a XYZHSV.</div><div class="ttdef"><b>Definition:</b> <a href="point__types__conversion_8h_source.html#l00105">point_types_conversion.h:105</a></div></div>
 <div class="ttc" id="astructpcl_1_1_intensity_html"><div class="ttname"><a href="structpcl_1_1_intensity.html">pcl::Intensity</a></div><div class="ttdoc">A point structure representing the grayscale intensity in single-channel images.</div><div class="ttdef"><b>Definition:</b> <a href="point__types_8hpp_source.html#l00373">point_types.hpp:373</a></div></div>
 <div class="ttc" id="astructpcl_1_1___point_x_y_z_i_html_a26704c71a97deb8bb945cabc4f3e3ce1"><div class="ttname"><a href="structpcl_1_1___point_x_y_z_i.html#a26704c71a97deb8bb945cabc4f3e3ce1">pcl::_PointXYZI::intensity</a></div><div class="ttdeci">float intensity</div><div class="ttdef"><b>Definition:</b> <a href="point__types_8hpp_source.html#l00456">point_types.hpp:456</a></div></div>
 <div class="ttc" id="astructpcl_1_1_point_x_y_z_h_s_v_html"><div class="ttname"><a href="structpcl_1_1_point_x_y_z_h_s_v.html">pcl::PointXYZHSV</a></div><div class="ttdef"><b>Definition:</b> <a href="point__types_8hpp_source.html#l00710">point_types.hpp:710</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html_a644dc7161c2e3f23bc4d36d36c58e7b4"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#a644dc7161c2e3f23bc4d36d36c58e7b4">pcl::PointCloud::width</a></div><div class="ttdeci">std::uint32_t width</div><div class="ttdoc">The point cloud width (if organized as an image-structure).</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00414">point_cloud.h:414</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html_a644dc7161c2e3f23bc4d36d36c58e7b4"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#a644dc7161c2e3f23bc4d36d36c58e7b4">pcl::PointCloud::width</a></div><div class="ttdeci">std::uint32_t width</div><div class="ttdoc">The point cloud width (if organized as an image-structure).</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00391">point_cloud.h:391</a></div></div>
 <div class="ttc" id="anamespacepcl_html_a28dd2e3220f2c19ff79b9665fd90b94e"><div class="ttname"><a href="namespacepcl.html#a28dd2e3220f2c19ff79b9665fd90b94e">pcl::PointCloudRGBtoI</a></div><div class="ttdeci">void PointCloudRGBtoI(const PointCloud&lt; RGB &gt; &amp;in, PointCloud&lt; Intensity &gt; &amp;out)</div><div class="ttdoc">Convert a RGB point cloud to an Intensity.</div><div class="ttdef"><b>Definition:</b> <a href="point__types__conversion_8h_source.html#l00248">point_types_conversion.h:248</a></div></div>
 <div class="ttc" id="astructpcl_1_1_point_x_y_z_r_g_b_a_html"><div class="ttname"><a href="structpcl_1_1_point_x_y_z_r_g_b_a.html">pcl::PointXYZRGBA</a></div><div class="ttdoc">A point structure representing Euclidean xyz coordinates, and the RGBA color.</div><div class="ttdef"><b>Definition:</b> <a href="point__types_8hpp_source.html#l00553">point_types.hpp:553</a></div></div>
 <div class="ttc" id="astructpcl_1_1___point_x_y_z_h_s_v_html_af55e8a49c98bfe322979f17059cfdb0b"><div class="ttname"><a href="structpcl_1_1___point_x_y_z_h_s_v.html#af55e8a49c98bfe322979f17059cfdb0b">pcl::_PointXYZHSV::s</a></div><div class="ttdeci">float s</div><div class="ttdef"><b>Definition:</b> <a href="point__types_8hpp_source.html#l00701">point_types.hpp:701</a></div></div>
@@ -495,14 +494,14 @@ $(function() {
 <div class="ttc" id="astructpcl_1_1_r_g_b_html"><div class="ttname"><a href="structpcl_1_1_r_g_b.html">pcl::RGB</a></div><div class="ttdoc">A structure representing RGB color information.</div><div class="ttdef"><b>Definition:</b> <a href="point__types_8hpp_source.html#l00345">point_types.hpp:345</a></div></div>
 <div class="ttc" id="anamespacepcl_html_a73954cca0b970cb4aae7db33a568998a"><div class="ttname"><a href="namespacepcl.html#a73954cca0b970cb4aae7db33a568998a">pcl::PointXYZRGBAtoXYZHSV</a></div><div class="ttdeci">void PointXYZRGBAtoXYZHSV(const PointXYZRGBA &amp;in, PointXYZHSV &amp;out)</div><div class="ttdoc">Convert a XYZRGBA point type to a XYZHSV.</div><div class="ttdef"><b>Definition:</b> <a href="point__types__conversion_8h_source.html#l00143">point_types_conversion.h:143</a></div></div>
 <div class="ttc" id="anamespacepcl_html_a688582cb4b66085025fb42e354ac37fa"><div class="ttname"><a href="namespacepcl.html#a688582cb4b66085025fb42e354ac37fa">pcl::PointXYZHSVtoXYZRGB</a></div><div class="ttdeci">void PointXYZHSVtoXYZRGB(const PointXYZHSV &amp;in, PointXYZRGB &amp;out)</div><div class="ttdef"><b>Definition:</b> <a href="point__types__conversion_8h_source.html#l00180">point_types_conversion.h:180</a></div></div>
-<div class="ttc" id="anamespacepcl_html_aea8ace9e1a2351f301fd4b89b2940811"><div class="ttname"><a href="namespacepcl.html#aea8ace9e1a2351f301fd4b89b2940811">pcl::uint8_t</a></div><div class="ttdeci">std::uint8_t uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00054">types.h:54</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html_a0b4d7abee110e47d90635eb042488bb4"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#a0b4d7abee110e47d90635eb042488bb4">pcl::PointCloud::push_back</a></div><div class="ttdeci">void push_back(const PointT &amp;pt)</div><div class="ttdoc">Insert a new point in the cloud, at the end of the container.</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00543">point_cloud.h:543</a></div></div>
 <div class="ttc" id="astructpcl_1_1___point_x_y_z_h_s_v_html_a564b78128040e77577ca8c3c93e2c539"><div class="ttname"><a href="structpcl_1_1___point_x_y_z_h_s_v.html#a564b78128040e77577ca8c3c93e2c539">pcl::_PointXYZHSV::v</a></div><div class="ttdeci">float v</div><div class="ttdef"><b>Definition:</b> <a href="point__types_8hpp_source.html#l00702">point_types.hpp:702</a></div></div>
 <hr>
 <div id="footer">
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:10:26</p>
+<p>Pages generated on Sun Dec 20 2020 13:18:13</p>
 </div> <!-- #footer -->
 </body>
 </html>

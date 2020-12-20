@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -194,13 +194,13 @@ $(function() {
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;neighbor : neighbors)</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> (std::isfinite (normals_-&gt;points[neighbor].normal_x))</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> (std::isfinite ((*normals_)[neighbor].normal_x))</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    {</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="comment">// nx, ny, nz, h</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      norm1 = _mm_load_ps (&amp;(normals_-&gt;points[neighbor].normal_x));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      norm1 = _mm_load_ps (&amp;((*normals_)[neighbor].normal_x));</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="comment">// nx, nx, nx, nx</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      norm2 = _mm_set1_ps (normals_-&gt;points[neighbor].normal_x);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      norm2 = _mm_set1_ps ((*normals_)[neighbor].normal_x);</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="comment">// nx * nx, nx * ny, nx * nz, nx * h</span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      norm2 = _mm_mul_ps (norm1, norm2);</div>
@@ -209,7 +209,7 @@ $(function() {
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      vec1 = _mm_add_ps (vec1, norm2);</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      <span class="comment">// ny, ny, ny, ny</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      norm2 = _mm_set1_ps (normals_-&gt;points[neighbor].normal_y);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      norm2 = _mm_set1_ps ((*normals_)[neighbor].normal_y);</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="comment">// ny * nx, ny * ny, ny * nz, ny * h</span></div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      norm2 = _mm_mul_ps (norm1, norm2);</div>
@@ -217,7 +217,7 @@ $(function() {
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <span class="comment">// accumulate</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      vec2 = _mm_add_ps (vec2, norm2);</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      zz += normals_-&gt;points[neighbor].normal_z * normals_-&gt;points[neighbor].normal_z;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      zz += (*normals_)[neighbor].normal_z * (*normals_)[neighbor].normal_z;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      ++count;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  }</div>
@@ -234,17 +234,17 @@ $(function() {
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    memset (coefficients, 0, <span class="keyword">sizeof</span> (<span class="keywordtype">float</span>) * 8);</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  memset (coefficients, 0, <span class="keyword">sizeof</span> (<span class="keywordtype">float</span>) * 8);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordflow">for</span> (std::vector&lt;int&gt;::const_iterator iIt = neighbors.begin(); iIt != neighbors.end(); ++iIt)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; index : neighbors)</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">if</span> (std::isfinite (normals_-&gt;points[*iIt].normal_x))</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">if</span> (std::isfinite ((*normals_)[index].normal_x))</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      coefficients[0] += normals_-&gt;points[*iIt].normal_x * normals_-&gt;points[*iIt].normal_x;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      coefficients[1] += normals_-&gt;points[*iIt].normal_x * normals_-&gt;points[*iIt].normal_y;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      coefficients[2] += normals_-&gt;points[*iIt].normal_x * normals_-&gt;points[*iIt].normal_z;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      coefficients[0] += (*normals_)[index].normal_x * (*normals_)[index].normal_x;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      coefficients[1] += (*normals_)[index].normal_x * (*normals_)[index].normal_y;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      coefficients[2] += (*normals_)[index].normal_x * (*normals_)[index].normal_z;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      coefficients[5] += normals_-&gt;points[*iIt].normal_y * normals_-&gt;points[*iIt].normal_y;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      coefficients[6] += normals_-&gt;points[*iIt].normal_y * normals_-&gt;points[*iIt].normal_z;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      coefficients[7] += normals_-&gt;points[*iIt].normal_z * normals_-&gt;points[*iIt].normal_z;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      coefficients[5] += (*normals_)[index].normal_y * (*normals_)[index].normal_y;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      coefficients[6] += (*normals_)[index].normal_y * (*normals_)[index].normal_z;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      coefficients[7] += (*normals_)[index].normal_z * (*normals_)[index].normal_z;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      ++count;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
@@ -314,7 +314,7 @@ $(function() {
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keyword">typename</span> <a class="code" href="classpcl_1_1_point_cloud.html#ab805ba3b19e952ad19d084a9caa3dc60">pcl::PointCloud&lt;PointOutT&gt;::Ptr</a> response (<span class="keyword">new</span> <a class="code" href="classpcl_1_1_point_cloud.html">pcl::PointCloud&lt;PointOutT&gt;</a>);</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>.reserve (input_-&gt;points.size());</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>.reserve (input_-&gt;size());</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordflow">switch</span> (method_)</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  {</div>
@@ -345,27 +345,27 @@ $(function() {
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  }</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    output.points.clear ();</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    output.points.reserve (response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>.size());</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    output.clear ();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    output.reserve (response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#aa3fc6f30bae069ca325b80f60757276e">size</a>());</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">#pragma omp parallel for \</span></div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">  default(none) \</span></div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">  shared(output, response) \</span></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor">  num_threads(threads_)</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idx = 0; idx &lt; static_cast&lt;int&gt; (response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>.size ()); ++idx)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idx = 0; idx &lt; static_cast&lt;int&gt; (response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#aa3fc6f30bae069ca325b80f60757276e">size</a> ()); ++idx)</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      <span class="keywordflow">if</span> (!<a class="code" href="namespacepcl.html#a2adb775f2d234f57c4e7c1209eb95a1d">isFinite</a> (response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[idx]) ||</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;          !std::isfinite (response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[idx].intensity) ||</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[idx].intensity &lt; threshold_)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      <span class="keywordflow">if</span> (!<a class="code" href="namespacepcl.html#a2adb775f2d234f57c4e7c1209eb95a1d">isFinite</a> ((*response)[idx]) ||</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;          !std::isfinite ((*response)[idx].intensity) ||</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          (*response)[idx].intensity &lt; threshold_)</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      std::vector&lt;int&gt; nn_indices;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      std::vector&lt;float&gt; nn_dists;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      tree_-&gt;radiusSearch (idx, search_radius_, nn_indices, nn_dists);</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      <span class="keywordtype">bool</span> is_maxima = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      <span class="keywordflow">for</span> (std::vector&lt;int&gt;::const_iterator iIt = nn_indices.begin(); iIt != nn_indices.end(); ++iIt)</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; index : nn_indices)</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">if</span> (response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[idx].intensity &lt; response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[*iIt].intensity)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">if</span> ((*response)[idx].intensity &lt; (*response)[index].intensity)</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        {</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;          is_maxima = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;          <span class="keywordflow">break</span>;</div>
@@ -374,7 +374,7 @@ $(function() {
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      <span class="keywordflow">if</span> (is_maxima)</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">#pragma omp critical</span></div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        output.points.push_back (response-&gt;<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[idx]);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        output.push_back ((*response)[idx]);</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        keypoints_indices_-&gt;indices.push_back (idx);</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      }</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
@@ -383,7 +383,7 @@ $(function() {
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      refineCorners (output);</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    output.height = 1;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    output.width = <span class="keyword">static_cast&lt;</span><a class="code" href="namespacepcl.html#a7c55bf09e463d214a43d2bd7ceab7753">std::uint32_t</a><span class="keyword">&gt;</span> (output.points.size());</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    output.width = output.size();</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    output.is_dense = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  }</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
@@ -397,7 +397,7 @@ $(function() {
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor">#pragma omp parallel for \</span></div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="preprocessor">  default(none) \</span></div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="preprocessor">  shared(output) \</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="preprocessor">  private(covar) \</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="preprocessor">  firstprivate(covar) \</span></div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">  num_threads(threads_)</span></div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> pIdx = 0; pIdx &lt; static_cast&lt;int&gt; (input_-&gt;size ()); ++pIdx)</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  {</div>
@@ -438,7 +438,7 @@ $(function() {
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="preprocessor">#pragma omp parallel \</span></div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">  for default(none) \</span></div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="preprocessor">  shared(output) \</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">  private(covar) \</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">  firstprivate(covar) \</span></div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="preprocessor">  num_threads(threads_)</span></div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> pIdx = 0; pIdx &lt; static_cast&lt;int&gt; (input_-&gt;size ()); ++pIdx)</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  {</div>
@@ -478,7 +478,7 @@ $(function() {
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="preprocessor">#pragma omp parallel for \</span></div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="preprocessor">  default(none) \</span></div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="preprocessor">  shared(output) \</span></div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor">  private(covar) \</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor">  firstprivate(covar) \</span></div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="preprocessor">  num_threads(threads_)</span></div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> pIdx = 0; pIdx &lt; static_cast&lt;int&gt; (input_-&gt;size ()); ++pIdx)</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  {</div>
@@ -514,13 +514,13 @@ $(function() {
 <div class="line"><a name="l00442"></a><span class="lineno"><a class="line" href="classpcl_1_1_harris_keypoint3_d.html#a80e32cb4619b0ce48ae46f861c8b23a7">  442</a></span>&#160;<a class="code" href="classpcl_1_1_harris_keypoint3_d.html#a80e32cb4619b0ce48ae46f861c8b23a7">pcl::HarrisKeypoint3D&lt;PointInT, PointOutT, NormalT&gt;::responseCurvature</a> (<a class="code" href="classpcl_1_1_harris_keypoint3_d.html#a6e4cdc25ae280c5d956b33bac7bb8e50">PointCloudOut</a> &amp;output)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  PointOutT point;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  <span class="keywordflow">for</span> (std::size_t idx = 0; idx &lt; input_-&gt;points.size(); ++idx)</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  <span class="keywordflow">for</span> (std::size_t idx = 0; idx &lt; input_-&gt;size(); ++idx)</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  {</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    point.x = input_-&gt;points[idx].x;</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    point.y = input_-&gt;points[idx].y;</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    point.z = input_-&gt;points[idx].z;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    point.intensity = normals_-&gt;points[idx].curvature;</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    output.points.push_back(point);</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    point.x = (*input_)[idx].x;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    point.y = (*input_)[idx].y;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    point.z = (*input_)[idx].z;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    point.intensity = (*normals_)[idx].curvature;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    output.push_back(point);</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  }</div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  <span class="comment">// does not change the order</span></div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  output.height = input_-&gt;height;</div>
@@ -537,7 +537,7 @@ $(function() {
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="preprocessor">#pragma omp parallel for \</span></div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="preprocessor">  default(none) \</span></div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="preprocessor">  shared(output) \</span></div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="preprocessor">  private(covar, covariance_matrix) \</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="preprocessor">  firstprivate(covar, covariance_matrix) \</span></div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="preprocessor">  num_threads(threads_)</span></div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> pIdx = 0; pIdx &lt; static_cast&lt;int&gt; (input_-&gt;size ()); ++pIdx)</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;  {</div>
@@ -585,7 +585,7 @@ $(function() {
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;<span class="preprocessor">#pragma omp parallel for \</span></div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;<span class="preprocessor">  default(none) \</span></div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;<span class="preprocessor">  shared(corners) \</span></div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;<span class="preprocessor">  private(nnT, NNT, NNTInv, NNTp, diff) \</span></div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;<span class="preprocessor">  firstprivate(nnT, NNT, NNTInv, NNTp, diff) \</span></div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;<span class="preprocessor">  num_threads(threads_)</span></div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> cIdx = 0; cIdx &lt; static_cast&lt;int&gt; (corners.size ()); ++cIdx)</div>
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;  {</div>
@@ -600,14 +600,14 @@ $(function() {
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;      std::vector&lt;int&gt; nn_indices;</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;      std::vector&lt;float&gt; nn_dists;</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;      tree_-&gt;radiusSearch (corner, search_radius_, nn_indices, nn_dists);</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;      <span class="keywordflow">for</span> (std::vector&lt;int&gt;::const_iterator iIt = nn_indices.begin(); iIt != nn_indices.end(); ++iIt)</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; index : nn_indices)</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;      {</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        <span class="keywordflow">if</span> (!std::isfinite (normals_-&gt;points[*iIt].normal_x))</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        <span class="keywordflow">if</span> (!std::isfinite ((*normals_)[index].normal_x))</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;          <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160; </div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        nnT = normals_-&gt;points[*iIt].getNormalVector3fMap () * normals_-&gt;points[*iIt].getNormalVector3fMap ().transpose();</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        nnT = (*normals_)[index].getNormalVector3fMap () * (*normals_)[index].getNormalVector3fMap ().transpose();</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        NNT += nnT;</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        NNTp += nnT * surface_-&gt;points[*iIt].getVector3fMap ();</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        NNTp += nnT * (*surface_)[index].getVector3fMap ();</div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;      }</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="group__common.html#ga503f55a565c260660c6ac0461f17fa8f">invert3x3SymMatrix</a> (NNT, NNTInv) != 0)</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        corners[cIdx].getVector3fMap () = NNTInv * NNTp;</div>
@@ -626,8 +626,7 @@ $(function() {
 <div class="ttc" id="aclasspcl_1_1_harris_keypoint3_d_html_ab7d78e7ad7d9505fea7bfa7d2e836023"><div class="ttname"><a href="classpcl_1_1_harris_keypoint3_d.html#ab7d78e7ad7d9505fea7bfa7d2e836023">pcl::HarrisKeypoint3D::setNonMaxSupression</a></div><div class="ttdeci">void setNonMaxSupression(bool=false)</div><div class="ttdoc">Whether non maxima suppression should be applied or the response for each point should be returned.</div><div class="ttdef"><b>Definition:</b> <a href="harris__3d_8hpp_source.html#l00092">harris_3d.hpp:92</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_harris_keypoint3_d_html_a80e32cb4619b0ce48ae46f861c8b23a7"><div class="ttname"><a href="classpcl_1_1_harris_keypoint3_d.html#a80e32cb4619b0ce48ae46f861c8b23a7">pcl::HarrisKeypoint3D::responseCurvature</a></div><div class="ttdeci">void responseCurvature(PointCloudOut &amp;output) const</div><div class="ttdef"><b>Definition:</b> <a href="harris__3d_8hpp_source.html#l00442">harris_3d.hpp:442</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_normal_estimation_html"><div class="ttname"><a href="classpcl_1_1_normal_estimation.html">pcl::NormalEstimation</a></div><div class="ttdoc">NormalEstimation estimates local surface properties (surface normals and curvatures)at each 3D point.</div><div class="ttdef"><b>Definition:</b> <a href="features_2include_2pcl_2features_2normal__3d_8h_source.html#l00243">normal_3d.h:243</a></div></div>
-<div class="ttc" id="anamespacepcl_html_a7c55bf09e463d214a43d2bd7ceab7753"><div class="ttname"><a href="namespacepcl.html#a7c55bf09e463d214a43d2bd7ceab7753">pcl::uint32_t</a></div><div class="ttdeci">std::uint32_t uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00058">types.h:58</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html_af16a62638198313b9c093127c492c884"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">pcl::PointCloud::points</a></div><div class="ttdeci">std::vector&lt; PointT, Eigen::aligned_allocator&lt; PointT &gt; &gt; points</div><div class="ttdoc">The point data.</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00411">point_cloud.h:411</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html_af16a62638198313b9c093127c492c884"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">pcl::PointCloud::points</a></div><div class="ttdeci">std::vector&lt; PointT, Eigen::aligned_allocator&lt; PointT &gt; &gt; points</div><div class="ttdoc">The point data.</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00388">point_cloud.h:388</a></div></div>
 <div class="ttc" id="anamespacepcl_html_a2adb775f2d234f57c4e7c1209eb95a1d"><div class="ttname"><a href="namespacepcl.html#a2adb775f2d234f57c4e7c1209eb95a1d">pcl::isFinite</a></div><div class="ttdeci">bool isFinite(const PointT &amp;pt)</div><div class="ttdoc">Tests if the 3D components of a point are all finite param[in] pt point to be tested return true if f...</div><div class="ttdef"><b>Definition:</b> <a href="point__tests_8h_source.html#l00055">point_tests.h:55</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_integral_image_normal_estimation_html"><div class="ttname"><a href="classpcl_1_1_integral_image_normal_estimation.html">pcl::IntegralImageNormalEstimation</a></div><div class="ttdoc">Surface normal estimation on organized data using integral images.</div><div class="ttdef"><b>Definition:</b> <a href="integral__image__normal_8h_source.html#l00066">integral_image_normal.h:66</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_harris_keypoint3_d_html_a093345f533e96dbb8758b5399ffde8ce"><div class="ttname"><a href="classpcl_1_1_harris_keypoint3_d.html#a093345f533e96dbb8758b5399ffde8ce">pcl::HarrisKeypoint3D::PointCloudNPtr</a></div><div class="ttdeci">typename PointCloudN::Ptr PointCloudNPtr</div><div class="ttdef"><b>Definition:</b> <a href="harris__3d_8h_source.html#l00063">harris_3d.h:63</a></div></div>
@@ -643,15 +642,15 @@ $(function() {
 <div class="ttc" id="aclasspcl_1_1_normal_estimation_html_aff25e25bac3a8f682149025e293a919d"><div class="ttname"><a href="classpcl_1_1_normal_estimation.html#aff25e25bac3a8f682149025e293a919d">pcl::NormalEstimation::setInputCloud</a></div><div class="ttdeci">void setInputCloud(const PointCloudConstPtr &amp;cloud) override</div><div class="ttdoc">Provide a pointer to the input dataset.</div><div class="ttdef"><b>Definition:</b> <a href="features_2include_2pcl_2features_2normal__3d_8h_source.html#l00332">normal_3d.h:332</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_integral_image_normal_estimation_html_ac833637b98338bafa4c38925ab245927"><div class="ttname"><a href="classpcl_1_1_integral_image_normal_estimation.html#ac833637b98338bafa4c38925ab245927">pcl::IntegralImageNormalEstimation::setNormalSmoothingSize</a></div><div class="ttdeci">void setNormalSmoothingSize(float normal_smoothing_size)</div><div class="ttdoc">Set the normal smoothing size.</div><div class="ttdef"><b>Definition:</b> <a href="integral__image__normal_8h_source.html#l00191">integral_image_normal.h:191</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_harris_keypoint3_d_html_a37c9f4b503236e8d504d231fa3d4584c"><div class="ttname"><a href="classpcl_1_1_harris_keypoint3_d.html#a37c9f4b503236e8d504d231fa3d4584c">pcl::HarrisKeypoint3D::PointCloudNConstPtr</a></div><div class="ttdeci">typename PointCloudN::ConstPtr PointCloudNConstPtr</div><div class="ttdef"><b>Definition:</b> <a href="harris__3d_8h_source.html#l00064">harris_3d.h:64</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_feature_html_ad5b1fa9612da40e738b1d99252c5ff2f"><div class="ttname"><a href="classpcl_1_1_feature.html#ad5b1fa9612da40e738b1d99252c5ff2f">pcl::Feature::compute</a></div><div class="ttdeci">void compute(PointCloudOut &amp;output)</div><div class="ttdoc">Base method for feature estimation for all points given in &lt;setInputCloud (), setIndices ()&gt; using th...</div><div class="ttdef"><b>Definition:</b> <a href="feature_8hpp_source.html#l00193">feature.hpp:193</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_feature_html_ad5b1fa9612da40e738b1d99252c5ff2f"><div class="ttname"><a href="classpcl_1_1_feature.html#ad5b1fa9612da40e738b1d99252c5ff2f">pcl::Feature::compute</a></div><div class="ttdeci">void compute(PointCloudOut &amp;output)</div><div class="ttdoc">Base method for feature estimation for all points given in &lt;setInputCloud (), setIndices ()&gt; using th...</div><div class="ttdef"><b>Definition:</b> <a href="feature_8hpp_source.html#l00194">feature.hpp:194</a></div></div>
 <div class="ttc" id="agroup__common_html_ga503f55a565c260660c6ac0461f17fa8f"><div class="ttname"><a href="group__common.html#ga503f55a565c260660c6ac0461f17fa8f">pcl::invert3x3SymMatrix</a></div><div class="ttdeci">Matrix::Scalar invert3x3SymMatrix(const Matrix &amp;matrix, Matrix &amp;inverse)</div><div class="ttdoc">Calculate the inverse of a 3x3 symmetric matrix.</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2common_2impl_2eigen_8hpp_source.html#l00424">eigen.hpp:424</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_harris_keypoint3_d_html_ae8f2b1a05313fd1b82a73cc116010865"><div class="ttname"><a href="classpcl_1_1_harris_keypoint3_d.html#ae8f2b1a05313fd1b82a73cc116010865">pcl::HarrisKeypoint3D::PointCloudInConstPtr</a></div><div class="ttdeci">typename PointCloudIn::ConstPtr PointCloudInConstPtr</div><div class="ttdef"><b>Definition:</b> <a href="harris__3d_8h_source.html#l00060">harris_3d.h:60</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html_a3ca88d8ebf6f4f35acbc31cdfb38aa94"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#a3ca88d8ebf6f4f35acbc31cdfb38aa94">pcl::PointCloud::is_dense</a></div><div class="ttdeci">bool is_dense</div><div class="ttdoc">True if no points are invalid (e.g., have NaN or Inf values in any of their floating point fields).</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00419">point_cloud.h:419</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html_a3ca88d8ebf6f4f35acbc31cdfb38aa94"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#a3ca88d8ebf6f4f35acbc31cdfb38aa94">pcl::PointCloud::is_dense</a></div><div class="ttdeci">bool is_dense</div><div class="ttdoc">True if no points are invalid (e.g., have NaN or Inf values in any of their floating point fields).</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00396">point_cloud.h:396</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_harris_keypoint3_d_html_a5fc92825eb963fbab8a538644594e8cc"><div class="ttname"><a href="classpcl_1_1_harris_keypoint3_d.html#a5fc92825eb963fbab8a538644594e8cc">pcl::HarrisKeypoint3D::responseHarris</a></div><div class="ttdeci">void responseHarris(PointCloudOut &amp;output) const</div><div class="ttdoc">gets the corner response for valid input points</div><div class="ttdef"><b>Definition:</b> <a href="harris__3d_8hpp_source.html#l00321">harris_3d.hpp:321</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_harris_keypoint3_d_html_a058026af18e6580f2cde085f33536311"><div class="ttname"><a href="classpcl_1_1_harris_keypoint3_d.html#a058026af18e6580f2cde085f33536311">pcl::HarrisKeypoint3D::calculateNormalCovar</a></div><div class="ttdeci">void calculateNormalCovar(const std::vector&lt; int &gt; &amp;neighbors, float *coefficients) const</div><div class="ttdoc">calculates the upper triangular part of unnormalized covariance matrix over the normals given by the ...</div><div class="ttdef"><b>Definition:</b> <a href="harris__3d_8hpp_source.html#l00106">harris_3d.hpp:106</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html_aa3fc6f30bae069ca325b80f60757276e"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#aa3fc6f30bae069ca325b80f60757276e">pcl::PointCloud::size</a></div><div class="ttdeci">std::size_t size() const</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00459">point_cloud.h:459</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html_aa3fc6f30bae069ca325b80f60757276e"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#aa3fc6f30bae069ca325b80f60757276e">pcl::PointCloud::size</a></div><div class="ttdeci">std::size_t size() const</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00436">point_cloud.h:436</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_harris_keypoint3_d_html_ad5874363fb23e47c4d3bb038fcb30c1c"><div class="ttname"><a href="classpcl_1_1_harris_keypoint3_d.html#ad5874363fb23e47c4d3bb038fcb30c1c">pcl::HarrisKeypoint3D::setThreshold</a></div><div class="ttdeci">void setThreshold(float threshold)</div><div class="ttdoc">Set the threshold value for detecting corners.</div><div class="ttdef"><b>Definition:</b> <a href="harris__3d_8hpp_source.html#l00071">harris_3d.hpp:71</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html_ab805ba3b19e952ad19d084a9caa3dc60"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#ab805ba3b19e952ad19d084a9caa3dc60">pcl::PointCloud::Ptr</a></div><div class="ttdeci">shared_ptr&lt; PointCloud&lt; PointT &gt; &gt; Ptr</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00429">point_cloud.h:429</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html_ab805ba3b19e952ad19d084a9caa3dc60"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#ab805ba3b19e952ad19d084a9caa3dc60">pcl::PointCloud::Ptr</a></div><div class="ttdeci">shared_ptr&lt; PointCloud&lt; PointT &gt; &gt; Ptr</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00406">point_cloud.h:406</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_harris_keypoint3_d_html_a11ffe872261553c144bd5f6b834e5ff2"><div class="ttname"><a href="classpcl_1_1_harris_keypoint3_d.html#a11ffe872261553c144bd5f6b834e5ff2">pcl::HarrisKeypoint3D::responseTomasi</a></div><div class="ttdeci">void responseTomasi(PointCloudOut &amp;output) const</div><div class="ttdef"><b>Definition:</b> <a href="harris__3d_8hpp_source.html#l00460">harris_3d.hpp:460</a></div></div>
 <div class="ttc" id="acommon_2time_8h_html"><div class="ttname"><a href="common_2time_8h.html">time.h</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_feature_html_a44829319486a2dc415a4e068dc55c577"><div class="ttname"><a href="classpcl_1_1_feature.html#a44829319486a2dc415a4e068dc55c577">pcl::Feature::setRadiusSearch</a></div><div class="ttdeci">void setRadiusSearch(double radius)</div><div class="ttdoc">Set the sphere radius that is to be used for determining the nearest neighbors used for the feature e...</div><div class="ttdef"><b>Definition:</b> <a href="feature_8h_source.html#l00201">feature.h:201</a></div></div>
@@ -667,7 +666,7 @@ $(function() {
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:10:38</p>
+<p>Pages generated on Sun Dec 20 2020 13:18:28</p>
 </div> <!-- #footer -->
 </body>
 </html>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Smoothing and normal estimation based on polynomial reconstruction &mdash; Point Cloud Library 1.11.0-dev documentation</title>
+  <title>Smoothing and normal estimation based on polynomial reconstruction &mdash; Point Cloud Library 1.11.1-dev documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                1.11.0-dev
+                1.11.1-dev
               </div>
             
           
@@ -155,7 +155,7 @@
 <p>This tutorial explains how a Moving Least Squares (MLS) surface reconstruction
 method can be used to smooth and resample noisy data. Please see an example in
 the video below:</p>
-<iframe title="Smoothing and normal estimation based on polynomial reconstruction" width="480" height="390" src="http://www.youtube.com/embed/FqHroDuo_I8?rel=0" frameborder="0" allowfullscreen></iframe><p>Some of the data irregularities (caused by small distance measurement errors)
+<iframe title="Smoothing and normal estimation based on polynomial reconstruction" width="480" height="390" src="https://www.youtube.com/embed/FqHroDuo_I8?rel=0" frameborder="0" allowfullscreen></iframe><p>Some of the data irregularities (caused by small distance measurement errors)
 are very hard to remove using statistical analysis. To create complete models,
 glossy surfaces as well as occlusions in the data must be accounted for. In
 situations where additional scans are impossible to acquire, a solution is to
@@ -165,7 +165,7 @@ points. By performing resampling, these small errors can be corrected and the
 “double walls” artifacts resulted from registering multiple scans together can
 be smoothed.</p>
 <img alt="_images/resampling_1.jpg" src="_images/resampling_1.jpg" />
-<p>On the left side of the figure above, we see the effect or estimating surface
+<p>On the left side of the figure above, we see the effect of estimating surface
 normals in a dataset comprised of two registered point clouds together. Due to
 alignment errors, the resultant normals are noisy. On the right side we see the
 effects of surface normal estimation in the same dataset after it has been
@@ -176,7 +176,7 @@ we obtain:</p>
 <p>To approximate the surface defined by a local neighborhood of points
 <strong>p1</strong>, <strong>p2</strong> … <strong>pk</strong> at a point <strong>q</strong> we use a bivariate polynomial height function
 defined on a robustly computed reference plane.</p>
-<iframe title="Removing noisy data through resampling" width="480" height="390" src="http://www.youtube.com/embed/N5AgC0KEcw0?rel=0" frameborder="0" allowfullscreen></iframe></div>
+<iframe title="Removing noisy data through resampling" width="480" height="390" src="https://www.youtube.com/embed/N5AgC0KEcw0?rel=0" frameborder="0" allowfullscreen></iframe></div>
 <div class="section" id="the-code">
 <h1>The code</h1>
 <p>First, download the dataset <a class="reference external" href="https://raw.githubusercontent.com/PointCloudLibrary/pcl/master/test/bun0.pcd">bun0.pcd</a>

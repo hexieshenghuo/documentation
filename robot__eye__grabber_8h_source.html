@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -218,30 +218,29 @@ $(function() {
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keywordtype">void</span> socketCallback (<span class="keyword">const</span> boost::system::error_code&amp; error, std::size_t number_of_bytes);</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordtype">void</span> convertPacketData (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *data_packet, std::size_t length);</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      <span class="keywordtype">void</span> computeXYZI (<a class="code" href="structpcl_1_1_point_x_y_z_i.html">pcl::PointXYZI</a>&amp; point_XYZI, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* point_data);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="keywordtype">void</span> computeTimestamp (<a class="code" href="namespacepcl.html#a7c55bf09e463d214a43d2bd7ceab7753">std::uint32_t</a>&amp; timestamp, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* point_data);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="keywordtype">void</span> computeTimestamp (std::uint32_t&amp; timestamp, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* point_data);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  };</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacepcl_html"><div class="ttname"><a href="namespacepcl.html">pcl</a></div><div class="ttdef"><b>Definition:</b> <a href="2d_2include_2pcl_22d_2convolution_8h_source.html#l00046">convolution.h:46</a></div></div>
 <div class="ttc" id="acommon_2include_2pcl_2point__types_8h_html"><div class="ttname"><a href="common_2include_2pcl_2point__types_8h.html">point_types.h</a></div></div>
-<div class="ttc" id="anamespacepcl_html_a7c55bf09e463d214a43d2bd7ceab7753"><div class="ttname"><a href="namespacepcl.html#a7c55bf09e463d214a43d2bd7ceab7753">pcl::uint32_t</a></div><div class="ttdeci">std::uint32_t uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00058">types.h:58</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_robot_eye_grabber_html_a765190c367008128dfa2cdaa14f9d776"><div class="ttname"><a href="classpcl_1_1_robot_eye_grabber.html#a765190c367008128dfa2cdaa14f9d776">pcl::RobotEyeGrabber::sig_cb_robot_eye_point_cloud_xyzi</a></div><div class="ttdeci">void(const pcl::PointCloud&lt; pcl::PointXYZI &gt;::ConstPtr &amp;) sig_cb_robot_eye_point_cloud_xyzi</div><div class="ttdoc">Signal used for the point cloud callback.</div><div class="ttdef"><b>Definition:</b> <a href="robot__eye__grabber_8h_source.html#l00066">robot_eye_grabber.h:66</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_robot_eye_grabber_html"><div class="ttname"><a href="classpcl_1_1_robot_eye_grabber.html">pcl::RobotEyeGrabber</a></div><div class="ttdoc">Grabber for the Ocular Robotics RobotEye sensor.</div><div class="ttdef"><b>Definition:</b> <a href="robot__eye__grabber_8h_source.html#l00058">robot_eye_grabber.h:58</a></div></div>
 <div class="ttc" id="astructpcl_1_1_point_x_y_z_i_html"><div class="ttname"><a href="structpcl_1_1_point_x_y_z_i.html">pcl::PointXYZI</a></div><div class="ttdef"><b>Definition:</b> <a href="point__types_8hpp_source.html#l00464">point_types.hpp:464</a></div></div>
-<div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="namespaceboost.html">boost</a></div><div class="ttdef"><b>Definition:</b> <a href="boost__graph_8h_source.html#l00046">boost_graph.h:46</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html"><div class="ttname"><a href="classpcl_1_1_point_cloud.html">pcl::PointCloud</a></div><div class="ttdoc">PointCloud represents the base class in PCL for storing collections of 3D points.</div><div class="ttdef"><b>Definition:</b> <a href="projection__matrix_8h_source.html#l00053">projection_matrix.h:53</a></div></div>
+<div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="namespaceboost.html">boost</a></div><div class="ttdef"><b>Definition:</b> <a href="boost__graph_8h_source.html#l00048">boost_graph.h:48</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html"><div class="ttname"><a href="classpcl_1_1_point_cloud.html">pcl::PointCloud</a></div><div class="ttdoc">PointCloud represents the base class in PCL for storing collections of 3D points.</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2common_2distances_8h_source.html#l00055">distances.h:55</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_grabber_html"><div class="ttname"><a href="classpcl_1_1_grabber.html">pcl::Grabber</a></div><div class="ttdoc">Grabber interface for PCL 1.x device drivers.</div><div class="ttdef"><b>Definition:</b> <a href="grabber_8h_source.html#l00059">grabber.h:59</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html_ab805ba3b19e952ad19d084a9caa3dc60"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#ab805ba3b19e952ad19d084a9caa3dc60">pcl::PointCloud::Ptr</a></div><div class="ttdeci">shared_ptr&lt; PointCloud&lt; PointT &gt; &gt; Ptr</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00429">point_cloud.h:429</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html_af70fd81ce582ccabf683dd782ed3f032"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#af70fd81ce582ccabf683dd782ed3f032">pcl::PointCloud::ConstPtr</a></div><div class="ttdeci">shared_ptr&lt; const PointCloud&lt; PointT &gt; &gt; ConstPtr</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00430">point_cloud.h:430</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html_ab805ba3b19e952ad19d084a9caa3dc60"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#ab805ba3b19e952ad19d084a9caa3dc60">pcl::PointCloud::Ptr</a></div><div class="ttdeci">shared_ptr&lt; PointCloud&lt; PointT &gt; &gt; Ptr</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00406">point_cloud.h:406</a></div></div>
+<div class="ttc" id="aclasspcl_1_1_point_cloud_html_af70fd81ce582ccabf683dd782ed3f032"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#af70fd81ce582ccabf683dd782ed3f032">pcl::PointCloud::ConstPtr</a></div><div class="ttdeci">shared_ptr&lt; const PointCloud&lt; PointT &gt; &gt; ConstPtr</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00407">point_cloud.h:407</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_synchronized_queue_html"><div class="ttname"><a href="classpcl_1_1_synchronized_queue.html">pcl::SynchronizedQueue</a></div><div class="ttdef"><b>Definition:</b> <a href="synchronized__queue_8hpp_source.html#l00051">synchronized_queue.hpp:51</a></div></div>
 <div class="ttc" id="amemory_8h_html"><div class="ttname"><a href="memory_8h.html">memory.h</a></div><div class="ttdoc">Defines functions, macros and traits for allocating and using memory.</div></div>
-<div class="ttc" id="apcl__macros_8h_html_a2b443b7908f11aed38b620b570e5ebce"><div class="ttname"><a href="pcl__macros_8h.html#a2b443b7908f11aed38b620b570e5ebce">PCL_EXPORTS</a></div><div class="ttdeci">#define PCL_EXPORTS</div><div class="ttdef"><b>Definition:</b> <a href="pcl__macros_8h_source.html#l00331">pcl_macros.h:331</a></div></div>
+<div class="ttc" id="apcl__macros_8h_html_a2b443b7908f11aed38b620b570e5ebce"><div class="ttname"><a href="pcl__macros_8h.html#a2b443b7908f11aed38b620b570e5ebce">PCL_EXPORTS</a></div><div class="ttdeci">#define PCL_EXPORTS</div><div class="ttdef"><b>Definition:</b> <a href="pcl__macros_8h_source.html#l00323">pcl_macros.h:323</a></div></div>
 <hr>
 <div id="footer">
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:10:37</p>
+<p>Pages generated on Sun Dec 20 2020 13:18:26</p>
 </div> <!-- #footer -->
 </body>
 </html>

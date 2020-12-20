@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -103,7 +103,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>/brief Class representing 3D point picking events. </p>
 
-<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00083">83</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00084">84</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adfb65f16d9e6d9043514035005c9bf95"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adfb65f16d9e6d9043514035005c9bf95">&#9670;&nbsp;</a></span>PointPickingEvent() <span class="overload">[1/3]</span></h2>
@@ -129,7 +129,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00086">86</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00087">87</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
 
 </div>
 </div>
@@ -179,7 +179,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00087">87</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00088">88</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
 
 </div>
 </div>
@@ -253,7 +253,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00089">89</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00090">90</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
 
 </div>
 </div>
@@ -308,7 +308,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00112">112</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00113">113</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
 
 </div>
 </div>
@@ -338,7 +338,7 @@ Public Member Functions</h2></td></tr>
 <p>Obtain the ID of a point that the user just clicked on. </p>
 <dl class="section warning"><dt>Warning</dt><dd>If the cloud contains NaNs the index returned by this function will not correspond to the original indices. To get the correct index either sanitize the input cloud to remove NaNs or use the <a class="el" href="classpcl_1_1visualization_1_1_point_picking_event.html#a819e3290317356584b71b57a77fbb2d0" title="Obtain the XYZ point coordinates of a point that the user just clicked on.">PointPickingEvent::getPoint</a> function to get the x,y,z of the picked point and then search the original cloud for the correct index. An example of how to do this can be found in the pp_callback function in visualization/tools/pcd_viewer.cpp </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00101">101</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00102">102</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
 
 </div>
 </div>
@@ -387,7 +387,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>true, if two points are available and have been clicked by the user, false otherwise </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>If the cloud contains NaNs the index returned by this function will not correspond to the original indices. To get the correct index either sanitize the input cloud to remove NaNs or use the <a class="el" href="classpcl_1_1visualization_1_1_point_picking_event.html#a819e3290317356584b71b57a77fbb2d0" title="Obtain the XYZ point coordinates of a point that the user just clicked on.">PointPickingEvent::getPoint</a> function to get the x,y,z of the picked point and then search the original cloud for the correct index. An example of how to do this can be found in the pp_callback function in visualization/tools/pcd_viewer.cpp </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00147">147</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00148">148</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
 
 </div>
 </div>
@@ -463,7 +463,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true, if two points are available and have been clicked by the user, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00127">127</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="point__picking__event_8h_source.html#l00128">128</a> of file <a class="el" href="point__picking__event_8h_source.html">point_picking_event.h</a>.</p>
 
 </div>
 </div>
@@ -476,7 +476,7 @@ Public Member Functions</h2></td></tr>
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:15:04</p>
+<p>Pages generated on Sun Dec 20 2020 13:23:36</p>
 </div> <!-- #footer -->
 </body>
 </html>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -407,6 +407,9 @@ $(function() {
 <li>getAllModelCoefficients()
 : <a class="el" href="classpcl_1_1cuda_1_1_multi_random_sample_consensus.html#ab55b29e094fb6a4eb34c50b0af5c892e">pcl::cuda::MultiRandomSampleConsensus&lt; Storage &gt;</a>
 </li>
+<li>getAllNeighborsAtPoint()
+: <a class="el" href="classpcl_1_1_voxel_grid_covariance.html#a56d80ccb6876267e6e4cb56ce1fc06e7">pcl::VoxelGridCovariance&lt; PointT &gt;</a>
+</li>
 <li>getAllocatorsAlignment()
 : <a class="el" href="class_n_c_v_matrix_alloc.html#a6fe8a6b7550ed2293204849a350596bf">NCVMatrixAlloc&lt; T &gt;</a>
 , <a class="el" href="class_n_c_v_vector_alloc.html#a013478520770d6fa55ba960de4342831">NCVVectorAlloc&lt; T &gt;</a>
@@ -470,8 +473,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1_range_image.html#af4891c9812652efe513b9ff060490364">pcl::RangeImage</a>
 </li>
 <li>getAngularThreshold()
-: <a class="el" href="classpcl_1_1_euclidean_cluster_comparator.html#a90c75d31614fdc364d73d88885567561">pcl::EuclideanClusterComparator&lt; PointT, PointNT, PointLT &gt;</a>
-, <a class="el" href="classpcl_1_1_ground_plane_comparator.html#aa24b2167f6b5a27a7f16fbf4eadbb8f8">pcl::GroundPlaneComparator&lt; PointT, PointNT &gt;</a>
+: <a class="el" href="classpcl_1_1_ground_plane_comparator.html#aa24b2167f6b5a27a7f16fbf4eadbb8f8">pcl::GroundPlaneComparator&lt; PointT, PointNT &gt;</a>
 , <a class="el" href="classpcl_1_1_organized_multi_plane_segmentation.html#ad7e90a382f262ab7b0710a7ce9ec889d">pcl::OrganizedMultiPlaneSegmentation&lt; PointT, PointNT, PointLT &gt;</a>
 , <a class="el" href="classpcl_1_1_plane_coefficient_comparator.html#a1ea59c59f0c38582a5c3064868e321d6">pcl::PlaneCoefficientComparator&lt; PointT, PointNT &gt;</a>
 </li>
@@ -1008,8 +1010,8 @@ $(function() {
 , <a class="el" href="classpcl_1_1_planar_polygon.html#a4edb3f46d46fc9d133cffa0503998d10">pcl::PlanarPolygon&lt; PointT &gt;</a>
 </li>
 <li>getColor()
-: <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler.html#a10820196b0046daab43b947ba9c21662">pcl::visualization::PointCloudColorHandler&lt; PointT &gt;</a>
-, <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler_3_01pcl_1_1_p_c_l_point_cloud2_01_4.html#a9517d858357df926ece379e72183e35c">pcl::visualization::PointCloudColorHandler&lt; pcl::PCLPointCloud2 &gt;</a>
+: <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler.html#ab85825de0836379d74b4e55f479eb038">pcl::visualization::PointCloudColorHandler&lt; PointT &gt;</a>
+, <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler_3_01pcl_1_1_p_c_l_point_cloud2_01_4.html#ae3f1b75de68e64b966409b2dae21b4c9">pcl::visualization::PointCloudColorHandler&lt; pcl::PCLPointCloud2 &gt;</a>
 , <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler_custom.html#ac8a3827c23a8cf710fff382c1c03f107">pcl::visualization::PointCloudColorHandlerCustom&lt; PointT &gt;</a>
 , <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler_custom_3_01pcl_1_1_p_c_l_point_cloud2_01_4.html#a152262c77e134bfd3d31191fd05b2bf2">pcl::visualization::PointCloudColorHandlerCustom&lt; pcl::PCLPointCloud2 &gt;</a>
 , <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler_generic_field.html#ac9d8aa1c73d5b013208139d97b49d5c5">pcl::visualization::PointCloudColorHandlerGenericField&lt; PointT &gt;</a>
@@ -1024,13 +1026,12 @@ $(function() {
 , <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler_r_g_b_a_field_3_01pcl_1_1_p_c_l_point_cloud2_01_4.html#abc6ab0679394273fc9769e5d9b4fbcc3">pcl::visualization::PointCloudColorHandlerRGBAField&lt; pcl::PCLPointCloud2 &gt;</a>
 , <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler_r_g_b_field.html#a10730ea6b6543859840adf8ee8204a91">pcl::visualization::PointCloudColorHandlerRGBField&lt; PointT &gt;</a>
 , <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler_r_g_b_field_3_01pcl_1_1_p_c_l_point_cloud2_01_4.html#ac4ef5b4666deda4981d27468bf223d34">pcl::visualization::PointCloudColorHandlerRGBField&lt; pcl::PCLPointCloud2 &gt;</a>
-, <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler_r_g_b_hack.html#ac39786d50bae7803450f4b43deac3cfe">pcl::visualization::PointCloudColorHandlerRGBHack&lt; PointT &gt;</a>
+, <a class="el" href="classpcl_1_1visualization_1_1_point_cloud_color_handler_r_g_b_hack.html#acfafc9900f7ec404a4598196649fc48f">pcl::visualization::PointCloudColorHandlerRGBHack&lt; PointT &gt;</a>
 </li>
 <li>getColoredCloud()
 : <a class="el" href="classpcl_1_1features_1_1_i_s_m_vote_list.html#a8af69407ed99f978fc73b245d2540c6b">pcl::features::ISMVoteList&lt; PointT &gt;</a>
 , <a class="el" href="classpcl_1_1_min_cut_segmentation.html#aeb4784e5b04612cf2a802017ab1b7908">pcl::MinCutSegmentation&lt; PointT &gt;</a>
 , <a class="el" href="classpcl_1_1_region_growing.html#aeb1ae724085424bc60bb4cf27ff27283">pcl::RegionGrowing&lt; PointT, NormalT &gt;</a>
-, <a class="el" href="classpcl_1_1_supervoxel_clustering.html#a1ddb159d39a3da31c756a66786b232a8">pcl::SupervoxelClustering&lt; PointT &gt;</a>
 </li>
 <li>getColoredCloudRGBA()
 : <a class="el" href="classpcl_1_1_region_growing.html#a1aed39b32b17e43362d5d72112e6e3d2">pcl::RegionGrowing&lt; PointT, NormalT &gt;</a>
@@ -1174,7 +1175,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1_registration.html#ac0c221d8f1151096721db3817610c9d9">pcl::Registration&lt; PointSource, PointTarget, Scalar &gt;</a>
 </li>
 <li>getCorrespondences()
-: <a class="el" href="classpcl_1_1_normal_refinement.html#ae87cf1463b23d96ba02e486924c1739b">pcl::NormalRefinement&lt; NormalT &gt;</a>
+: <a class="el" href="classpcl_1_1_normal_refinement.html#a2e8b7a2f65db3755761ae10ae67768b6">pcl::NormalRefinement&lt; NormalT &gt;</a>
 , <a class="el" href="classpcl_1_1registration_1_1_correspondence_rejector.html#a72c90f3fb93739b0366d3528cf7d502f">pcl::registration::CorrespondenceRejector</a>
 , <a class="el" href="classpcl_1_1registration_1_1_l_u_m.html#ab83f80d5d2b23497058317491fd8c510">pcl::registration::LUM&lt; PointT &gt;</a>
 </li>
@@ -1384,6 +1385,9 @@ $(function() {
 <li>getDepthCameraIntrinsics()
 : <a class="el" href="classpcl_1_1_open_n_i_grabber.html#aecbe1778e7518e6e9f74f259e4658e59">pcl::OpenNIGrabber</a>
 </li>
+<li>getDepthDependent()
+: <a class="el" href="classpcl_1_1_euclidean_cluster_comparator.html#a272faa3e508f84bd69accf99945dcccf">pcl::EuclideanClusterComparator&lt; PointT, PointLT &gt;</a>
+</li>
 <li>getDepthDisconThreshold()
 : <a class="el" href="classpcl_1_1_organized_edge_base.html#aa1be7d1bedac230c86499f9ebff7ee3a">pcl::OrganizedEdgeBase&lt; PointT, PointLT &gt;</a>
 </li>
@@ -1468,7 +1472,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1poisson_1_1_sparse_symmetric_matrix.html#a4adcbbbc22db6d97906f41114cd0baf0">pcl::poisson::SparseSymmetricMatrix&lt; T &gt;</a>
 </li>
 <li>getDifferenceMask()
-: <a class="el" href="classpcl_1_1_mask_map.html#ad8f4ae7edc26c385bed51bbfdf82ba47">pcl::MaskMap</a>
+: <a class="el" href="classpcl_1_1_mask_map.html#aa6a7a8756058c6c7dbcc42d30fa8f214">pcl::MaskMap</a>
 </li>
 <li>getDifferentialDataVector()
 : <a class="el" href="classpcl_1_1octree_1_1_color_coding.html#a90fae26d4e9ff946155b589a7e135d15">pcl::octree::ColorCoding&lt; PointT &gt;</a>
@@ -1567,7 +1571,7 @@ $(function() {
 </li>
 <li>getDistanceThreshold()
 : <a class="el" href="classpcl_1_1cuda_1_1_sample_consensus.html#aec2105e1e32c118dbfb2bbb3f55b5df8">pcl::cuda::SampleConsensus&lt; Storage &gt;</a>
-, <a class="el" href="classpcl_1_1experimental_1_1_euclidean_cluster_comparator.html#ac433f8ad2a5ae1de9d5b0ecea0c5f271">pcl::experimental::EuclideanClusterComparator&lt; PointT, PointLT &gt;</a>
+, <a class="el" href="classpcl_1_1_euclidean_cluster_comparator.html#a1cb566c77534cec774357f212b6ca85f">pcl::EuclideanClusterComparator&lt; PointT, PointLT &gt;</a>
 , <a class="el" href="classpcl_1_1filters_1_1_convolution.html#a00cd1ceb0545dd8468fe0e6a37531180">pcl::filters::Convolution&lt; PointIn, PointOut &gt;</a>
 , <a class="el" href="classpcl_1_1filters_1_1_pyramid.html#a32e8b1516818794aabad33ab343cdca5">pcl::filters::Pyramid&lt; PointT &gt;</a>
 , <a class="el" href="classpcl_1_1gpu_1_1kinfu_l_s_1_1_cyclical_buffer.html#acf3fd4df35f18071b553b3214e1b77fd">pcl::gpu::kinfuLS::CyclicalBuffer</a>
@@ -1729,7 +1733,7 @@ $(function() {
 : <a class="el" href="structpcl_1_1_voxel_grid_covariance_1_1_leaf.html#a1d375e78ecc706179302f4571f72cf5e">pcl::VoxelGridCovariance&lt; PointT &gt;::Leaf</a>
 </li>
 <li>getExcludeLabels()
-: <a class="el" href="classpcl_1_1experimental_1_1_euclidean_cluster_comparator.html#a735c034b7b69eac689cfec8f38a3b038">pcl::experimental::EuclideanClusterComparator&lt; PointT, PointLT &gt;</a>
+: <a class="el" href="classpcl_1_1_euclidean_cluster_comparator.html#a86430a816a35ab3066f1009edc5f7907">pcl::EuclideanClusterComparator&lt; PointT, PointLT &gt;</a>
 </li>
 <li>getExistingData()
 : <a class="el" href="classpcl_1_1kinfu_l_s_1_1_world_model.html#a8bdbb16e594492fb868af32ef503c3e4">pcl::kinfuLS::WorldModel&lt; PointT &gt;</a>
@@ -1758,6 +1762,9 @@ $(function() {
 </li>
 <li>getFaceIndex()
 : <a class="el" href="classpcl_1_1geometry_1_1_mesh_base.html#ae6547b360f64c3fce6ca9af1cfbf77ff">pcl::geometry::MeshBase&lt; DerivedT, MeshTraitsT, MeshTagT &gt;</a>
+</li>
+<li>getFaceNeighborsAtPoint()
+: <a class="el" href="classpcl_1_1_voxel_grid_covariance.html#afee0f8eb99293c53ce4eb2063f782137">pcl::VoxelGridCovariance&lt; PointT &gt;</a>
 </li>
 <li>getFailureAfterMaximumIterations()
 : <a class="el" href="classpcl_1_1registration_1_1_default_convergence_criteria.html#a5ddf2d9957c228a7de44024ffef82456">pcl::registration::DefaultConvergenceCriteria&lt; Scalar &gt;</a>
@@ -1866,7 +1873,6 @@ $(function() {
 </li>
 <li>getFilterLimitsNegative()
 : <a class="el" href="classpcl_1_1_pass_through.html#ac008188d41014f990531c7dc22cf39c6">pcl::PassThrough&lt; PointT &gt;</a>
-, <a class="el" href="classpcl_1_1_pass_through_3_01pcl_1_1_p_c_l_point_cloud2_01_4.html#a15974f88cb7f8799d898c9c365e2ea8f">pcl::PassThrough&lt; pcl::PCLPointCloud2 &gt;</a>
 , <a class="el" href="classpcl_1_1_voxel_grid.html#afc48ddb2d86acdb89885649fce68767b">pcl::VoxelGrid&lt; PointT &gt;</a>
 , <a class="el" href="classpcl_1_1_voxel_grid_3_01pcl_1_1_p_c_l_point_cloud2_01_4.html#aba9c4e0516b42ce19b0b33efd2cf69f0">pcl::VoxelGrid&lt; pcl::PCLPointCloud2 &gt;</a>
 , <a class="el" href="classpcl__cuda_1_1_filter.html#a5e02aaecfc4911540191a24d33fc8f05">pcl_cuda::Filter&lt; CloudT &gt;</a>
@@ -2041,6 +2047,9 @@ $(function() {
 : <a class="el" href="classopenni__wrapper_1_1_open_n_i_exception.html#a16752e82a00161fdcdefccd98b4da600">openni_wrapper::OpenNIException</a>
 , <a class="el" href="classpcl_1_1io_1_1_i_o_exception.html#a70222bd88df0cd739a7f0afdf02b40e4">pcl::io::IOException</a>
 , <a class="el" href="classpcl_1_1_p_c_l_exception.html#aea0be31ead1e45bfd992f1f535783f6c">pcl::PCLException</a>
+</li>
+<li>getFunctionObject()
+: <a class="el" href="classpcl_1_1experimental_1_1advanced_1_1_functor_filter.html#aa3a258d5509f3edb2a052d0f62f4e908">pcl::experimental::advanced::FunctorFilter&lt; PointT, FunctionObject &gt;</a>
 </li>
 <li>getGCSize()
 : <a class="el" href="classpcl_1_1_geometric_consistency_grouping.html#ad3ce00e248fee1986a829a82395e8f23">pcl::GeometricConsistencyGrouping&lt; PointModelT, PointSceneT &gt;</a>
@@ -2346,8 +2355,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1_mesh_processing.html#ad4a3ff42dde18c5c7f14ffca12371232">pcl::MeshProcessing</a>
 </li>
 <li>getInputNormals()
-: <a class="el" href="classpcl_1_1_euclidean_cluster_comparator.html#a1d0165152c3966e216562883c1fdadba">pcl::EuclideanClusterComparator&lt; PointT, PointNT, PointLT &gt;</a>
-, <a class="el" href="classpcl_1_1_feature_from_normals.html#a2eb5090f6a3413a436d5900b386bf8e0">pcl::FeatureFromNormals&lt; PointInT, PointNT, PointOutT &gt;</a>
+: <a class="el" href="classpcl_1_1_feature_from_normals.html#a2eb5090f6a3413a436d5900b386bf8e0">pcl::FeatureFromNormals&lt; PointInT, PointNT, PointOutT &gt;</a>
 , <a class="el" href="classpcl_1_1_ground_plane_comparator.html#a4917094b3ac22e069d02bd9011345609">pcl::GroundPlaneComparator&lt; PointT, PointNT &gt;</a>
 , <a class="el" href="classpcl_1_1_model_outlier_removal.html#a9ca16c7cb037a10fd189778c1aaad99b">pcl::ModelOutlierRemoval&lt; PointT &gt;</a>
 , <a class="el" href="classpcl_1_1_organized_edge_from_normals.html#a32bceeb72da96b42486dda1eaa25993c">pcl::OrganizedEdgeFromNormals&lt; PointT, PointNT, PointLT &gt;</a>
@@ -2530,7 +2538,8 @@ $(function() {
 , <a class="el" href="classpcl_1_1_stats_estimator.html#a81eeb44edc44226e45e9559b8c6adf03">pcl::StatsEstimator&lt; LabelDataType, NodeType, DataSet, ExampleIndex &gt;</a>
 </li>
 <li>getLabels()
-: <a class="el" href="classpcl_1_1gpu_1_1people_1_1_r_d_f_body_parts_detector.html#a42d138d0d1b41eabf87f0a95f0aec094">pcl::gpu::people::RDFBodyPartsDetector</a>
+: <a class="el" href="classpcl_1_1_euclidean_cluster_comparator.html#a80768b63b3bb8c99dc931dc6d7e4afcf">pcl::EuclideanClusterComparator&lt; PointT, PointLT &gt;</a>
+, <a class="el" href="classpcl_1_1gpu_1_1people_1_1_r_d_f_body_parts_detector.html#a42d138d0d1b41eabf87f0a95f0aec094">pcl::gpu::people::RDFBodyPartsDetector</a>
 </li>
 <li>getLambda()
 : <a class="el" href="classpcl_1_1_grab_cut.html#acfd10ddb9bb658aac91191b232efdd81">pcl::GrabCut&lt; PointT &gt;</a>
@@ -2885,7 +2894,7 @@ $(function() {
 : <a class="el" href="class_o_n___brep.html#ac3140b56bfaad4c3b27c396266cf9e7d">ON_Brep</a>
 </li>
 <li>GetMeshEdgeList()
-: <a class="el" href="class_o_n___mesh.html#a4a1522d7a64486f3920643438993e87f">ON_Mesh</a>
+: <a class="el" href="class_o_n___mesh.html#a1f2bc98724dc51d5c3311aa1b4696526">ON_Mesh</a>
 </li>
 <li>GetMeshEdges()
 : <a class="el" href="class_o_n___mesh.html#a4a2631a57074d47d73a086470574dd1f">ON_Mesh</a>
@@ -3168,7 +3177,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1registration_1_1_k_f_p_c_s_initial_alignment.html#a8a71f71512d087dc631b596d19987726">pcl::registration::KFPCSInitialAlignment&lt; PointSource, PointTarget, NormalT, Scalar &gt;</a>
 </li>
 <li>getNearestLeaf()
-: <a class="el" href="classpcl_1_1poisson_1_1_oct_node.html#a8e932a1697531c6437c49c64232d43f0">pcl::poisson::OctNode&lt; NodeData, Real &gt;</a>
+: <a class="el" href="classpcl_1_1poisson_1_1_oct_node.html#a5b6cc876081455ce4bf28c58336d31d2">pcl::poisson::OctNode&lt; NodeData, Real &gt;</a>
 </li>
 <li>getNearestNeighborNum()
 : <a class="el" href="classpcl_1_1_grid_projection.html#a9887d299ea2be516a1216cb7843a1bef">pcl::GridProjection&lt; PointNT &gt;</a>
@@ -3200,7 +3209,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1_range_image_border_extractor.html#afc527dd5fb69ea2ad4a94ad167fc2e75">pcl::RangeImageBorderExtractor</a>
 </li>
 <li>getNeighborhoodAtPoint()
-: <a class="el" href="classpcl_1_1_voxel_grid_covariance.html#ab24846085f7bd621a6edf415b0226679">pcl::VoxelGridCovariance&lt; PointT &gt;</a>
+: <a class="el" href="classpcl_1_1_voxel_grid_covariance.html#a0e344b7255d2cdf4192aa7cc5bf6eba6">pcl::VoxelGridCovariance&lt; PointT &gt;</a>
 </li>
 <li>getNeighborhoodConstant()
 : <a class="el" href="classpcl_1_1_smoothed_surfaces_keypoint.html#a80f53a3a21367b58dafe623c54128248">pcl::SmoothedSurfacesKeypoint&lt; PointT, PointNT &gt;</a>
@@ -3315,7 +3324,7 @@ $(function() {
 , <a class="el" href="classpcl_1_1_sample_consensus_model_from_normals.html#aa6aa76a67ce91f49f7c7b6a2f524abc6">pcl::SampleConsensusModelFromNormals&lt; PointT, PointNT &gt;</a>
 </li>
 <li>getNormalForClosestNeighbors()
-: <a class="el" href="classpcl_1_1_range_image.html#a3e583b912d095111ad61232ca2e8705e">pcl::RangeImage</a>
+: <a class="el" href="classpcl_1_1_range_image.html#a5cb82433197f15970647793c6271fe9a">pcl::RangeImage</a>
 </li>
 <li>getNormalizeCoordinates()
 : <a class="el" href="classpcl_1_1_mesh_smoothing_windowed_sinc_v_t_k.html#a9f63cfc8671ad8e993a0fb6b7c1e0873">pcl::MeshSmoothingWindowedSincVTK</a>
@@ -3764,7 +3773,7 @@ $(function() {
 : <a class="el" href="class_o_n___layer.html#aac30ac29f72a3e846b8ca2737dc59e36">ON_Layer</a>
 </li>
 <li>getPixel()
-: <a class="el" href="classpcl_1_1recognition_1_1_o_r_r_octree_z_projection.html#abf85b5b01c58bc5b5c3b20cc72fff744">pcl::recognition::ORROctreeZProjection</a>
+: <a class="el" href="classpcl_1_1recognition_1_1_o_r_r_octree_z_projection.html#aa378abee0779ad564cc4529fdf7d165b">pcl::recognition::ORROctreeZProjection</a>
 </li>
 <li>getPixelCoordinates()
 : <a class="el" href="classpcl_1_1recognition_1_1_o_r_r_octree_z_projection.html#a8fcdc71873ec8438230f9ebee14fc4d1">pcl::recognition::ORROctreeZProjection</a>
@@ -3787,7 +3796,7 @@ $(function() {
 , <a class="el" href="structpcl_1_1detail_1_1_get_point.html#a6e294bdba2353bd0905eab7bdfc11270">pcl::detail::GetPoint&lt; PointT &gt;</a>
 </li>
 <li>getPoint()
-: <a class="el" href="classpcl_1_1_range_image.html#aa7e520479cc8f66e5ddd7f594649b25f">pcl::RangeImage</a>
+: <a class="el" href="classpcl_1_1_range_image.html#a35a8dbb8cc328029a928b3cff4225d5b">pcl::RangeImage</a>
 , <a class="el" href="classpcl_1_1recognition_1_1_o_r_r_octree_1_1_node_1_1_data.html#a2da2dc966d428161fe2c8ed38db2edd2">pcl::recognition::ORROctree::Node::Data</a>
 , <a class="el" href="classpcl_1_1_supervoxel_clustering_1_1_voxel_data.html#a6a43e5d0cf77ec2fb51787af00afbf0f">pcl::SupervoxelClustering&lt; PointT &gt;::VoxelData</a>
 , <a class="el" href="classpcl_1_1visualization_1_1_point_picking_event.html#a819e3290317356584b71b57a77fbb2d0">pcl::visualization::PointPickingEvent</a>
@@ -3799,10 +3808,10 @@ $(function() {
 <li>getPointCloud()
 : <a class="el" href="classpcl_1_1registration_1_1_l_u_m.html#a43d1c5fd77ffb145ec0e7b603bbc9b40">pcl::registration::LUM&lt; PointT &gt;</a>
 , <a class="el" href="classpcl_1_1_robot_eye_grabber.html#aad2e680d35d52faa56c955288a81dd94">pcl::RobotEyeGrabber</a>
-, <a class="el" href="classpcl_1_1_stereo_matching.html#adae373bb5275a9c3ea35a69e9c3c2cbb">pcl::StereoMatching</a>
+, <a class="el" href="classpcl_1_1_stereo_matching.html#ad5cb4b96c50b127e38ff3b291e602c00">pcl::StereoMatching</a>
 </li>
 <li>getPointCloudRenderingProperties()
-: <a class="el" href="classpcl_1_1visualization_1_1_p_c_l_visualizer.html#acde8be1004cd2fd43d8e4287bd726252">pcl::visualization::PCLVisualizer</a>
+: <a class="el" href="classpcl_1_1visualization_1_1_p_c_l_visualizer.html#ac5cd0b698a5a57d69092ed8a5e2172b4">pcl::visualization::PCLVisualizer</a>
 </li>
 <li>getPointCoherences()
 : <a class="el" href="classpcl_1_1tracking_1_1_point_cloud_coherence.html#acb11f66643be5b878a221a05e8a7da48">pcl::tracking::PointCloudCoherence&lt; PointInT &gt;</a>
@@ -3854,7 +3863,7 @@ $(function() {
 : <a class="el" href="class_o_n___workspace.html#acafca6f8950c0f7d29f0eac071765dfc">ON_Workspace</a>
 </li>
 <li>getPointNoCheck()
-: <a class="el" href="classpcl_1_1_range_image.html#a587663a5b4123f4c423c9e38a9b36d41">pcl::RangeImage</a>
+: <a class="el" href="classpcl_1_1_range_image.html#a45bfd00007940d0043b8f1df43663d07">pcl::RangeImage</a>
 </li>
 <li>GetPointOnObjectValue()
 : <a class="el" href="class_o_n___history_record.html#ad2aa92327d8417251d5b0353f1cfa143">ON_HistoryRecord</a>
@@ -3873,7 +3882,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1recognition_1_1_model_library_1_1_model.html#aedbe3fe2282f3609e42ee6e4d1a9c803">pcl::recognition::ModelLibrary::Model</a>
 </li>
 <li>getPointsIndices()
-: <a class="el" href="classpcl_1_1visualization_1_1_area_picking_event.html#a50483676b6375088c8542f6f5cbd87a0">pcl::visualization::AreaPickingEvent</a>
+: <a class="el" href="classpcl_1_1visualization_1_1_area_picking_event.html#a2b92a42f86c465112d84f1a558677d19">pcl::visualization::AreaPickingEvent</a>
 </li>
 <li>getPointsLoaded()
 : <a class="el" href="class_outofcore_cloud.html#a788c7f61c736af1bc88f7a21c1428db2">OutofcoreCloud</a>
@@ -3888,7 +3897,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1outofcore_1_1_outofcore_octree_base_metadata.html#a8139222ac6532460b8cf11b402a72e7f">pcl::outofcore::OutofcoreOctreeBaseMetadata</a>
 </li>
 <li>getPointUVCoordinates()
-: <a class="el" href="classpcl_1_1_texture_mapping.html#a8eddf168d0dd4929191126f9a73a9ed0">pcl::TextureMapping&lt; PointInT &gt;</a>
+: <a class="el" href="classpcl_1_1_texture_mapping.html#a183d45e708fa4aaf6d5e2e898c5cf1ec">pcl::TextureMapping&lt; PointInT &gt;</a>
 </li>
 <li>GetPointValue()
 : <a class="el" href="class_o_n___history_record.html#ab1c4759fa3338cf4e04e8a383667e6b5">ON_HistoryRecord</a>
@@ -3904,9 +3913,6 @@ $(function() {
 </li>
 <li>GetPolyEdgeValues()
 : <a class="el" href="class_o_n___history_record.html#a0b6e41afea28f7668c268532a33059c4">ON_HistoryRecord</a>
-</li>
-<li>getPolynomialFit()
-: <a class="el" href="classpcl_1_1_moving_least_squares.html#a16c07d35ff542961eacdf24852adfdcd">pcl::MovingLeastSquares&lt; PointInT, PointOutT &gt;</a>
 </li>
 <li>getPolynomialOrder()
 : <a class="el" href="classpcl_1_1_moving_least_squares.html#a31b20ae5edc27db50e771a5832d4f7ea">pcl::MovingLeastSquares&lt; PointInT, PointOutT &gt;</a>
@@ -4139,8 +4145,8 @@ $(function() {
 : <a class="el" href="classpcl_1_1_conditional_euclidean_clustering.html#af264099e843fbf5d48049857e1e1d6af">pcl::ConditionalEuclideanClustering&lt; PointT &gt;</a>
 </li>
 <li>getRemovedIndices()
-: <a class="el" href="classpcl_1_1_filter.html#a68618aa4ef4f26ea1a93d4c2b64de696">pcl::Filter&lt; PointT &gt;</a>
-, <a class="el" href="classpcl_1_1_filter_3_01pcl_1_1_p_c_l_point_cloud2_01_4.html#aed3e1689bc4ca18260c8864f6cc0c620">pcl::Filter&lt; pcl::PCLPointCloud2 &gt;</a>
+: <a class="el" href="classpcl_1_1_filter.html#add67775d121c2dd536d3306ef447431e">pcl::Filter&lt; PointT &gt;</a>
+, <a class="el" href="classpcl_1_1_filter_3_01pcl_1_1_p_c_l_point_cloud2_01_4.html#a030b0a71687396094f13b3facabe9ed5">pcl::Filter&lt; pcl::PCLPointCloud2 &gt;</a>
 </li>
 <li>getRemoveInvalid3DKeypoints()
 : <a class="el" href="classpcl_1_1_brisk_keypoint2_d.html#a5c53a903009694e3fc7e5694995af95a">pcl::BriskKeypoint2D&lt; PointInT, PointOutT, IntensityT &gt;</a>
@@ -4239,7 +4245,7 @@ $(function() {
 </li>
 <li>getRotationSpaces()
 : <a class="el" href="classpcl_1_1recognition_1_1_rigid_transform_space.html#a2ed1cb5121997c209f52eda12e00a059">pcl::recognition::RigidTransformSpace</a>
-, <a class="el" href="classpcl_1_1recognition_1_1_rotation_space_creator.html#ae6c035869c07220980844d97b829b628">pcl::recognition::RotationSpaceCreator</a>
+, <a class="el" href="classpcl_1_1recognition_1_1_rotation_space_creator.html#a1764ee45f8e12c234d110decbe0a0a93">pcl::recognition::RotationSpaceCreator</a>
 </li>
 <li>getRotationThreshold()
 : <a class="el" href="classpcl_1_1registration_1_1_default_convergence_criteria.html#af862f17b53a068b23a4f27ff5bd3379b">pcl::registration::DefaultConvergenceCriteria&lt; Scalar &gt;</a>
@@ -4427,7 +4433,7 @@ $(function() {
 </li>
 <li>getSegmentFromPoint()
 : <a class="el" href="classpcl_1_1_region_growing.html#a72b71b0e82a8080dcd26142968eb21e3">pcl::RegionGrowing&lt; PointT, NormalT &gt;</a>
-, <a class="el" href="classpcl_1_1_region_growing_r_g_b.html#a491387aac00e33f33e1da93d5d021e3f">pcl::RegionGrowingRGB&lt; PointT, NormalT &gt;</a>
+, <a class="el" href="classpcl_1_1_region_growing_r_g_b.html#a09ce6d3f0acafe52c81e8c7c4e090418">pcl::RegionGrowingRGB&lt; PointT, NormalT &gt;</a>
 </li>
 <li>getSegmentToSupervoxelMap()
 : <a class="el" href="classpcl_1_1_l_c_c_p_segmentation.html#a93b6050ab422da465548a17cca765d30">pcl::LCCPSegmentation&lt; PointT &gt;</a>
@@ -4685,7 +4691,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1_range_image.html#aa44f7eb7c10f57ca223fed1e1267ac51">pcl::RangeImage</a>
 </li>
 <li>getSurfaceNormals()
-: <a class="el" href="classpcl_1_1_surface_normal_modality.html#a2b976f5469678c55fb58d614bc74ef44">pcl::SurfaceNormalModality&lt; PointInT &gt;</a>
+: <a class="el" href="classpcl_1_1_surface_normal_modality.html#ad22686f686120cbec54eeca27c8850f0">pcl::SurfaceNormalModality&lt; PointInT &gt;</a>
 </li>
 <li>GetSurfaceNormalXform()
 : <a class="el" href="class_o_n___xform.html#ab7a7206c7076b1ed6d73810274e0d00b">ON_Xform</a>
@@ -4707,7 +4713,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1_narf.html#a094f2ffdf7ac21701d5858ae68a38dd2">pcl::Narf</a>
 </li>
 <li>getSurfacePatchWorldSize()
-: <a class="el" href="classpcl_1_1_narf.html#a9ee48b664ec95b095dec9f7d5fcd3dab">pcl::Narf</a>
+: <a class="el" href="classpcl_1_1_narf.html#a64470852459c8b05ab4ed7e0452e7450">pcl::Narf</a>
 </li>
 <li>GetSurfaceSize()
 : <a class="el" href="class_o_n___extrusion.html#ab7b49f6e0d861589456bdc97b807085f">ON_Extrusion</a>
@@ -4816,7 +4822,10 @@ $(function() {
 : <a class="el" href="classpcl_1_1_real_sense2_grabber.html#a25afe6d42c528638224eb10a0190a984">pcl::RealSense2Grabber</a>
 </li>
 <li>GetTextXform()
-: <a class="el" href="class_o_n___annotation2.html#a301eea2a75007cb4254412d8370d852b">ON_Annotation2</a>
+: <a class="el" href="class_o_n___annotation2.html#ab36908027fe14a75e9139588e188e52c">ON_Annotation2</a>
+</li>
+<li>getThreads()
+: <a class="el" href="classpcl_1_1_poisson.html#a2a9bd49ad80850c2dad8b40e8a74f1f1">pcl::Poisson&lt; PointNT &gt;</a>
 </li>
 <li>getThreshold()
 : <a class="el" href="struct_haar_classifier_node128.html#ae5416583336f2795d07849b379bdd377">HaarClassifierNode128</a>
@@ -4923,7 +4932,7 @@ $(function() {
 , <a class="el" href="classpcl_1_1visualization_1_1_p_c_l_painter2_d.html#a54be6a96700dcc33a65e1b74f0c0cf01">pcl::visualization::PCLPainter2D</a>
 </li>
 <li>getTransformation()
-: <a class="el" href="classpcl_1_1_narf.html#a4b5c9962ee22c46722a476a395923557">pcl::Narf</a>
+: <a class="el" href="classpcl_1_1_narf.html#a646fe283f6b99fb19b7fc7784a32932d">pcl::Narf</a>
 , <a class="el" href="classpcl_1_1registration_1_1_l_u_m.html#ad33e4d184894f161587fef8ebdc1a581">pcl::registration::LUM&lt; PointT &gt;</a>
 , <a class="el" href="classpcl_1_1_transformation_from_correspondences.html#a0126a0d3c7fcf5f762bd76359fffc95f">pcl::TransformationFromCorrespondences</a>
 </li>
@@ -5149,13 +5158,13 @@ $(function() {
 : <a class="el" href="classpcl_1_1geometry_1_1_mesh_base.html#a5a68751110b806710e024698cd613c32">pcl::geometry::MeshBase&lt; DerivedT, MeshTraitsT, MeshTagT &gt;</a>
 </li>
 <li>getVertexAroundFaceCirculator()
-: <a class="el" href="classpcl_1_1geometry_1_1_mesh_base.html#a86e8b2d7ccde25e97d4452a9c63a2be6">pcl::geometry::MeshBase&lt; DerivedT, MeshTraitsT, MeshTagT &gt;</a>
+: <a class="el" href="classpcl_1_1geometry_1_1_mesh_base.html#a22c4d0b82719c61474f1c10ae9165273">pcl::geometry::MeshBase&lt; DerivedT, MeshTraitsT, MeshTagT &gt;</a>
 </li>
 <li>getVertexAroundVertexCirculator()
-: <a class="el" href="classpcl_1_1geometry_1_1_mesh_base.html#a17ce476f53a6e99c6de3996bb217674c">pcl::geometry::MeshBase&lt; DerivedT, MeshTraitsT, MeshTagT &gt;</a>
+: <a class="el" href="classpcl_1_1geometry_1_1_mesh_base.html#a138e4db9aa95de0b5b9a4c8033eaa3be">pcl::geometry::MeshBase&lt; DerivedT, MeshTraitsT, MeshTagT &gt;</a>
 </li>
 <li>getVertexDataCloud()
-: <a class="el" href="classpcl_1_1geometry_1_1_mesh_base.html#ab1237135e3318c46b9e71c7a31c22859">pcl::geometry::MeshBase&lt; DerivedT, MeshTraitsT, MeshTagT &gt;</a>
+: <a class="el" href="classpcl_1_1geometry_1_1_mesh_base.html#ad01617b7fc9c08e79b7357659a8d6731">pcl::geometry::MeshBase&lt; DerivedT, MeshTraitsT, MeshTagT &gt;</a>
 </li>
 <li>GetVertexEdges()
 : <a class="el" href="class_o_n___mesh.html#a7696c1cc1632aeaee8966d392814e9d7">ON_Mesh</a>
@@ -5180,7 +5189,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1visualization_1_1_p_c_l_visualizer.html#ae87cdb4c22d7b37389acd09e1a68e434">pcl::visualization::PCLVisualizer</a>
 </li>
 <li>getViewingDirection()
-: <a class="el" href="classpcl_1_1_range_image.html#ad37bc4a8aab3d63ee7c9ef9428239f00">pcl::RangeImage</a>
+: <a class="el" href="classpcl_1_1_range_image.html#a32dfa3c681a50aebc74ae6830767a831">pcl::RangeImage</a>
 </li>
 <li>GetViewPlane()
 : <a class="el" href="class_o_n___viewport.html#a7dc76c4b596e3ec9c541188e90a7eec0">ON_Viewport</a>
@@ -5233,16 +5242,19 @@ $(function() {
 , <a class="el" href="structpcl_1_1_t_s_d_f_volume_1_1_header.html#a4f6a24c723f3dbd0a0fbbe9b8b6c4ca6">pcl::TSDFVolume&lt; VoxelT, WeightT &gt;::Header</a>
 </li>
 <li>getVotes()
-: <a class="el" href="classpcl_1_1_r_f_face_detector_trainer.html#a185a2db5a62c39fc65eda978dbcc0dbb">pcl::RFFaceDetectorTrainer</a>
+: <a class="el" href="classpcl_1_1_r_f_face_detector_trainer.html#ab54456064d0b280591f5f5ed285988b3">pcl::RFFaceDetectorTrainer</a>
 </li>
 <li>getVotes2()
 : <a class="el" href="classpcl_1_1_r_f_face_detector_trainer.html#af6424fe56a7d4a0cbb31fb375373c52f">pcl::RFFaceDetectorTrainer</a>
 </li>
 <li>getVoxel()
-: <a class="el" href="classpcl_1_1recognition_1_1_voxel_structure.html#adfd5b0db1b0df621eef179ccf87cb76e">pcl::recognition::VoxelStructure&lt; T, REAL &gt;</a>
+: <a class="el" href="classpcl_1_1recognition_1_1_voxel_structure.html#a1313ad51305b2ab9f6369b41849a12b3">pcl::recognition::VoxelStructure&lt; T, REAL &gt;</a>
 </li>
 <li>getVoxelActor()
 : <a class="el" href="class_outofcore_cloud.html#aec904d3452aa3a2c404d4ffbecf3f71c">OutofcoreCloud</a>
+</li>
+<li>getVoxelAtPoint()
+: <a class="el" href="classpcl_1_1_voxel_grid_covariance.html#a6d8b856598a1a68a5f150ebe8357d716">pcl::VoxelGridCovariance&lt; PointT &gt;</a>
 </li>
 <li>getVoxelBounds()
 : <a class="el" href="classpcl_1_1octree_1_1_octree_point_cloud.html#ad15791e2de5823745260f812b4c65e06">pcl::octree::OctreePointCloud&lt; PointT, LeafContainerT, BranchContainerT, OctreeT &gt;</a>
@@ -5275,7 +5287,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1_supervoxel_clustering.html#a2b6f7118c8c4ba33d474fda9e53c0aee">pcl::SupervoxelClustering&lt; PointT &gt;</a>
 </li>
 <li>getVoxels()
-: <a class="el" href="classpcl_1_1recognition_1_1_voxel_structure.html#aa7c2cf3399363204603b5074a5eedd15">pcl::recognition::VoxelStructure&lt; T, REAL &gt;</a>
+: <a class="el" href="classpcl_1_1recognition_1_1_voxel_structure.html#ab8959adb92fb49e9435ace6b5a36721a">pcl::recognition::VoxelStructure&lt; T, REAL &gt;</a>
 </li>
 <li>getVoxelSideLength()
 : <a class="el" href="classpcl_1_1outofcore_1_1_outofcore_octree_base.html#a7503db4c6b543960b5de57d545cdb9fa">pcl::outofcore::OutofcoreOctreeBase&lt; ContainerT, PointT &gt;</a>
@@ -5371,7 +5383,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1visualization_1_1_mouse_event.html#a6717601f91ef9598f6e242e6506a13c4">pcl::visualization::MouseEvent</a>
 </li>
 <li>getYAxisVector3fMap()
-: <a class="el" href="structpcl_1_1___reference_frame.html#a41d1ea357937c8e4f23d2cc3754cc436">pcl::_ReferenceFrame</a>
+: <a class="el" href="structpcl_1_1___reference_frame.html#a606899c3b68953c051104180753d6ec0">pcl::_ReferenceFrame</a>
 </li>
 <li>getZAxisVector3fMap()
 : <a class="el" href="structpcl_1_1___reference_frame.html#a65bf7279e06b57bb85d738c1cb246ae2">pcl::_ReferenceFrame</a>
@@ -5402,7 +5414,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1_global_hypotheses_verification.html#a347da8df9da39d40649d7ed357907208">pcl::GlobalHypothesesVerification&lt; ModelT, SceneT &gt;</a>
 </li>
 <li>GMM()
-: <a class="el" href="classpcl_1_1segmentation_1_1grabcut_1_1_g_m_m.html#a5219e6b9ee0ba89bf795cf151c14a61b">pcl::segmentation::grabcut::GMM</a>
+: <a class="el" href="classpcl_1_1segmentation_1_1grabcut_1_1_g_m_m.html#a8c870011d933a72b1885f2ee923ced53">pcl::segmentation::grabcut::GMM</a>
 </li>
 <li>GMM_component_
 : <a class="el" href="classpcl_1_1_grab_cut.html#a3c2d1b392e39d0df1fb439860ab9bcb4">pcl::GrabCut&lt; PointT &gt;</a>
@@ -5435,12 +5447,12 @@ $(function() {
 , <a class="el" href="classpcl_1_1gpu_1_1_seeded_hue_segmentation.html#adf9cb3f80cc864e0ced025c24d7696ef">pcl::gpu::SeededHueSegmentation</a>
 </li>
 <li>grab()
-: <a class="el" href="class_evaluation.html#a5e1de308223ca4c898ada4ccd2468fef">Evaluation</a>
+: <a class="el" href="class_evaluation.html#a43e84fbd6994480fb4311818e2b212f2">Evaluation</a>
 , <a class="el" href="classpcl_1_1gpu_1_1_capture_open_n_i.html#a5e925d66d991557b041b3217570c9472">pcl::gpu::CaptureOpenNI</a>
 , <a class="el" href="classpcl_1_1gpu_1_1kinfu_l_s_1_1_capture_open_n_i.html#af334659df7b5a483f36252e84fbfd989">pcl::gpu::kinfuLS::CaptureOpenNI</a>
 </li>
 <li>Grabber()
-: <a class="el" href="classpcl_1_1_grabber.html#a1e06ef5a0988ada1e9b75547479da9e7">pcl::Grabber</a>
+: <a class="el" href="classpcl_1_1_grabber.html#a2ffd614fb8b7178217778c739b698cf5">pcl::Grabber</a>
 </li>
 <li>grabber_
 : <a class="el" href="class_open_n_i_capture.html#a051014fbc993fcd7c53ef23900eb2798">OpenNICapture</a>
@@ -5589,7 +5601,7 @@ $(function() {
 : <a class="el" href="classpcl_1_1_grid_minimum.html#a1ea51d3b624cbaf1dcba3af90d67c292">pcl::GridMinimum&lt; PointT &gt;</a>
 </li>
 <li>GridProjection()
-: <a class="el" href="classpcl_1_1_grid_projection.html#acb6b9a0bf64fe78bbd8c8b16b95735fa">pcl::GridProjection&lt; PointNT &gt;</a>
+: <a class="el" href="classpcl_1_1_grid_projection.html#a79cb25cd43c17040722912dbffa5ca22">pcl::GridProjection&lt; PointNT &gt;</a>
 </li>
 <li>gridResolution()
 : <a class="el" href="classpcl_1_1gpu_1_1kinfu_l_s_1_1_tsdf_volume.html#af26eab160f60904ea2e3b4e5bca64488">pcl::gpu::kinfuLS::TsdfVolume</a>
@@ -5673,7 +5685,7 @@ $(function() {
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:15:37</p>
+<p>Pages generated on Sun Dec 20 2020 13:24:12</p>
 </div> <!-- #footer -->
 </body>
 </html>

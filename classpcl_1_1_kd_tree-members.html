@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -87,10 +87,10 @@ $(function() {
   <tr><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#a9b71072db4f7662c7c565d4c49145db2">input_</a></td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#a49e8890a0cd0e35d0d5290b6e2be7900">KdTree</a>(bool sorted=true)</td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#aaceb7706d5a8b57ab626277f826162d3">min_pts_</a></td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#ac81c442ff9c9b1e03c10cb55128e726d">nearestKSearch</a>(const PointT &amp;p_q, int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const =0</td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#a6375c3f23775693f316482e7bd1c5e5d">nearestKSearch</a>(const PointCloud &amp;cloud, int index, int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#a7b8a30dcd9117c962e1940ad2bf3b79d">nearestKSearch</a>(int index, int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#a3c3de00ef91b96c2680c17de1b236c23">nearestKSearchT</a>(const PointTDiff &amp;point, int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#ac8ffab954e827438acae304837a9bb3e">nearestKSearch</a>(const PointT &amp;p_q, unsigned int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const =0</td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#adbc35714fc75a4b9bd4e7a4ae89f2e93">nearestKSearch</a>(const PointCloud &amp;cloud, int index, unsigned int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#ae66937853e2b2a9c2171da966ac781a5">nearestKSearch</a>(int index, unsigned int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#a561c1be97c2bae1a921b28844ec7804a">nearestKSearchT</a>(const PointTDiff &amp;point, unsigned int k, std::vector&lt; int &gt; &amp;k_indices, std::vector&lt; float &gt; &amp;k_sqr_distances) const</td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#a2cacacf162468a473dca65193e708002">point_representation_</a></td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#afc34812fe33e1767dd856ae7d9dcda77">PointCloud</a> typedef</td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html#a899c6b5d462f4126259ac445a57f92ca">PointCloudConstPtr</a> typedef</td><td class="entry"><a class="el" href="classpcl_1_1_kd_tree.html">pcl::KdTree&lt; PointT &gt;</a></td><td class="entry"></td></tr>
@@ -114,7 +114,7 @@ $(function() {
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:12:09</p>
+<p>Pages generated on Sun Dec 20 2020 13:20:16</p>
 </div> <!-- #footer -->
 </body>
 </html>

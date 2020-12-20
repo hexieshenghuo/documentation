@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -654,7 +654,7 @@ $(function() {
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;      <span class="keyword">static</span> __forceinline__ __device__ <span class="keywordtype">int</span> </div>
 <div class="line"><a name="l00583"></a><span class="lineno"><a class="line" href="structpcl_1_1device_1_1_emulation.html#a2b969287e30e5845625806bc468917d0">  583</a></span>&#160;      <a class="code" href="structpcl_1_1device_1_1_emulation.html#a2b969287e30e5845625806bc468917d0">Ballot</a>(<span class="keywordtype">int</span> predicate, <span class="keyword">volatile</span> <span class="keywordtype">int</span>* cta_buffer)</div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;      {</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        <a class="code" href="namespacepcl_1_1utils.html#ad8fb00193c8572ad7284ef828c144d05">pcl::utils::ignore</a>(cta_buffer);</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        <a class="code" href="namespacepcl_1_1utils.html#a78a2d5e0d4579c74c29e3022e8045a11">pcl::utils::ignore</a>(cta_buffer);</div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;<span class="preprocessor">#if CUDA_VERSION &gt;= 9000</span></div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;        <span class="keywordflow">return</span> __ballot_sync (__activemask (), predicate);</div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;<span class="preprocessor">#else</span></div>
@@ -665,7 +665,7 @@ $(function() {
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;      <span class="keyword">static</span> __forceinline__ __device__ <span class="keywordtype">bool</span></div>
 <div class="line"><a name="l00594"></a><span class="lineno"><a class="line" href="structpcl_1_1device_1_1_emulation.html#a49effda22de2309e0a2a314a46108d39">  594</a></span>&#160;      <a class="code" href="structpcl_1_1device_1_1_emulation.html#a49effda22de2309e0a2a314a46108d39">All</a>(<span class="keywordtype">int</span> predicate, <span class="keyword">volatile</span> <span class="keywordtype">int</span>* cta_buffer)</div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;      {</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        <a class="code" href="namespacepcl_1_1utils.html#ad8fb00193c8572ad7284ef828c144d05">pcl::utils::ignore</a>(cta_buffer);</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        <a class="code" href="namespacepcl_1_1utils.html#a78a2d5e0d4579c74c29e3022e8045a11">pcl::utils::ignore</a>(cta_buffer);</div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;<span class="preprocessor">#if CUDA_VERSION &gt;= 9000</span></div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        <span class="keywordflow">return</span> __all_sync (__activemask (), predicate);</div>
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;<span class="preprocessor">#else</span></div>
@@ -708,10 +708,10 @@ $(function() {
 <div class="ttc" id="anamespacepcl_1_1device_html_a617b440766a2058b5587f8cc493c1048"><div class="ttname"><a href="namespacepcl_1_1device.html#a617b440766a2058b5587f8cc493c1048">pcl::device::dot</a></div><div class="ttdeci">__device__ __forceinline__ float dot(const float3 &amp;v1, const float3 &amp;v2)</div><div class="ttdef"><b>Definition:</b> <a href="src_2cuda_2utils_8hpp_source.html#l00059">utils.hpp:59</a></div></div>
 <div class="ttc" id="astructpcl_1_1device_1_1_warp_html_a48dec3419018e143da7a9d015a7d4810"><div class="ttname"><a href="structpcl_1_1device_1_1_warp.html#a48dec3419018e143da7a9d015a7d4810">pcl::device::Warp::laneId</a></div><div class="ttdeci">static __device__ __forceinline__ unsigned int laneId()</div><div class="ttdoc">Returns the warp lane ID of the calling thread.</div><div class="ttdef"><b>Definition:</b> <a href="src_2cuda_2utils_8hpp_source.html#l00534">utils.hpp:534</a></div></div>
 <div class="ttc" id="anamespacepcl_1_1device_html_ab91db2ef47d38b225992ec6efb0de06a"><div class="ttname"><a href="namespacepcl_1_1device.html#ab91db2ef47d38b225992ec6efb0de06a">pcl::device::computeRoots2</a></div><div class="ttdeci">__device__ __forceinline__ void computeRoots2(const float &amp;b, const float &amp;c, float3 &amp;roots)</div><div class="ttdef"><b>Definition:</b> <a href="gpu_2features_2include_2pcl_2gpu_2features_2device_2eigen_8hpp_source.html#l00102">eigen.hpp:102</a></div></div>
-<div class="ttc" id="anamespacepcl_1_1utils_html_ad8fb00193c8572ad7284ef828c144d05"><div class="ttname"><a href="namespacepcl_1_1utils.html#ad8fb00193c8572ad7284ef828c144d05">pcl::utils::ignore</a></div><div class="ttdeci">void ignore(const T &amp;)</div><div class="ttdoc">Utility function to eliminate unused variable warnings.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00062">utils.h:62</a></div></div>
 <div class="ttc" id="anamespacepcl_1_1device_html_a88588f028f0250a361e9bc8a08129ae2"><div class="ttname"><a href="namespacepcl_1_1device.html#a88588f028f0250a361e9bc8a08129ae2">pcl::device::norm</a></div><div class="ttdeci">__device__ __host__ __forceinline__ float norm(const float3 &amp;v1, const float3 &amp;v2)</div><div class="ttdef"><b>Definition:</b> <a href="vector__operations_8hpp_source.html#l00060">vector_operations.hpp:60</a></div></div>
 <div class="ttc" id="anamespacepcl_1_1device_html_a235007ad67113b56d5a9ef8933165514"><div class="ttname"><a href="namespacepcl_1_1device.html#a235007ad67113b56d5a9ef8933165514">pcl::device::operator*=</a></div><div class="ttdeci">__device__ __forceinline__ float3 &amp; operator*=(float3 &amp;vec, const float &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="src_2cuda_2utils_8hpp_source.html#l00077">utils.hpp:77</a></div></div>
 <div class="ttc" id="anamespacepcl_1_1device_html_a10d2bab628ea3ea3f31aa6e8efe360da"><div class="ttname"><a href="namespacepcl_1_1device.html#a10d2bab628ea3ea3f31aa6e8efe360da">pcl::device::operator+</a></div><div class="ttdeci">__device__ __forceinline__ float3 operator+(const float3 &amp;v1, const float3 &amp;v2)</div><div class="ttdef"><b>Definition:</b> <a href="src_2cuda_2utils_8hpp_source.html#l00071">utils.hpp:71</a></div></div>
+<div class="ttc" id="anamespacepcl_1_1utils_html_a78a2d5e0d4579c74c29e3022e8045a11"><div class="ttname"><a href="namespacepcl_1_1utils.html#a78a2d5e0d4579c74c29e3022e8045a11">pcl::utils::ignore</a></div><div class="ttdeci">void ignore(const T &amp;...)</div><div class="ttdoc">Utility function to eliminate unused variable warnings.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8h_source.html#l00062">utils.h:62</a></div></div>
 <div class="ttc" id="astructpcl_1_1device_1_1_emulation_html_a2b969287e30e5845625806bc468917d0"><div class="ttname"><a href="structpcl_1_1device_1_1_emulation.html#a2b969287e30e5845625806bc468917d0">pcl::device::Emulation::Ballot</a></div><div class="ttdeci">static __forceinline__ __device__ int Ballot(int predicate, volatile int *cta_buffer)</div><div class="ttdef"><b>Definition:</b> <a href="src_2cuda_2utils_8hpp_source.html#l00583">utils.hpp:583</a></div></div>
 <div class="ttc" id="astructpcl_1_1device_1_1_warp_html_ab39c20ab26445e80e7d968e61d2456c3a073da26dbafe7b94db54d5f1b0dadee7"><div class="ttname"><a href="structpcl_1_1device_1_1_warp.html#ab39c20ab26445e80e7d968e61d2456c3a073da26dbafe7b94db54d5f1b0dadee7">pcl::device::Warp::STRIDE</a></div><div class="ttdeci">@ STRIDE</div><div class="ttdef"><b>Definition:</b> <a href="src_2cuda_2utils_8hpp_source.html#l00529">utils.hpp:529</a></div></div>
 <div class="ttc" id="astructpcl_1_1device_1_1_eigen33_1_1_mini_mat_html"><div class="ttname"><a href="structpcl_1_1device_1_1_eigen33_1_1_mini_mat.html">pcl::device::Eigen33::MiniMat</a></div><div class="ttdef"><b>Definition:</b> <a href="gpu_2features_2include_2pcl_2gpu_2features_2device_2eigen_8hpp_source.html#l00167">eigen.hpp:167</a></div></div>
@@ -721,7 +721,7 @@ $(function() {
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:10:33</p>
+<p>Pages generated on Sun Dec 20 2020 13:18:22</p>
 </div> <!-- #footer -->
 </body>
 </html>

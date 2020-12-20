@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -152,17 +152,23 @@ Functions</h2></td></tr>
 <tr class="separator:af3842cf5d2a15a7d0d1a86da2e9ae4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24fe4be3441cd38cc1f9a8017bdd715f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepcl_1_1detail.html#a24fe4be3441cd38cc1f9a8017bdd715f">fieldOrdering</a> (const <a class="el" href="structpcl_1_1detail_1_1_field_mapping.html">FieldMapping</a> &amp;a, const <a class="el" href="structpcl_1_1detail_1_1_field_mapping.html">FieldMapping</a> &amp;b)</td></tr>
 <tr class="separator:a24fe4be3441cd38cc1f9a8017bdd715f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91fc3bb11ebbb4290bb64d1df3f30587"><td class="memTemplParams" colspan="2">template&lt;typename PointT &gt; </td></tr>
-<tr class="memitem:a91fc3bb11ebbb4290bb64d1df3f30587"><td class="memTemplItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="namespacepcl.html#ae716f0bdfbc7ae033006733a42fb6b63">pcl::MsgFieldMap</a> &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepcl_1_1detail.html#a91fc3bb11ebbb4290bb64d1df3f30587">getMapping</a> (<a class="el" href="classpcl_1_1_point_cloud.html">pcl::PointCloud</a>&lt; <a class="el" href="structpcl_1_1_point_x_y_z_r_g_b.html">PointT</a> &gt; &amp;p)</td></tr>
-<tr class="separator:a91fc3bb11ebbb4290bb64d1df3f30587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b2338236d3a301bf2e82477fd6d197"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a93b2338236d3a301bf2e82477fd6d197"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepcl_1_1detail.html#a93b2338236d3a301bf2e82477fd6d197">copyStringValue</a> (const std::string &amp;st, <a class="el" href="structpcl_1_1_p_c_l_point_cloud2.html">pcl::PCLPointCloud2</a> &amp;cloud, <a class="el" href="namespacepcl.html#a45edbae979af563e6a1e39fd1aad3911">pcl::index_t</a> point_index, unsigned int field_idx, unsigned int fields_count, std::istringstream &amp;is)</td></tr>
+<tr class="separator:a93b2338236d3a301bf2e82477fd6d197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a317c73abbd065aad8bb740cc0da80b34"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a317c73abbd065aad8bb740cc0da80b34"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepcl_1_1detail.html#a317c73abbd065aad8bb740cc0da80b34">copyStringValue&lt; std::int8_t &gt;</a> (const std::string &amp;st, <a class="el" href="structpcl_1_1_p_c_l_point_cloud2.html">pcl::PCLPointCloud2</a> &amp;cloud, <a class="el" href="namespacepcl.html#a45edbae979af563e6a1e39fd1aad3911">pcl::index_t</a> point_index, unsigned int field_idx, unsigned int fields_count, std::istringstream &amp;is)</td></tr>
+<tr class="separator:a317c73abbd065aad8bb740cc0da80b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68168a03f7fa557abf6d48a62ce2151"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:af68168a03f7fa557abf6d48a62ce2151"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepcl_1_1detail.html#af68168a03f7fa557abf6d48a62ce2151">copyStringValue&lt; std::uint8_t &gt;</a> (const std::string &amp;st, <a class="el" href="structpcl_1_1_p_c_l_point_cloud2.html">pcl::PCLPointCloud2</a> &amp;cloud, <a class="el" href="namespacepcl.html#a45edbae979af563e6a1e39fd1aad3911">pcl::index_t</a> point_index, unsigned int field_idx, unsigned int fields_count, std::istringstream &amp;is)</td></tr>
+<tr class="separator:af68168a03f7fa557abf6d48a62ce2151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a485d0d8c7a7b9981ac9e76ab821a38e4"><td class="memItemLeft" align="right" valign="top">constexpr std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepcl_1_1detail.html#a485d0d8c7a7b9981ac9e76ab821a38e4">index_type_size</a> = <a class="el" href="types_8h.html#aab6f123bb0d1b60eb0e02814c55ba73f">PCL_INDEX_SIZE</a></td></tr>
+<tr class="memitem:a485d0d8c7a7b9981ac9e76ab821a38e4"><td class="memItemLeft" align="right" valign="top">constexpr std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepcl_1_1detail.html#a485d0d8c7a7b9981ac9e76ab821a38e4">index_type_size</a> = PCL_INDEX_SIZE</td></tr>
 <tr class="memdesc:a485d0d8c7a7b9981ac9e76ab821a38e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of bits in PCL's index type  <a href="namespacepcl_1_1detail.html#a485d0d8c7a7b9981ac9e76ab821a38e4">More...</a><br /></td></tr>
 <tr class="separator:a485d0d8c7a7b9981ac9e76ab821a38e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d5f9ba23dbec1366c9021dc149c9925"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepcl_1_1detail.html#a0d5f9ba23dbec1366c9021dc149c9925">index_type_signed</a> = <a class="el" href="types_8h.html#a25b0b408208fd827d14539af240eeea9">PCL_INDEX_SIGNED</a></td></tr>
-<tr class="memdesc:a0d5f9ba23dbec1366c9021dc149c9925"><td class="mdescLeft">&#160;</td><td class="mdescRight">signed/unsigned nature of PCL's index type For PCL 1.11, please use PCL_INDEX_SIGNED to choose a type best suited for your needs.  <a href="namespacepcl_1_1detail.html#a0d5f9ba23dbec1366c9021dc149c9925">More...</a><br /></td></tr>
+<tr class="memitem:a0d5f9ba23dbec1366c9021dc149c9925"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepcl_1_1detail.html#a0d5f9ba23dbec1366c9021dc149c9925">index_type_signed</a> = PCL_INDEX_SIGNED</td></tr>
+<tr class="memdesc:a0d5f9ba23dbec1366c9021dc149c9925"><td class="mdescLeft">&#160;</td><td class="mdescRight">signed/unsigned nature of PCL's index type Please use PCL_INDEX_SIGNED when building PCL to choose a type best suited for your needs.  <a href="namespacepcl_1_1detail.html#a0d5f9ba23dbec1366c9021dc149c9925">More...</a><br /></td></tr>
 <tr class="separator:a0d5f9ba23dbec1366c9021dc149c9925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -183,11 +189,209 @@ template&lt;std::size_t Bits, bool Signed = true&gt; </div>
 <p>helper type to use for <code><a class="el" href="structpcl_1_1detail_1_1int__type.html#a1d830b2bb47ff6fc4676c4b8d58b5962">int_type::type</a></code> </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structpcl_1_1detail_1_1int__type.html" title="int_type::type refers to an integral type that satisfies template parameters">int_type</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00093">93</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00068">68</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a93b2338236d3a301bf2e82477fd6d197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b2338236d3a301bf2e82477fd6d197">&#9670;&nbsp;</a></span>copyStringValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pcl::detail::copyStringValue </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>st</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpcl_1_1_p_c_l_point_cloud2.html">pcl::PCLPointCloud2</a> &amp;&#160;</td>
+          <td class="paramname"><em>cloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacepcl.html#a45edbae979af563e6a1e39fd1aad3911">pcl::index_t</a>&#160;</td>
+          <td class="paramname"><em>point_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>field_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>fields_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::istringstream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="io_2include_2pcl_2io_2file__io_8h_source.html#l00330">330</a> of file <a class="el" href="io_2include_2pcl_2io_2file__io_8h_source.html">file_io.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_p_c_l_point_cloud2_8h_source.html#l00030">pcl::PCLPointCloud2::data</a>, <a class="el" href="_p_c_l_point_cloud2_8h_source.html#l00023">pcl::PCLPointCloud2::fields</a>, <a class="el" href="_p_c_l_point_cloud2_8h_source.html#l00032">pcl::PCLPointCloud2::is_dense</a>, and <a class="el" href="_p_c_l_point_cloud2_8h_source.html#l00027">pcl::PCLPointCloud2::point_step</a>.</p>
+
+</div>
+</div>
+<a id="a317c73abbd065aad8bb740cc0da80b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a317c73abbd065aad8bb740cc0da80b34">&#9670;&nbsp;</a></span>copyStringValue&lt; std::int8_t &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="namespacepcl_1_1detail.html#a93b2338236d3a301bf2e82477fd6d197">pcl::detail::copyStringValue</a>&lt; std::int8_t &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>st</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpcl_1_1_p_c_l_point_cloud2.html">pcl::PCLPointCloud2</a> &amp;&#160;</td>
+          <td class="paramname"><em>cloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacepcl.html#a45edbae979af563e6a1e39fd1aad3911">pcl::index_t</a>&#160;</td>
+          <td class="paramname"><em>point_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>field_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>fields_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::istringstream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="io_2include_2pcl_2io_2file__io_8h_source.html#l00356">356</a> of file <a class="el" href="io_2include_2pcl_2io_2file__io_8h_source.html">file_io.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_p_c_l_point_cloud2_8h_source.html#l00030">pcl::PCLPointCloud2::data</a>, <a class="el" href="_p_c_l_point_cloud2_8h_source.html#l00023">pcl::PCLPointCloud2::fields</a>, and <a class="el" href="_p_c_l_point_cloud2_8h_source.html#l00027">pcl::PCLPointCloud2::point_step</a>.</p>
+
+</div>
+</div>
+<a id="af68168a03f7fa557abf6d48a62ce2151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68168a03f7fa557abf6d48a62ce2151">&#9670;&nbsp;</a></span>copyStringValue&lt; std::uint8_t &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="namespacepcl_1_1detail.html#a93b2338236d3a301bf2e82477fd6d197">pcl::detail::copyStringValue</a>&lt; std::uint8_t &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>st</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpcl_1_1_p_c_l_point_cloud2.html">pcl::PCLPointCloud2</a> &amp;&#160;</td>
+          <td class="paramname"><em>cloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacepcl.html#a45edbae979af563e6a1e39fd1aad3911">pcl::index_t</a>&#160;</td>
+          <td class="paramname"><em>point_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>field_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>fields_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::istringstream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="io_2include_2pcl_2io_2file__io_8h_source.html#l00380">380</a> of file <a class="el" href="io_2include_2pcl_2io_2file__io_8h_source.html">file_io.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_p_c_l_point_cloud2_8h_source.html#l00030">pcl::PCLPointCloud2::data</a>, <a class="el" href="_p_c_l_point_cloud2_8h_source.html#l00023">pcl::PCLPointCloud2::fields</a>, and <a class="el" href="_p_c_l_point_cloud2_8h_source.html#l00027">pcl::PCLPointCloud2::point_step</a>.</p>
+
+</div>
+</div>
 <a id="a24fe4be3441cd38cc1f9a8017bdd715f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24fe4be3441cd38cc1f9a8017bdd715f">&#9670;&nbsp;</a></span>fieldOrdering()</h2>
 
@@ -222,11 +426,11 @@ template&lt;std::size_t Bits, bool Signed = true&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="conversions_8h_source.html#l00116">116</a> of file <a class="el" href="conversions_8h_source.html">conversions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="conversions_8h_source.html#l00115">115</a> of file <a class="el" href="conversions_8h_source.html">conversions.h</a>.</p>
 
-<p class="reference">References <a class="el" href="common_2include_2pcl_2point__cloud_8h_source.html#l00064">pcl::detail::FieldMapping::serialized_offset</a>.</p>
+<p class="reference">References <a class="el" href="common_2include_2pcl_2point__cloud_8h_source.html#l00063">pcl::detail::FieldMapping::serialized_offset</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="conversions_8h_source.html#l00124">pcl::createMapping()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="conversions_8h_source.html#l00123">pcl::createMapping()</a>.</p>
 
 </div>
 </div>
@@ -269,32 +473,6 @@ template&lt;typename Vector , typename Matrix &gt; </div>
 
 </div>
 </div>
-<a id="a91fc3bb11ebbb4290bb64d1df3f30587"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91fc3bb11ebbb4290bb64d1df3f30587">&#9670;&nbsp;</a></span>getMapping()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename PointT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">shared_ptr&lt; <a class="el" href="namespacepcl.html#ae716f0bdfbc7ae033006733a42fb6b63">pcl::MsgFieldMap</a> &gt; &amp; pcl::detail::getMapping </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classpcl_1_1_point_cloud.html">pcl::PointCloud</a>&lt; <a class="el" href="structpcl_1_1_point_x_y_z_r_g_b.html">PointT</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Scheduled for removal in version 1 . 12 : "use createMapping() instead" <br  />
- </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="common_2include_2pcl_2point__cloud_8h_source.html#l00646">646</a> of file <a class="el" href="common_2include_2pcl_2point__cloud_8h_source.html">point_cloud.h</a>.</p>
-
-<p class="reference">References <a class="el" href="common_2include_2pcl_2point__cloud_8h_source.html#l00635">pcl::PointCloud&lt; PointT &gt;::mapping_</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="a0d5f9ba23dbec1366c9021dc149c9925"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d5f9ba23dbec1366c9021dc149c9925">&#9670;&nbsp;</a></span>index_type_signed</h2>
@@ -306,7 +484,7 @@ template&lt;typename PointT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool pcl::detail::index_type_signed = <a class="el" href="types_8h.html#a25b0b408208fd827d14539af240eeea9">PCL_INDEX_SIGNED</a></td>
+          <td class="memname">constexpr bool pcl::detail::index_type_signed = PCL_INDEX_SIGNED</td>
         </tr>
       </table>
   </td>
@@ -316,10 +494,10 @@ template&lt;typename PointT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>signed/unsigned nature of PCL's index type For PCL 1.11, please use PCL_INDEX_SIGNED to choose a type best suited for your needs. </p>
-<p>PCL 1.12 will come with default signed, along with client code compile time choice Default: signed </p>
+<p>signed/unsigned nature of PCL's index type Please use PCL_INDEX_SIGNED when building PCL to choose a type best suited for your needs. </p>
+<p>Default: signed </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00128">128</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00102">102</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -333,7 +511,7 @@ template&lt;typename PointT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr std::uint8_t pcl::detail::index_type_size = <a class="el" href="types_8h.html#aab6f123bb0d1b60eb0e02814c55ba73f">PCL_INDEX_SIZE</a></td>
+          <td class="memname">constexpr std::uint8_t pcl::detail::index_type_size = PCL_INDEX_SIZE</td>
         </tr>
       </table>
   </td>
@@ -344,10 +522,10 @@ template&lt;typename PointT &gt; </div>
 </div><div class="memdoc">
 
 <p>number of bits in PCL's index type </p>
-<p>For PCL 1.11, please use PCL_INDEX_SIZE to choose a size best suited for your needs. PCL 1.12 will come with default 32, along with client code compile time choice</p>
+<p>Please use PCL_INDEX_SIZE when building PCL to choose a size best suited for your needs. PCL 1.12 will come with default 32</p>
 <p>PCL 1.11 has a default size = sizeof(int) </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00120">120</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8h_source.html#l00095">95</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
 
 </div>
 </div>
@@ -357,7 +535,7 @@ template&lt;typename PointT &gt; </div>
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:13:25</p>
+<p>Pages generated on Sun Dec 20 2020 13:21:43</p>
 </div> <!-- #footer -->
 </body>
 </html>

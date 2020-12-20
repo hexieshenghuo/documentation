@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -157,9 +157,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a044e3716897dfcb17784503e804131fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_progressive_morphological_filter.html#a044e3716897dfcb17784503e804131fc">setExponential</a> (bool exponential)</td></tr>
 <tr class="memdesc:a044e3716897dfcb17784503e804131fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag indicating whether or not to exponentially grow window sizes?  <a href="classpcl_1_1_progressive_morphological_filter.html#a044e3716897dfcb17784503e804131fc">More...</a><br /></td></tr>
 <tr class="separator:a044e3716897dfcb17784503e804131fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d0ec27d246c6ba8e11c911c35df0631"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_progressive_morphological_filter.html#a6d0ec27d246c6ba8e11c911c35df0631">extract</a> (std::vector&lt; int &gt; &amp;ground)</td></tr>
-<tr class="memdesc:a6d0ec27d246c6ba8e11c911c35df0631"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method launches the segmentation algorithm and returns indices of points determined to be ground returns.  <a href="classpcl_1_1_progressive_morphological_filter.html#a6d0ec27d246c6ba8e11c911c35df0631">More...</a><br /></td></tr>
-<tr class="separator:a6d0ec27d246c6ba8e11c911c35df0631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11329557575d02e76c2238a48ab1a3b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_progressive_morphological_filter.html#a11329557575d02e76c2238a48ab1a3b4">extract</a> (<a class="el" href="namespacepcl.html#a8bfe09b8680e7129dd0fd6177c1a2ce6">Indices</a> &amp;ground)</td></tr>
+<tr class="memdesc:a11329557575d02e76c2238a48ab1a3b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method launches the segmentation algorithm and returns indices of points determined to be ground returns.  <a href="classpcl_1_1_progressive_morphological_filter.html#a11329557575d02e76c2238a48ab1a3b4">More...</a><br /></td></tr>
+<tr class="separator:a11329557575d02e76c2238a48ab1a3b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classpcl_1_1_p_c_l_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classpcl_1_1_p_c_l_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classpcl_1_1_p_c_l_base.html">pcl::PCLBase&lt; PointT &gt;</a></td></tr>
 <tr class="memitem:af4fbc5eb005057f8a0fc6d60bde595df inherit pub_methods_classpcl_1_1_p_c_l_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpcl_1_1_p_c_l_base.html#af4fbc5eb005057f8a0fc6d60bde595df">PCLBase</a> ()</td></tr>
 <tr class="memdesc:af4fbc5eb005057f8a0fc6d60bde595df inherit pub_methods_classpcl_1_1_p_c_l_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor.  <a href="classpcl_1_1_p_c_l_base.html#af4fbc5eb005057f8a0fc6d60bde595df">More...</a><br /></td></tr>
@@ -313,8 +313,8 @@ template&lt;typename PointT &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6d0ec27d246c6ba8e11c911c35df0631"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d0ec27d246c6ba8e11c911c35df0631">&#9670;&nbsp;</a></span>extract()</h2>
+<a id="a11329557575d02e76c2238a48ab1a3b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11329557575d02e76c2238a48ab1a3b4">&#9670;&nbsp;</a></span>extract()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -327,7 +327,7 @@ template&lt;typename PointT &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classpcl_1_1_progressive_morphological_filter.html">pcl::ProgressiveMorphologicalFilter</a>&lt; <a class="el" href="structpcl_1_1_point_x_y_z_r_g_b.html">PointT</a> &gt;::extract </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacepcl.html#a8bfe09b8680e7129dd0fd6177c1a2ce6">Indices</a> &amp;&#160;</td>
           <td class="paramname"><em>ground</em></td><td>)</td>
           <td></td>
         </tr>
@@ -349,7 +349,7 @@ template&lt;typename PointT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="progressive__morphological__filter_8hpp_source.html#l00071">71</a> of file <a class="el" href="progressive__morphological__filter_8hpp_source.html">progressive_morphological_filter.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="morphological__filter_8h_source.html#l00054">pcl::MORPH_OPEN</a>, and <a class="el" href="common_2include_2pcl_2point__cloud_8h_source.html#l00411">pcl::PointCloud&lt; PointT &gt;::points</a>.</p>
+<p class="reference">References <a class="el" href="morphological__filter_8h_source.html#l00051">pcl::MORPH_OPEN</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1001,7 @@ template&lt;typename PointT &gt; </div>
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:12:40</p>
+<p>Pages generated on Sun Dec 20 2020 13:20:51</p>
 </div> <!-- #footer -->
 </body>
 </html>

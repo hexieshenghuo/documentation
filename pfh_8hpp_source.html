@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Point Cloud Library (PCL)
-   &#160;<span id="projectnumber">1.11.0-dev</span>
+   &#160;<span id="projectnumber">1.11.1-dev</span>
    </div>
   </td>
  </tr>
@@ -121,8 +121,8 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">const</span> <a class="code" href="classpcl_1_1_point_cloud.html">pcl::PointCloud&lt;PointInT&gt;</a> &amp;cloud, <span class="keyword">const</span> <a class="code" href="classpcl_1_1_point_cloud.html">pcl::PointCloud&lt;PointNT&gt;</a> &amp;normals,</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordtype">int</span> p_idx, <span class="keywordtype">int</span> q_idx, <span class="keywordtype">float</span> &amp;f1, <span class="keywordtype">float</span> &amp;f2, <span class="keywordtype">float</span> &amp;f3, <span class="keywordtype">float</span> &amp;f4)</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="group__features.html#gaacfebe0c36e7d879e48bd3f163aec3c9">pcl::computePairFeatures</a> (cloud.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[p_idx].getVector4fMap (), normals.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[p_idx].getNormalVector4fMap (),</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                            cloud.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[q_idx].getVector4fMap (), normals.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[q_idx].getNormalVector4fMap (),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="group__features.html#gaacfebe0c36e7d879e48bd3f163aec3c9">pcl::computePairFeatures</a> (cloud[p_idx].getVector4fMap (), normals[p_idx].getNormalVector4fMap (),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                            cloud[q_idx].getVector4fMap (), normals[q_idx].getNormalVector4fMap (),</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                            f1, f2, f3, f4);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
@@ -150,7 +150,7 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span> (std::size_t j_idx = 0; j_idx &lt; i_idx; ++j_idx)</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="comment">// If the 3D points are invalid, don&#39;t bother estimating, just continue</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">if</span> (!<a class="code" href="namespacepcl.html#a2adb775f2d234f57c4e7c1209eb95a1d">isFinite</a> (cloud.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[indices[i_idx]]) || !<a class="code" href="namespacepcl.html#a2adb775f2d234f57c4e7c1209eb95a1d">isFinite</a> (cloud.<a class="code" href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">points</a>[indices[j_idx]]))</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">if</span> (!<a class="code" href="namespacepcl.html#a2adb775f2d234f57c4e7c1209eb95a1d">isFinite</a> (cloud[indices[i_idx]]) || !<a class="code" href="namespacepcl.html#a2adb775f2d234f57c4e7c1209eb95a1d">isFinite</a> (cloud[indices[j_idx]]))</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">if</span> (use_cache_)</div>
@@ -259,7 +259,7 @@ $(function() {
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      <span class="keywordflow">if</span> (this-&gt;searchForNeighbors ((*indices_)[idx], search_parameter_, nn_indices, nn_dists) == 0)</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      {</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">for</span> (Eigen::Index d = 0; d &lt; pfh_histogram_.size (); ++d)</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;          output.points[idx].histogram[d] = std::numeric_limits&lt;float&gt;::quiet_NaN ();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;          output[idx].histogram[d] = std::numeric_limits&lt;float&gt;::quiet_NaN ();</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        output.is_dense = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">continue</span>;</div>
@@ -270,7 +270,7 @@ $(function() {
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      <span class="comment">// Copy into the resultant cloud</span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keywordflow">for</span> (Eigen::Index d = 0; d &lt; pfh_histogram_.size (); ++d)</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        output.points[idx].histogram[d] = pfh_histogram_[d];</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        output[idx].histogram[d] = pfh_histogram_[d];</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  }</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordflow">else</span></div>
@@ -282,7 +282,7 @@ $(function() {
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;          this-&gt;searchForNeighbors ((*indices_)[idx], search_parameter_, nn_indices, nn_dists) == 0)</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      {</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">for</span> (Eigen::Index d = 0; d &lt; pfh_histogram_.size (); ++d)</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;          output.points[idx].histogram[d] = std::numeric_limits&lt;float&gt;::quiet_NaN ();</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;          output[idx].histogram[d] = std::numeric_limits&lt;float&gt;::quiet_NaN ();</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        output.is_dense = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">continue</span>;</div>
@@ -293,7 +293,7 @@ $(function() {
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      <span class="comment">// Copy into the resultant cloud</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <span class="keywordflow">for</span> (Eigen::Index d = 0; d &lt; pfh_histogram_.size (); ++d)</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        output.points[idx].histogram[d] = pfh_histogram_[d];</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        output[idx].histogram[d] = pfh_histogram_[d];</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  }</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
@@ -303,10 +303,9 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasspcl_1_1_p_f_h_estimation_html_ab1304ee95f069b980308a69882706e66"><div class="ttname"><a href="classpcl_1_1_p_f_h_estimation.html#ab1304ee95f069b980308a69882706e66">pcl::PFHEstimation::computePointPFHSignature</a></div><div class="ttdeci">void computePointPFHSignature(const pcl::PointCloud&lt; PointInT &gt; &amp;cloud, const pcl::PointCloud&lt; PointNT &gt; &amp;normals, const std::vector&lt; int &gt; &amp;indices, int nr_split, Eigen::VectorXf &amp;pfh_histogram)</div><div class="ttdoc">Estimate the PFH (Point Feature Histograms) individual signatures of the three angular (f1,...</div><div class="ttdef"><b>Definition:</b> <a href="pfh_8hpp_source.html#l00060">pfh.hpp:60</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_p_f_h_estimation_html_ad9f7f5a34676a6974369d2032c5f6994"><div class="ttname"><a href="classpcl_1_1_p_f_h_estimation.html#ad9f7f5a34676a6974369d2032c5f6994">pcl::PFHEstimation::PointCloudOut</a></div><div class="ttdeci">typename Feature&lt; PointInT, PointOutT &gt;::PointCloudOut PointCloudOut</div><div class="ttdef"><b>Definition:</b> <a href="pfh_8h_source.html#l00095">pfh.h:95</a></div></div>
-<div class="ttc" id="aclasspcl_1_1_point_cloud_html_af16a62638198313b9c093127c492c884"><div class="ttname"><a href="classpcl_1_1_point_cloud.html#af16a62638198313b9c093127c492c884">pcl::PointCloud::points</a></div><div class="ttdeci">std::vector&lt; PointT, Eigen::aligned_allocator&lt; PointT &gt; &gt; points</div><div class="ttdoc">The point data.</div><div class="ttdef"><b>Definition:</b> <a href="common_2include_2pcl_2point__cloud_8h_source.html#l00411">point_cloud.h:411</a></div></div>
 <div class="ttc" id="anamespacepcl_html_a2adb775f2d234f57c4e7c1209eb95a1d"><div class="ttname"><a href="namespacepcl.html#a2adb775f2d234f57c4e7c1209eb95a1d">pcl::isFinite</a></div><div class="ttdeci">bool isFinite(const PointT &amp;pt)</div><div class="ttdoc">Tests if the 3D components of a point are all finite param[in] pt point to be tested return true if f...</div><div class="ttdef"><b>Definition:</b> <a href="point__tests_8h_source.html#l00055">point_tests.h:55</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_point_cloud_html"><div class="ttname"><a href="classpcl_1_1_point_cloud.html">pcl::PointCloud&lt; PointInT &gt;</a></div></div>
-<div class="ttc" id="apcl__macros_8h_html_ae71449b1cc6e6250b91f539153a7a0d3"><div class="ttname"><a href="pcl__macros_8h.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a></div><div class="ttdeci">#define M_PI</div><div class="ttdef"><b>Definition:</b> <a href="pcl__macros_8h_source.html#l00195">pcl_macros.h:195</a></div></div>
+<div class="ttc" id="apcl__macros_8h_html_ae71449b1cc6e6250b91f539153a7a0d3"><div class="ttname"><a href="pcl__macros_8h.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a></div><div class="ttdeci">#define M_PI</div><div class="ttdef"><b>Definition:</b> <a href="pcl__macros_8h_source.html#l00201">pcl_macros.h:201</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_p_f_h_estimation_html_a52c53643dbac89281ef94ce15a7ac0f8"><div class="ttname"><a href="classpcl_1_1_p_f_h_estimation.html#a52c53643dbac89281ef94ce15a7ac0f8">pcl::PFHEstimation::computeFeature</a></div><div class="ttdeci">void computeFeature(PointCloudOut &amp;output) override</div><div class="ttdoc">Estimate the Point Feature Histograms (PFH) descriptors at a set of points given by &lt;setInputCloud ()...</div><div class="ttdef"><b>Definition:</b> <a href="pfh_8hpp_source.html#l00166">pfh.hpp:166</a></div></div>
 <div class="ttc" id="aclasspcl_1_1_p_f_h_estimation_html_a24c4df13bb5e418f65a4d0397f5c059f"><div class="ttname"><a href="classpcl_1_1_p_f_h_estimation.html#a24c4df13bb5e418f65a4d0397f5c059f">pcl::PFHEstimation::computePairFeatures</a></div><div class="ttdeci">bool computePairFeatures(const pcl::PointCloud&lt; PointInT &gt; &amp;cloud, const pcl::PointCloud&lt; PointNT &gt; &amp;normals, int p_idx, int q_idx, float &amp;f1, float &amp;f2, float &amp;f3, float &amp;f4)</div><div class="ttdoc">Compute the 4-tuple representation containing the three angles and one distance between two points re...</div><div class="ttdef"><b>Definition:</b> <a href="pfh_8hpp_source.html#l00048">pfh.hpp:48</a></div></div>
 <div class="ttc" id="agroup__features_html_gaacfebe0c36e7d879e48bd3f163aec3c9"><div class="ttname"><a href="group__features.html#gaacfebe0c36e7d879e48bd3f163aec3c9">pcl::computePairFeatures</a></div><div class="ttdeci">PCL_EXPORTS bool computePairFeatures(const Eigen::Vector4f &amp;p1, const Eigen::Vector4f &amp;n1, const Eigen::Vector4f &amp;p2, const Eigen::Vector4f &amp;n2, float &amp;f1, float &amp;f2, float &amp;f3, float &amp;f4)</div><div class="ttdoc">Compute the 4-tuple representation containing the three angles and one distance between two points re...</div></div>
@@ -315,7 +314,7 @@ $(function() {
 <p>
 Except where otherwise noted, the PointClouds.org web pages are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>. 
 </p>
-<p>Pages generated on Tue Jun 2 2020 14:10:29</p>
+<p>Pages generated on Sun Dec 20 2020 13:18:16</p>
 </div> <!-- #footer -->
 </body>
 </html>
